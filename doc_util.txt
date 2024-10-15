@@ -1,0 +1,25 @@
+doc_util
+
+
+
+- 해당 폴더는 프로젝트 전반에서 재사용 가능한 유틸리티 함수나 도구 파일을 모아두는 폴더입니다.
+
+
+- 업로드하는 방법
+	1. 자신이 업로드하려는 파일을 Add file > Upload files로 클릭, 드래그앤드랍으로 올립니다.
+	2. Commit changes에 있는
+	   Add files via upload의 제목을 자신이 작업한 내용을 언급하여 작성합니다.
+	   Add an optional extended description에는 작업한 내용을 구체적으로 서술하고, 
+           검토 사항, 필수 확인 사항 등을 적어주세요.
+           ( 원활한 작업을 위해 Commit을 기본 문구로 하지 말아주세요! )
+	3. branch에 commit되도록 
+	   옵션을 'Create a new branch for this commit'으로 선택해주세요.
+           하단 초록색의 'Propose changes' 버튼을 클릭합니다.
+	3. 다시 해당 repository로 돌아가, 
+           자신이 올린 파일이 PR(Pull requests)로 잘 올라갔는지 확인해주세요.
+
+- 코드리뷰 진행
+	1. 코드리뷰가 진행된 코드들만 일반적으로 팀장이 main으로 merge합니다.
+	   필요시, 팀장이 특정 팀원을 지정하여 merge 작업을 요청합니다.
+	2. 코드리뷰에서 Comment를 남기는 방법은 
+	   이전 다른 Repository에서 연습했던 것처럼 동일하게 진행하시면 됩니다.
