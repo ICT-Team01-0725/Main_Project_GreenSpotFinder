@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sub_page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+    <link rel="stylesheet" href="./css/menu.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        main {
+            z-index: 2;
+            position: relative;
+            transition: transform .7s ease-in-out;
+        }
+
+        #sub_container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            height: 5000px;
+            background-color: #f8f8f8;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 400px;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            left: 0;
+            background-color: #EF8354;
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            height: 3px;
+            width: 30px;
+            background-color: #EF8354;
+            margin: 6px auto;
+        }
+
+        .button {
+            cursor: pointer;
+            display: inline-block;
+            width: auto;
+            margin: 0 auto;
+        }
+
+        
+
+        .visible-xs {
+            display: none;
+        }
+
+        .nav-left.visible-xs {
+            z-index: 4;
+        }
+
+        .hidden-xs {
+            display: none;
+        }
+
+        .middle {
+            margin: 0 auto;
+        }
+
+        .nav-left.visible-xs .active .bar {
+            /* background-color: #FFF; */
+            transition: all .7s ease;
+        }
+
+        
+        .button.active .top {
+            transform: translateY(10px) rotateZ(45deg);
+        }
+
+        .button.active .bottom {
+            transform: translateY(-8px) rotateZ(-45deg);
+        }
+
+        .button.active .middle {
+            width: 0;
+        }
+
+        .move-to-left {
+            transform: translateX(400px);
+        }
+
+        nav {
+            padding-top: 30px;
+        }
+
+        .sidebar-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            margin-top: 150px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .sidebar {
+                height: 100vh;
+                width: 400px;
+                position: fixed;
+                top: 0;
+                z-index: 1;
+                left: 0;
+                background-color: #EF8354;
+                display: block;
+            }
+
+            .visible-xs {
+                display: block;
+            }
+
+            .wrap {
+                top: 0;
+            }
+
+            #sub_container {
+                width: 100%;
+                max-width: 1320px;
+                padding: 62px 0 150px 0;
+                height: 5000px;
+                background-color: #f8f8f8;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-left {
+                position: fixed;
+            }
+
+            .hidden-xs {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-list {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="menubar">
+            <div class="menuLogo">
+                <a href="#">Logo</a>
+            </div>
+            <ul class="menuItem">
+                <li>
+                    <a href="#">공원찾기</a>
+                    <ul>
+                        <li>
+                            <div class="clearfix">
+                                <div class="menu_layout">
+                                    <div class="menu_title">
+                                        <p>공원찾기</p>
+                                    </div>
+                                    <div class="menu_01">
+                                        <p class="menu_01_p">공원 이야기</p>
+                                        <p class="menu_02_p">지역별 공원찾기</p>
+                                        <p class="menu_03_p">면적별 공원찾기</p>
+                                        <p class="menu_04_p">공원 연락하기</p>
+                                    </div>
+                                    <div class="menu_02">
+                                    </div>
+                                    <div class="menu_01_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>공원 이야기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_02_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>지역별 공원찾기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_03_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>면적별 공원찾기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_04_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>공원 연락하기 안내문구입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">가로수길 찾기</a>
+                    <ul>
+                        <li>
+                            <div class="clearfix">
+                                <div class="menu_layout">
+                                    <div class="menu_title">
+                                        <p>가로수길 찾기</p>
+                                    </div>
+                                    <div class="menu_01">
+                                        <p class="menu_01_p">가로수길 걷기</p>
+                                        <p class="menu_02_p">지역별 가로수길 찾기</p>
+                                        <p class="menu_03_p">산책코스 찾기</p>
+                                        <p class="menu_04_p">가로수길 수목 조회</p>
+                                    </div>
+                                    <div class="menu_02">
+                                    </div>
+                                    <div class="menu_01_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>가로수길 걷기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_02_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>지역별 가로수길 찾기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_03_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>산책코스 찾기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_04_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>가로수길 수목 조회</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">지역 속 보호수</a>
+                    <ul>
+                        <li>
+                            <div class="clearfix">
+                                <div class="menu_layout">
+                                    <div class="menu_title">
+                                        <p>지역 속 보호수</p>
+                                    </div>
+                                    <div class="menu_01">
+                                        <p class="menu_01_p">보호수란?</p>
+                                        <p class="menu_02_p">지역별로 찾기</p>
+                                        <p class="menu_03_p">보호수 현황표</p>
+                                    </div>
+                                    <div class="menu_02">
+                                    </div>
+                                    <div class="menu_01_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>보호수란? 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_02_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>지역별로 찾기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_03_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>보호수 현황표 안내문구입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">녹지 행사</a>
+                    <ul>
+                        <li>
+                            <div class="clearfix">
+                                <div class="menu_layout">
+                                    <div class="menu_title">
+                                        <p>녹지 행사</p>
+                                    </div>
+                                    <div class="menu_01">
+                                        <p class="menu_01_p">날짜별 행사 찾기</p>
+                                        <p class="menu_02_p">지역별로 행사 찾기</p>
+                                    </div>
+                                    <div class="menu_02">
+                                    </div>
+                                    <div class="menu_01_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>날짜별 행사 찾기 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_02_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>지역별로 행사 찾기 안내문구입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul>
+                        <li>
+                            <div class="clearfix">
+                                <div class="menu_layout">
+                                    <div class="menu_title">
+                                        <p>커뮤니티</p>
+                                    </div>
+                                    <div class="menu_01">
+                                        <p class="menu_01_p">공지사항</p>
+                                        <p class="menu_02_p">리뷰</p>
+                                        <p class="menu_03_p">고객의 소리</p>
+                                        <p class="menu_04_p">자주하는 질문</p>
+                                        <p class="menu_05_p">1:1 문의</p>
+                                    </div>
+                                    <div class="menu_02">
+                                    </div>
+                                    <div class="menu_01_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>공지사항 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_02_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>리뷰 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_03_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>고객의 소리 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_04_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08327351.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>자주하는 질문 안내문구입니다.</p>
+                                    </div>
+                                    <div class="menu_05_img">
+                                        <div style="width: 100%;">
+                                            <img src="./images/CK_cm08287656.jpg" alt="나눔" style="width: 100%;">
+                                        </div>
+                                        <p>1:1 문의 안내문구입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="menuIcon">
+                <ul class="icon">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <div class="nav-left visible-xs">
+        <div class="button" id="btn">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+        </div>
+    </div>
+
+    
+    <!-- nav-left -->
+    <main>
+
+        
+        <div id="sub_container">
+            <ul class="contents_box2">
+                <li>01</li>
+                <li>02</li>
+                <li>03</li>
+                <li>04</li>
+                <li>05</li>
+                <li>06</li>
+            </ul>
+        </div>
+                
+
+        <footer>
+            <ul>
+                <li>
+                    <img src="./images/CK_cm08327351.jpg" alt="" style="height: 50px;">
+                    
+                    <p>TEL : 031-1234-5678 Email : official@naver.com <br>
+                    주소 : 경기도 고양시 덕양구 행신동 000길 00 ○○빌딩 ○○○호 </p>
+                    
+                    <ul class="f_menu">
+                        <li onclick="location.href='qna.html'">개인정보처리방침</li>
+                        <li onclick="location.href='qna.html'">이용약관</li>
+                        <li onclick="location.href='customer.html'">고객센터</li>
+                        <li onclick="location.href='notice.html'">공지사항</li>
+                    </ul>
+                    <p>© Seoul Cultural Space. All Rights Reserved.</p>
+                </li>
+                <li>
+                    <ul class="icon">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+    </main>
+
+    <!-- left-menu -->
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li>
+                메뉴공간
+            </li>
+        </ul>
+    </div>
+    <div class="black_bg"></div>
+
+    
+    <script>
+        $(document).ready(function () {
+            function toggleSidebar() {
+                $(".button").toggleClass("active");
+                $("main").toggleClass("move-to-left");
+                $(".sidebar-item").toggleClass("active");
+                $(".sidebar-item").toggleClass("active");
+            }
+
+            $(".button").on("click tap", function () {
+                toggleSidebar();
+            });
+
+            
+        });
+    </script>
+</body>
+
+</html>

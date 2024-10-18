@@ -1,0 +1,29 @@
+/* 메인 슬라이드 */
+.swiper {
+	width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.swiper-wrapper .swiper-slide {
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: left;
+    position: relative;
+} 
+
+.swiper-wrapper .swiper-slide h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.swiper-wrapper .swiper-slide p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}

@@ -1,0 +1,21 @@
+/* 메인 슬라이드 */
+.swiper {
+	width: 100%;
+	height: 530px;
+}
+
+.swiper-wrapper .swiper-slide {
+    background-color: #ddd;
+    width: 420px;
+    border-radius: 15px;
+    text-align: center;
+} 
+
+
+section.main_slide {
+    width: 100%;
+    height: 530px;
+    padding: 30px 0px;
+}
+
+
