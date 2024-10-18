@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+#box {
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1320px;
+        height: 830px;
+        margin: 0 auto;
+    }
+
+    input {
+        border: none;
+    }
+
+    #box {
+        width: 500px;
+        height: 650px;
+        text-align: left;
+        padding: 50px 30px;
+        margin: 70px auto;
+    }
+
+    .id,
+    .pw {
+        width: 500px;
+        height: 46px;
+        text-align: left;
+        margin-bottom: 30px;
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    #loginbtn {
+        width: 500px;
+        height: 50px;
+        text-align: center;
+        margin-top: 25px 0;
+        background-color: #111111;
+        color: #ffffff;
+    }
+
+    #loginbtn:hover {
+        cursor: pointer;
+    }
+
+    input::placeholder {
+        color: #cccccc;
+        font-size: 16px;
+    }
+
+    .h3 {
+        font-weight: 700;
+    }
+
+    #logintxt {
+        margin-bottom: 50px;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    #three {
+        text-align: center;
+        padding-top: 15px;
+        height: 40px;
+        border-bottom: 1px solid #cccccc;
+
+    }
+
+    .tmp {
+        color: #555555;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 0 20px;
+    }
+
+    .sns:hover {
+        cursor: pointer;
+    }
+
+    .sns {
+        width: 500px;
+        height: 50px;
+        margin-bottom: 16px;
+
+    }
+
+    .naver {
+        background-color: #00cb48;
+        background-size: 30px 30px;
+        background-position: 15px center;
+        background-image: url("./images/bear.jpg");
+        background-repeat: no-repeat;
+        color: #ffffff;
+    }
+
+    .kakao {
+        background-color: #ffe400;
+        background-size: 30px 30px;
+        background-position: 15px center;
+        background-image: url("./images/bear.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .ptag {
+        line-height: 26px;
+        font-size: 16px;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    header {
+        width: 100%;
+        height: 70px;
+        background-color: #cccccc;
+    }
+
+
+
+    footer {
+        width: 100%;
+        height: 343px;
+        border-top: 1px solid #dddddd;
+    }
+
+    @media screen and (max-width: 560px) {
+        #box {
+            width: 90%;
+            padding: 50px 5%;
+        }
+
+        .sns {
+            width: 100%;
+        }
+
+        .id,
+        .pw {
+            width: 100%;
+        }
+
+        #loginbtn {
+            width: 100%;
+
+        }
+
+        .tmp {
+            padding: 0 3%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        p {
+            line-height: 24px;
+            font-size: 14px;
+        }
+    }
+}
