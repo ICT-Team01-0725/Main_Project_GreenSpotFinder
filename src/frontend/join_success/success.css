@@ -1,0 +1,147 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap')
+	;
+
+button {
+	border: none;
+}
+
+* {
+	/* width height 속성 설정시 padding으로 값이 늘어나지 않음 */
+	box-sizing: border-box;
+	text-align: center;
+}
+
+#header {
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid #cccccc;
+}
+
+#section {
+	width: 768px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 150px;
+}
+
+#footer {
+	width: 100%;
+	height: 343px;
+}
+
+#check {
+	font-size: 100px;
+	color: #00a38b;
+}
+
+#success {
+	margin: 23px auto;
+}
+
+/* success 안의 p태그 */
+#success:p {
+	font-size: 32px;
+	color: #00a38b;
+}
+
+#username {
+	font-size: 24px;
+}
+
+#infobox {
+	width: 768px;
+	padding: 25px 15px;
+	background-color: #f7f7f7;
+	text-align: center;
+	margin: 30px 0;
+	line-height: 16px;
+}
+
+#infobox:p {
+	font-size: 16px;
+}
+
+#infoup {
+	color: #ff5500;
+}
+
+#twobtn {
+	border-top: 1px solid #dddddd;
+	width: 768px;
+	padding-top: 50px;
+	height: 197px;
+}
+
+.btn {
+	width: 200px;
+	height: 46px;
+	border-radius: 5px;
+	font-size: 16px;
+	margin: 0 8px;
+}
+
+#menu {
+	border: 1px solid #00a38b;
+	background-color: #ffffff;
+	color: #00a38b;
+}
+
+#menu:hover {
+	background-color: #ddd;
+	color: #008e79;
+	transition: all 0.5s;
+}
+
+#login {
+	color: #ffffff;
+	background-color: #00a38b;
+}
+
+#login:hover {
+	color: #ddd;
+	background-color: #008e79;
+	transition: all 0.5s
+}
+
+#footer {
+	border-top: 1px solid #dddddd;
+}
+
+@media screen and (max-width:768px) {
+	#section {
+		width: 100%;
+	}
+	#twobtn {
+		width: 100%;
+	}
+	#infobox {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:560px) {
+	#infobox:p {
+		font-size: 14px;
+	}
+	#username {
+		font-size: 20px;
+	}
+	.btn {
+		margin: 0 4px;
+		width: 180px;
+	}
+}
+
+@media screen and (max-width:420px) {
+	#infobox:p {
+		font-size: 13px;
+	}
+	#username {
+		font-size: 18px;
+	}
+	.btn {
+		margin: 0;
+		width: 160px;
+	}
+}
