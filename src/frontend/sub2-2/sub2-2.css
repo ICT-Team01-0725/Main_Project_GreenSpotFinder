@@ -1,0 +1,232 @@
+/* sub2-2 시작 */
+
+
+
+
+
+
+
+
+/* div class="page" 숫자박스 수정 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+header {
+    height: 70px;
+    background-color: #fff; 
+    border-bottom: 1px solid #00A38B;
+}
+
+footer {
+    height: 70px;
+    border-top: 1px solid #00A38B;
+    margin-top: 150px;
+}
+
+.contents1, .contents2 {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.title1 {
+    font-size: 40px;
+    margin: 0 auto;
+    color: black;
+    font-weight: 500;
+}
+
+.subtitle1 {
+    margin-top: 16px;
+    font-size: 20px;
+    color: #555555;
+}
+.search_container{
+    margin-top: 39px;
+}
+.search_input {
+    margin-top: 39px;
+    border-radius: 45px;
+    width: 620px;
+    height: 54px;
+    font-size: 16px;
+}
+
+.contents2 {
+    margin-top: 54px;
+}
+
+.contents1 {
+    text-align: center;
+}
+
+.park-map-container {
+    display: flex;
+}
+.regions {
+    display: flex;
+    list-style-type: none;
+    margin: 55px auto 100px auto;
+    width: 1300px;
+
+}
+
+.region {
+    width: 121px;
+    border-collapse: collapse;
+    font-size: 16px;
+    border-bottom: 1px solid #555;
+    text-align: center;
+
+}
+.street-list {
+    width: 100%;
+    max-width: 645px;
+    border-top: 1px solid black;
+    margin-top: 95px;
+}
+
+.overflow-y {
+    overflow-y: scroll;
+    height: 720px;
+}
+
+.map {
+    flex: 1;
+    background-color: #e0e0e0;
+    height: 720px;
+    margin-top: 98px;
+    margin-left: 30px;
+    /* background-image: url("/images/map.JPG");
+    background-size: cover;
+    background-position: center center; */
+}
+
+.tree-linedstreet {
+    background: #f5f5f5;
+    padding: 25px 15px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.location {
+    display: inline-block;
+    background-color: #00a884;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    display: inline-block;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.page {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.page-link {
+     border: 1px solid #555;
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 2px;
+    border-radius: 5px;
+
+}
+
+.h3, .detail2 {
+    font-weight: 500;
+}
+
+.detail1 {
+    font-weight: 400;
+    margin-top: 15px;
+}
+.detail2 {
+    margin-top: 11px;
+}
+.detail3{
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.detail1, .detail2 {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+@media screen and (max-width: 1000px){
+    *{
+        width: 90%;
+    }
+    
+    .regions{
+        font-size: 14px;
+    }
+    .location{
+        font-size: 14px;
+    }
+    .h3{
+        font-size: 16px;
+    }
+    .detail1, .detail2, .detail3{
+        font-size: 16px;
+    }
+    .detail3{
+
+    }
+    
+    
+    }
+    
+    
+    @media screen and (max-width: 768px){
+    *{
+        width: 90%;
+        }
+        .regions{
+            font-size: 13px;
+        }
+        .location{
+            font-size: 13px;
+        }
+        .h3{
+            font-size: 15px;
+        }
+        .detail1, .detail2, .detail3{
+            font-size: 14px;
+        }
+    }
+    
+    @media screen and (max-width: 480px){
+    *{
+        width: 90%;
+        }
+        .regions{
+            font-size: 12px;
+        }
+        .location{
+            font-size: 12px;
+        }
+        .h3{
+            font-size: 14px;
+        }
+        .detail1, .detail2, .detail3{
+            font-size: 12px;
+        }
+    }
+/* sub2-2 끝 */

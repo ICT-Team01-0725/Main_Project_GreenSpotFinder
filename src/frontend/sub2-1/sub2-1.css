@@ -1,0 +1,171 @@
+
+/* sub2-1 시작 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+header {
+    height: 70px;
+    background-color: #fff; 
+    border-bottom: 1px solid #00A38B;
+}
+
+footer {
+    height: 70px;
+    border-top: 1px solid #00A38B;
+    margin-top: 150px;
+}
+.contents1{
+    display: flex;
+    justify-content: space-between;
+}
+.contents1, .contents3 {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.contents3{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: white;
+}
+h1{
+    font-size: 40px;
+    margin-top: 153px;
+    font-weight: 700;
+}
+h3{
+    font-weight: 500;
+}
+.subtitle{
+    margin-top: 7px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.introleft{
+    flex: 1;
+    margin-right: 90px;
+}
+.text1{
+    margin-top: 153px;
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 20px;
+}
+.text2{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+}
+.introright{
+    flex: 2;
+}
+.img {
+    background-image: url('/images/namsan.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 72px 0;
+    margin: 0 auto;
+    color: #fff;
+}
+.contents2{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.title2 {
+    font-size: 20px; 
+    margin-top: 16px;
+}
+.text img{
+    width: 60px;
+    height: 60px;
+    margin-top: 50px;
+}
+.paragraph{
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 20px;
+}
+.text{
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    flex: 1;
+    margin-left: 30px;
+    height: 357px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px){
+    .contents1, .contents3 {
+        width: 90%;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 18px;
+    }
+    .contents2{
+        font-size: 16px;
+    }
+
+    .contents3 p br {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .contents1, .contents3 {
+        width: 90%;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .contents2{
+        font-size: 16px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .contents3 p br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .contents1, .contents3 {
+        width: 90%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 14px;
+    }
+    .contents2{
+        font-size: 14px;
+    }
+
+    .contents3 p br {
+        display: none;
+    }
+}
+    /* sub2-1 끝 */

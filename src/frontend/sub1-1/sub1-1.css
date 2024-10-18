@@ -1,0 +1,148 @@
+/* sub1-1 시작 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+header {
+    height: 70px; /* 헤더 푸터 들어갈 높이 70px 공백처리 */
+    background-color: #fff; /* 헤더, 푸터 배경색 */
+    border-bottom: 1px solid #00A38B;
+    width: 100%;
+}
+
+footer {
+    height: 70px; /* 헤더 푸터 들어갈 높이 70px 공백처리 */
+    border-top: 1px solid #00A38B;
+    margin-top: 150px;
+    
+}
+.contents2, .contents3 {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.contents1 {
+    background-image: url('/images/namsan.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 72px 0;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.text {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.title2 {
+    font-size:  20px;
+    font-weight: 500;
+}
+
+.text1 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+main{
+    text-align: left;
+}
+
+b{ 
+    font-weight: bold;
+}
+div{
+    font-size: 16px;
+}
+.contents2{
+    font-size: 20px;
+    margin: 150px auto;
+}
+.contents3{
+    margin-top: 100px;
+    font-size: 20px;
+}
+.title1{
+    font-size: 40px;
+}
+.subtitle1{
+    margin-top: 17px;
+}
+.content1{
+    margin-top: 42px;
+}
+.content1, .contents3 {
+    line-height: 36px;
+    word-break: keep-all;
+}
+
+@media screen and (max-width: 1000px){
+    .contents2, .contents3 {
+        width: 90%;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 18px;
+    }
+    .contents1{
+        font-size: 16px;
+    }
+
+    .contents3 p br {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .contents2, .contents3 {
+        width: 90%;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .contents1{
+        font-size: 16px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .contents3 p br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .contents2, .contents3 {
+        width: 90%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .text {
+        width: 90%;
+        font-size: 14px;
+    }
+    .contents1{
+        font-size: 14px;
+    }
+
+    .contents3 p br {
+        display: none;
+    }
+}
+/* sub1-1 끝 */
