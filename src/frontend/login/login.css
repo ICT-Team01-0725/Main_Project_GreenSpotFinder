@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-#box {
+
     body {
         font-family: 'Noto Sans KR', sans-serif;
-
+		box-sizing: border-box;
     }
 
     .container {
@@ -158,9 +158,8 @@
     }
 
     @media screen and (max-width: 400px) {
-        p {
+        .ptag {
             line-height: 24px;
             font-size: 14px;
         }
     }
-}
