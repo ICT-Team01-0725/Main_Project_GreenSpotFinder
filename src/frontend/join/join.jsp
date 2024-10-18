@@ -127,6 +127,7 @@
 				}else{
 					$("#pwtest").text("");
 					pwtestok = 1;
+					// function 실행 
 					enabled();
 				}
 			
@@ -134,7 +135,9 @@
 			
 			
 		});	
-		$("#pwchkid").keyup(function(){
+		
+		// 비밀번호, 비밀번호 확인 키보드 입력시
+		$("#pwchkid, #pwid").keyup(function(){
 			// p 비밀번호 값
 			let p = document.getElementById("pwid").value;
 			// pwch 비밀번호 확인 값
@@ -144,6 +147,7 @@
 			if(p == pwch){
 				$("#pwOK").text("비밀번호가 일치합니다.");
 				pwchkok = 1;
+				// function 실행
 				enabled();
 			// 값이 다르면
 			}else{
@@ -153,12 +157,26 @@
 			
 		});
 		
+		// 체크박스 변화시
 		$(".optionchk").change(function(){
 			enabled();
 		});
 		
+		// 이메일 뒷자리 
+		let emailbac;
+		// 이메일 뒷자리 선택시
+		$("#emailback").change(function(){
+			// 선택한 값을 emailbac 에 넣는다.
+			emailbac = document.getElementById("emailback").value;
+			// function 실행
+			enabled();
+		});
+		
+		// 회원가입 버튼 활성화
 		function enabled() {
-			if(pwtestok == 1 && pwchkok == 1 && $(".optionchk").is(":checked")){
+			// 비밀번호 정규식, 비밀번호 확인, 체크박스 체크, 이메일 뒷자리 선택시 
+			if(pwtestok == 1 && pwchkok == 1 && $(".optionchk").is(":checked") && emailbac !== "select"){
+				// 버튼 활성화, 색 #111111로 변경
 				$(".joinbtn").prop("disabled", false).css("background-color", "#111111");
 				
 			}
