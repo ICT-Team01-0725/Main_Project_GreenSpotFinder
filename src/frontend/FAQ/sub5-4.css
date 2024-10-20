@@ -9,48 +9,49 @@
 
 /* 헤더 푸터는 교체할 예정 */
 .header {
- width : 100%;
- height : 70px;
- background-color: brown;
+    width: 100%;
+    height: 70px;
+    background-color: brown;
 }
 
 .footer {
-    width : 100%;
-    height : 70px;
+    width: 100%;
+    height: 70px;
     background-color: darkblue;
 }
 
 /* 콘텐츠 전체 조정 */
 .body {
-    width : 100%;
+    width: 100%;
     max-width: 1320px;
-    margin : 150px auto 150px auto;
+    margin: 150px auto 150px auto;
 }
 
-/* faq 설정 부분 */
-.faq {
+/* faqhead 설정 부분 */
+.faqhead {
     margin-bottom: 60px;
 }
 
-.faq p {
-    padding : 10px 5px;
+.faqhead p {
+    padding: 10px 5px;
     font-size: 40px;
     font-weight: 500;
 }
-.faq span {
-    padding : 10px 5px;
+
+.faqhead span {
+    padding: 10px 5px;
 }
 
 /* 검색 창 css */
 
 .search-bar {
-    display : flex;
+    display: flex;
     justify-content: center;
     vertical-align: center;
 }
 
 .search-bar div {
-    width : 50%;
+    width: 50%;
 }
 
 .search-text {
@@ -62,22 +63,23 @@
     color: white;
     border: none;
     border-radius: 4px;
-    padding : 10px;
-    
+    padding: 10px;
+
 }
 
-/* 컨테이너 css */
+/* 컨테이너 메인 컨텐츠 css */
 
 .container {
-    margin : 20px 0 10px 0;
-    border-top : 2px solid #555;
+    margin: 20px 0 10px 0;
+    border-top: 2px solid #555;
+    border-bottom: 1px solid #555;
 }
 
 .container div {
     margin-top: 30px;
-    border-bottom: 1px solid #555;
-    
+
 }
+
 .container div span {
     margin: 30px 17px;
     border: 1px solid #000;
@@ -86,16 +88,19 @@
     background-color: #09BA00;
     color: white;
 }
+
 .container div p {
-    padding-left : 110px;
+    padding-left: 110px;
     margin-bottom: 25px;
     margin-top: 5px;
-    
+
 }
 
-a:visited, a:active, a:link {
+a:visited,
+a:active,
+a:link {
     text-decoration: none;
-    color : #000;
+    color: #000;
 }
 
 a:hover {
@@ -103,22 +108,85 @@ a:hover {
     color: #00A38B;
 }
 
-.container a {
-font-size: 20px;
-font-weight: 500;
-margin : 30px;
+.faq {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
 }
+
+.faq.active {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .faq .faq_question a {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px;
+}
+
+.container .faq
+
+/* .faq_answer */
+    {
+    margin: 0px;
+    align-items: center;
+}
+
+.container .faq .faq_answer {
+    background-color: #F8F8F8;
+    margin: 0px;
+    padding-top: 1rem;
+    border-bottom: 1px solid #555;
+
+}
+
+
+.faq_question {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+.faq_answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+
+
+}
+
+.faq.active .faq_answer {
+    max-height: 200px;
+    border-top: 1px solid silver;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.faq_btn {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border : none;
+}
+
+
 
 /* 페이지 넘기기 */
 
 .pagination {
     text-align: center;
-    margin-top : 50px;
+    margin-top: 50px;
 }
 
 .pagination a {
     border: 1px solid #555;
-    padding : 7px 12px;
-    margin : 2px;
+    padding: 7px 12px;
+    margin: 2px;
     border-radius: 5px;
 }

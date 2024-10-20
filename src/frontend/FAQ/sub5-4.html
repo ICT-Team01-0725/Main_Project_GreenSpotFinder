@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/sub5-4.css">
     <title>Document</title>
+
+
 </head>
 
 <body>
@@ -17,7 +19,7 @@
 
 
     <div class="body">
-        <div class="faq">
+        <div class="faqhead">
             <p>자주하는 질문</p>
             <span>1:1 문의 전에 필요한 정보를 빠르게 확인해보세요</span>
         </div>
@@ -28,53 +30,128 @@
                 <button type="submit"></button>
             </div>
         </div>
-    
+
         <div class="container">
-            <div>
-                <span>공원</span>
-                <a href="">도심 공원의 이용시간은 어떻게 되나요?</a>
-                <p>2024.10.01</p>
+            <div class="faq active">
+                <div class="faq_question">
+                    <span>공원</span>
+                    <a href="">도심 공원의 이용시간은 어떻게 되나요?</a>
+                    <p>2024.10.01</p>
+                </div>
+
+                <div class="faq_answer">
+                    <p>일반 도심공원은 24시간 개방, 시설형 도심공원은 오전 6시부터 밤 10시까지 운영됩니다.</p>
+                    <p>2024.10.01</p>
+                </div>
+                <button class="faq_btn"></button>
             </div>
-            <div>
-                <span>공원</span>
-                <a href="">공원 부대시설의 불편사항은 어디에 신고하나요?</a>
-                <p>2024.09.26</p>
+
+            <div class="faq">
+                <div class="faq_question">
+                    <span>공원</span>
+                    <a href="">공원 부대시설의 불편사항은 어디에 신고하나요?</a>
+                    <p>2024.09.26</p>
+                </div>
+
+                <div class="faq_answer">
+                    <p>일반 도심공원은 24시간 개방, 시설형 도심공원은 오전 6시부터 밤 10시까지 운영됩니다.</p>
+                    <p>2024.10.01</p>
+                </div>
+                <button class="faq_btn"></button>
             </div>
-            <div>
-                <span>공원</span>
-                <a href="">가로수길의 위생관련 신고는 어디에 하나요?</a>
-                <p>2024.08.03</p>
+
+            <div class="faq">
+                <div class="faq_question">
+                    <span>공원</span>
+                    <a href="">가로수길의 위생관련 신고는 어디에 하나요?</a>
+                    <p>2024.08.03</p>
+                </div>
+
+                <div class="faq_answer">
+                    <p>일반 도심공원은 24시간 개방, 시설형 도심공원은 오전 6시부터 밤 10시까지 운영됩니다.</p>
+                    <p>2024.10.01</p>
+                </div>
+                <button class="faq_btn"></button>
             </div>
-            <div>
-                <span>공원</span>
-                <a href="">가로수길에서 발견된 보행 불편물은 개인이 처리해도 되나요?</a>
-                <p>2024.08.01</p>
+
+            <div class="faq">
+                <div class="faq_question">
+                    <span>공원</span>
+                    <a href="">가로수길에서 발견된 보행 불편물은 개인이 처리해도 되나요?</a>
+                    <p>2024.08.01</p>
+                </div>
+
+                <div class="faq_answer">
+                    <p>일반 도심공원은 24시간 개방, 시설형 도심공원은 오전 6시부터 밤 10시까지 운영됩니다.</p>
+                    <p>2024.10.01</p>
+                </div>
+                <button class="faq_btn"></button>
             </div>
-            <div>
-                <span>공원</span>
-                <a href="">보호수 신청은 어떻게 하나요?</a>
-                <p>2024.07.25</p>
+
+            <div class="faq">
+                <div class="faq_question">
+                    <span>공원</span>
+                    <a href="">보호수 신청은 어떻게 하나요?</a>
+                    <p>2024.07.25</p>
+                </div>
+                <div class="faq_answer">
+                    <p>일반 도심공원은 24시간 개방, 시설형 도심공원은 오전 6시부터 밤 10시까지 운영됩니다.</p>
+                    <p>2024.10.01</p>
+                </div>
+                <button class="faq_btn"></button>
             </div>
 
         </div>
 
-       <div class="pagination">
-       <a href="#">&laquo;</a>
-       <a href="#">&lt;</a>
-       <a href="#">1</a>
-       <a href="#">2</a>
-       <a href="#">3</a>
-       <a href="#">4</a>
-       <a href="#">5</a>
-       <a href="#">&#62;</a>
-       <a href="#">&raquo;</a>
-       </div>
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">&lt;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&#62;</a>
+            <a href="#">&raquo;</a>
+        </div>
 
     </div>
 
 
     <div class="footer"></div>
 
+
+
+
+
+
+
+
+    <script>
+        const btns = document.querySelectorAll(".faq_question");
+    
+        btns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const faqItem = btn.parentNode;
+                const isActive = faqItem.classList.contains("active");
+    
+                removeActiveClasses();
+    
+                if (!isActive) {
+                    faqItem.classList.add("active");
+                }
+            });
+        });
+    
+        function removeActiveClasses() {
+            btns.forEach((btn) => {
+                btn.parentNode.classList.remove("active");
+            });
+        }
+        </script>
+
+
+  
 </body>
 
 </html>
