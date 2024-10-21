@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <link rel="stylesheet" href="../notice/notice_write.css">
+</head>
+
+<body>    
+    <div>
+        <section class="notice">        
+            <p class="title">공지사항</p>   
+                                    
+             <!-- 게시글 정보 섹션 -->
+            <div class="content">
+                <ul>
+                    <li>
+                        <table>
+                            <tr>
+                                <td class="left">
+                                    <span>제목</span>
+                                </td>
+                                <td class="right">
+                                    <input type="text" class="in_title"></input>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>                        
+                </ul>
+                <ul>
+                    <li> 
+                        <table >
+                            <tr>
+                                <td class="left">
+                                    <span>내용</span>
+                                </td>
+                                <td class="right">
+                                    <textarea class="in_content" rows="20" ></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </li> 
+                </ul> 
+                <ul>
+                    <li> 
+                        <table >
+                            <tr>
+                                <td class="left">
+                                    <span>첨부파일</span>
+                                </td>
+                                <td class="right">
+                                    <div class="in_file"><input type="file" class="input_file"></input></div>
+                                    <div class="del_file">
+                                        <div class="file_lst">
+                                            <label class="file_nm">만화로 배우는 자바.pdf</label>
+                                            <span class="cmd_f_del"><a href="javascript:delfile();">파일삭제</a></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </li> 
+                </ul>                 
+            </div>
+
+                        
+            <div class="button_box">                
+                <div>
+                    <button class="write">작성완료</button>    
+                    <button class="cancle">취소</button>             
+                </div>
+            </div>
+
+        </section>        
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    width: 90%;
+    max-width: 1320px;
+    margin: 0 auto;    
+    padding: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+section {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+
+.notice p.title {
+    margin: 12px 0;
+    font-size: 40px;
+    color: #111111;
+    font-weight: 500;
+}
+
+.notice div.subtitle {
+    font-size: 20px;
+    margin: 16px 0 30px;   
+    color:#555555;
+}
+
+.content  {
+    border-top: 2px solid #000;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    vertical-align: middle;
+    padding: 120px;
+}
+
+.content-box{ 
+    border-top: 2px solid #000000;
+    width: 500px;
+    text-align: left;
+}
+
+.content-box ul li {
+    border-bottom: 1px solid #dddd;
+    padding: 10px 10px; 
+    height: 20px;
+}
+
+.content-box p {
+color: #333333;
+}
+.content-box label {
+    color: #333333;
+    margin-right: 10px;
+}
+
+.content-box input {
+    border: 1px solid #DDDDDD;
+}
+
+.content ul {
+    justify-content: space-between; 
+    
+}
+
+.content ul li {          
+   padding: 10px 10px;
+}
+
+.button_box div {  
+    margin: 40px 0px 60px 0px;    
+    text-align: center;  
+}
+
+.button_box button.write {    
+    padding: 6px 16px 6px 16px;
+    background-color: #333333;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+    color:#ffffff;
+}
+
+.button_box button.cancle {    
+    padding: 6px 16px 6px 16px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+
+@media screen and (max-width: 420px) {
+    
+}
+
+
+
+

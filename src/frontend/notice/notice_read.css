@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    width: 90%;
+    max-width: 1320px;
+    margin: 0 auto;    
+    padding: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+section {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.notice {
+    margin: 0 0 100px 0;
+}
+
+.notice p.title {
+    margin: 12px 0;
+    font-size: 40px;
+    color: #111111;
+    font-weight: 500;
+}
+
+.notice a {
+    text-decoration: none;
+}
+
+.notice div.subtitle {
+    font-size: 20px;
+    margin: 16px 0 30px;   
+    color:#555555;
+}
+
+
+.content  {
+    border-top: 2px solid #000;
+}
+
+.content h2.title {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.content table {
+    border: 0px 0px 0px 0px ;
+    margin: 20px 0px 20px 0px ;
+}
+
+.content span.title{
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.content span.cont{
+    font-size: 20px;
+    margin-right: 50px;
+    font-weight: 100;
+    color: #555555;
+}
+
+
+.content ul {
+    justify-content: space-between; 
+    
+}
+
+.content ul li {       
+   border-bottom: 1px solid #ddd;
+   padding: 10px 10px;
+}
+
+.content div.bodyCont{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.comment {
+    padding: 0px 0px 0px 0px;   
+}
+
+.comment table tr td{
+    padding: 10px 10px 10px 10px;
+}
+.comment span.user_icon{
+    padding: 0px 10px 0px 10px;   
+}
+
+.comment span.user_id{
+    margin-right: 20px;   
+}
+
+.comment button.user_wt{
+    padding: 2px 10px 2px 10px;   
+    background-color: #ffffff;
+    border: 1px solid #00A38B;
+    border-radius: 4px;  
+    color: #00A38B; 
+}
+
+.comment span.cmd_ctt{
+    color:#333333;
+}
+
+.comment span.cmd_dt{
+    padding: 0px 0px 0px 0px;   
+    color:#AAAAAA;
+}
+
+.comment a.cmd_re{
+    padding: 10px 10px 10px 10px;   
+    color:#AAAAAA;
+    text-decoration: none;
+
+}
+
+.comment ul li {  
+    padding: 10px 10px 10px 10px;    
+    border-bottom: 1px solid #ddd;
+}
+
+.comment div.cmd_write{
+    padding-left: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 4px; 
+}
+
+.cmd_write table{    
+    width: 100%;
+}
+
+.cmd_write textarea {
+    border:none;
+    width: 98%;
+}
+
+.cmd_write textarea:focus {
+    outline: none; 
+}
+
+.cmd_write button {
+    padding: 6px 16px 6px 16px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+.button_box div {  
+    margin: 20px 0px 60px 0px;    
+    text-align: right;  
+}
+
+.button_box button {    
+    padding: 6px 16px 6px 16px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #555;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    background-color: #555;
+    color: white;
+}
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    border: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.pagination button.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+
+@media screen and (max-width: 420px) {
+    
+}
