@@ -3,7 +3,6 @@
 
 
 
-/* div class="page" 숫자박스 수정 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 body {
@@ -39,9 +38,21 @@ footer {
     font-size: 20px;
     color: #555555;
 }
-.search_container{
-    margin-top: 39px;
+.search-container{
+    width: 70%;
+    margin: 35px auto auto auto;
+    display: flex;
+
 }
+.search-button{
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 54px;
+}
+
 .search_input {
     margin-top: 39px;
     border-radius: 45px;
@@ -51,7 +62,13 @@ footer {
 }
 
 .contents2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse; /* 세로로 배치 */
     margin-top: 54px;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 .contents1 {
@@ -77,29 +94,28 @@ footer {
     text-align: center;
 
 }
-
     
 .park-list {
     width: 100%;
     max-width: 645px;
+    height: 720px;
     border-top: 1px solid black;
     margin-top: 95px;
-}
-
-.overflow-y {
     overflow-y: scroll;
-    height: 720px;
 }
 
 .map {
     flex: 1;
     background-color: #e0e0e0;
     height: 720px;
+    max-width: 645px;
     margin-top: 98px;
     margin-left: 30px;
-    /* background-image: url("/images/map.JPG");
-    background-size: cover;
-    background-position: center center; */
+}
+
+
+.map .root_daum_roughmap {
+    width: 100% !important;
 }
 
 .park-place {
@@ -116,8 +132,10 @@ footer {
     padding: 5px;
     font-size: 14px;
 }
-
-h3 {
+.location, .parkname{
+    display: inline-block;
+}
+.parkname {
     font-size: 18px;
     color: #333;
     display: inline-block;
@@ -144,7 +162,7 @@ p {
 
 }
 
-.h3, .detail2 {
+.parkname, .detail2 {
     font-weight: 500;
 }
 
@@ -161,30 +179,50 @@ p {
     line-height: 26px;
 }
 
+.content2 {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+}
+
+.content2 > div {
+    width: calc(50% - 16px);
+}
+
+.map .root_daum_roughmap {
+    width: 100% !important;
+}
+
+
+
+@media screen and (max-width: 1380px){
+    .contents1, .contents2 {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
+
 
 @media screen and (max-width: 1000px){
-*{
-    width: 90%;
-}
 
-.location{
-    font-size: 14px;
-}
-.h3{
-    font-size: 16px;
-}
-.detail1, .detail2{
-    font-size: 16px;
-}
+    
+    .location{
+        font-size: 14px;
+    }
+    .h3{
+        font-size: 16px;
+    }
+    .detail1, .detail2{
+        font-size: 16px;
+    }
 
 
 }
 
 
 @media screen and (max-width: 768px){
-*{
-    width: 90%;
-    }
     ul{
         font-size: 13px;
     }
@@ -200,20 +238,25 @@ p {
 }
 
 @media screen and (max-width: 480px){
-*{
-    width: 90%;
-    }
     ul{
         font-size: 12px;
     }
-    .location{
-        font-size: 12px;
+    .content2{
+        flex-direction: column-reverse;
+        width: 90%;
     }
-    .h3{
+    .location{
+        font-size: 16px;
+    }
+    .parkname{
         font-size: 14px;
     }
     .detail1, .detail2{
         font-size: 12px;
+        line-height: 20px;
+    }
+    .content2 > div {
+        width: 90%;
     }
 }
 /* sub1-2 끝 */
