@@ -1,35 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/css/sub1-4.css">
     <title>Document</title>
+    <!-- css 초기화 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <!-- css 불러오기 -->
+    <link rel="stylesheet" href="/css/sub1-4.css">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <body>
-    <div class="header">헤더</div>
-<div class="sub1-4">
-    <div class="section1">
-        <h1 class="title">공원 연락하기</h1>
-        <p class="subtitle">공원명을 검색하시면, 담당부처의 연락처를 알려드립니다. </p>
-        <form action="">
-            <div class="search-bar">
-                <input type="text" name="" placeholder="공원명을 검색하세요.">
-                <button type="submit"></button></button>
-            </div>
-        </form>
-    </div>
-    
+    <header>
+        <h1>헤더</h1>
+    </header>
+<div class="sub1-2">
 
-    <div class="container1">
-        <div class="c2">
-             <!-- * 카카오맵 - 지도퍼가기 -->
+    <section class="contents1">
+        <p class="title1">공원 연락하기</p>
+        <p class="subtitle1">공원명을 검색하시면, 담당부처의 연락처를 알려드립니다</p>
+        <ul class="search_container">
+            <li class="search">
+                <div class="search_div">
+                    <form action="/Integrated Search.html">
+                        <input type="text" name="" id="" placeholder="공원명을 검색하세요">
+                        <span class="material-icons">search</span>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+<!--    <ul class="regions">
+        <a href="">
+            <li class="region">서울</li>
+        </a>
+        <a href="">
+            <li class="region">경기</li>
+        </a>
+        <a href="">
+            <li class="region">인천</li>
+        </a>
+        <a href="">
+            <li class="region">충북</li>
+        </a>
+        <a href="">
+            <li class="region">충남</li>
+        </a>
+        <a href="">
+            <li class="region">경북</li>
+        </a>
+        <a href="">
+            <li class="region">경남</li>
+        </a>
+        <a href="">
+            <li class="region">전북</li>
+        </a>
+        <a href="">
+            <li class="region">전남</li>
+        </a>
+        <a href="">
+            <li class="region">제주</li>
+        </a>
+    </ul> -->
+    <section class="contents2">
+
+        <div class="content2">
+            <div>
+                <ul>
+                    <div class="left">
+                        <ul class="park-list">
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">구룡어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 964</p>
+                                </li>
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">반수어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 980-44</p>
+                                </li>
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">남문어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 160-6</p>
+                                </li>
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">한사랑어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 925-2</p>
+                                </li>
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">구룡어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 964</p>
+                                </li>
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">반수어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 980-44</p>
+                                </li>
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">남문어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 160-6</p>
+                                </li>
+                            <li class="park-place">
+                                <span class="location">서울</span>
+                                <h3 class="parkname">한사랑어린이공원</h3>
+                                <p class="detail1">Lorem Ipsum is simply dummy text of the printing and 
+                                    typesetting industry. Lorem Ipsum has been the industry's </p>
+                                <p class="detail2">서울특별시 금천구 독산동 925-2</p>
+                            </li>
+                        </ul>
+                        <div class="page">
+                            <a class="page-link">&lt;&lt;</a>
+                            <a class="page-link">&lt;</a>
+                            <a class="page-link">1</a>
+                            <a class="page-link">2</a>
+                            <a class="page-link">3</a>
+                            <a class="page-link">4</a>
+                            <a class="page-link">5</a>
+                            <a class="page-link">&gt;</a>
+                            <a class="page-link">&gt;&gt;</a>
+                        </div>
+                    </div>
+            </div>
+                <div class="map">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
                     <!-- 1. 지도 노드 -->
                     <div id="daumRoughmapContainer1729150537247" class="root_daum_roughmap root_daum_roughmap_landing"></div>
     
@@ -48,61 +163,16 @@
                             "mapHeight" : "720"
                         }).render();
                     </script>
-        </div>
-        <div class="c1">
-            <div class="maininfo">
-                <p class="result">새싹공원 담당부처</p>
-                <p class="resultcnt">전체 검색결과 총 6건</p>
-            </div>
-<div class="resultlist">
-            <div class="list">
-                <span class="tag">서울</span> 
-                <span class="treename">새싹공원</span><br>
-                <p class="phone">031-310-3864</p>
-                <p class="address">경기도 시흥시 정왕동 1412-9</p>
-            </div>
-            <div class="list">
-                <span class="tag">서울</span> 
-                <span class="treename">새싹공원</span><br>
-                <p class="phone">031-310-3864</p>
-                <p class="address">경기도 시흥시 정왕동 1412-9</p>
-            </div>
-            <div class="list">
-                <span class="tag">서울</span> 
-                <span class="treename">새싹공원</span><br>
-                <p class="phone">031-310-3864</p>
-                <p class="address">경기도 시흥시 정왕동 1412-9</p>
-            </div>
-            <div class="list">
-                <span class="tag">서울</span> 
-                <span class="treename">새싹공원</span><br>
-                <p class="phone">031-310-3864</p>
-                <p class="address">경기도 시흥시 정왕동 1412-9</p>
-            </div>
-            <div class="list">
-                <span class="tag">서울</span> 
-                <span class="treename">새싹공원</span><br>
-                <p class="phone">031-310-3864</p>
-                <p class="address">경기도 시흥시 정왕동 1412-9</p>
-            </div>
-            <div class="list">
-                <span class="tag">서울</span> 
-                <span class="treename">새싹공원</span><br>
-                <p class="phone">031-310-3864</p>
-                <p class="address">경기도 시흥시 정왕동 1412-9</p>
-            </div>
-            <div class="list">
-                <span class="tag">서울</span> 
-                <span class="treename">새싹공원</span><br>
-                <p class="phone">031-310-3864</p>
-                <p class="address">경기도 시흥시 정왕동 1412-9</p>
-            </div>
-</div>
+                </div>
         </div>
 
-    </div>
+
+        
+    </section>
 </div>
-    <div class="footer"></div>
+    <footer>
+        <h1>푸터</h1>
+       
+    </footer>
 </body>
-
 </html>
