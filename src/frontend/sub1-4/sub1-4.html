@@ -13,77 +13,91 @@
 </head>
 
 <body>
-    <div class="header"></div>
+    <div class="header">헤더</div>
 <div class="sub1-4">
     <div class="section1">
-        <h1>지역별 보호수 찾기</h1>
-        <p>우리 생활속 보호수의 위치를 찾아보세요</p>
+        <h1 class="title">공원 연락하기</h1>
+        <p class="subtitle">공원명을 검색하시면, 담당부처의 연락처를 알려드립니다. </p>
         <form action="">
             <div class="search-bar">
-                <input type="text" name="" placeholder="상세주소로 검색하기">
+                <input type="text" name="" placeholder="공원명을 검색하세요.">
                 <button type="submit"></button></button>
             </div>
         </form>
     </div>
     
-    <ul>
-        <a href="">
-            <li>서울</li>
-        </a>
-        <a href="">
-            <li>경기</li>
-        </a>
-        <a href="">
-            <li>인천</li>
-        </a>
-        <a href="">
-            <li>충북</li>
-        </a>
-        <a href="">
-            <li>충남</li>
-        </a>
-        <a href="">
-            <li>경북</li>
-        </a>
-        <a href="">
-            <li>경남</li>
-        </a>
-        <a href="">
-            <li>전북</li>
-        </a>
-        <a href="">
-            <li>전남</li>
-        </a>
-        <a href="">
-            <li>제주</li>
-        </a>
-    </ul>
 
     <div class="container1">
         <div class="c2">
-          
+             <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1729150537247" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+    
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1729150537247",
+                            "key" : "2kx9w",
+                            "mapWidth" : "645",
+                            "mapHeight" : "720"
+                        }).render();
+                    </script>
         </div>
         <div class="c1">
+            <div class="maininfo">
+                <p class="result">새싹공원 담당부처</p>
+                <p class="resultcnt">전체 검색결과 총 6건</p>
+            </div>
+<div class="resultlist">
             <div class="list">
-                <span class="tag">서울</span> <span class="treename">보호수명</span><br>
-                <p>설명</p>
-                <p class="address">보호수 주소</p>
+                <span class="tag">서울</span> 
+                <span class="treename">새싹공원</span><br>
+                <p class="phone">031-310-3864</p>
+                <p class="address">경기도 시흥시 정왕동 1412-9</p>
             </div>
             <div class="list">
-                <span class="tag">서울</span> <span class="treename">보호수명</span> <br>
-                <p>설명</p>
-                <p class="address">보호수 주소</p>
+                <span class="tag">서울</span> 
+                <span class="treename">새싹공원</span><br>
+                <p class="phone">031-310-3864</p>
+                <p class="address">경기도 시흥시 정왕동 1412-9</p>
             </div>
             <div class="list">
-                <span class="tag">서울</span> <span class="treename">보호수명</span> <br>
-                <p>설명</p>
-                <p class="address">보호수 주소</p>
+                <span class="tag">서울</span> 
+                <span class="treename">새싹공원</span><br>
+                <p class="phone">031-310-3864</p>
+                <p class="address">경기도 시흥시 정왕동 1412-9</p>
             </div>
             <div class="list">
-                <span class="tag">서울</span> <span class="treename">보호수명</span> <br>
-                <p>설명</p>
-                <p class="address">보호수 주소</p>
+                <span class="tag">서울</span> 
+                <span class="treename">새싹공원</span><br>
+                <p class="phone">031-310-3864</p>
+                <p class="address">경기도 시흥시 정왕동 1412-9</p>
             </div>
+            <div class="list">
+                <span class="tag">서울</span> 
+                <span class="treename">새싹공원</span><br>
+                <p class="phone">031-310-3864</p>
+                <p class="address">경기도 시흥시 정왕동 1412-9</p>
+            </div>
+            <div class="list">
+                <span class="tag">서울</span> 
+                <span class="treename">새싹공원</span><br>
+                <p class="phone">031-310-3864</p>
+                <p class="address">경기도 시흥시 정왕동 1412-9</p>
+            </div>
+            <div class="list">
+                <span class="tag">서울</span> 
+                <span class="treename">새싹공원</span><br>
+                <p class="phone">031-310-3864</p>
+                <p class="address">경기도 시흥시 정왕동 1412-9</p>
+            </div>
+</div>
         </div>
 
     </div>
