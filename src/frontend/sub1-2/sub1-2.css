@@ -5,6 +5,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
+
+.search_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+ul.search_container li.search {
+    width: 644px;
+}
+ul.search_container li.search .search_div {
+    position: relative;
+}
+ul.search_container li.search .search_div span {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 100;
+}
+ul.search_container li.search .search_div input[type="text"] {
+    width: 644px;
+    height: 54px;
+    border: 1px solid #00A38B;
+    border-radius: 27px;
+    padding: 0 34px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+ul.search_container li.search .search_div input:focus {
+    border-color:#00A38B;
+    border: 2px solid #00A38B;
+    outline: none;
+}
+
+
 body {
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -28,8 +65,8 @@ footer {
 
 .title1 {
     font-size: 40px;
-    margin: 0 auto;
     color: black;
+    margin-top: 100px;
     font-weight: 700;
 }
 
@@ -38,47 +75,20 @@ footer {
     font-size: 20px;
     color: #555555;
 }
-.search-container{
-    width: 70%;
-    margin: 35px auto auto auto;
-    display: flex;
 
-}
-.search-button{
-    padding: 10px 20px;
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    height: 54px;
-}
-
-.search_input {
-    margin-top: 39px;
-    border-radius: 45px;
-    width: 620px;
-    height: 54px;
-    font-size: 16px;
-}
 
 .contents2 {
-    display: flex;
-    justify-content: center;
     flex-direction: column-reverse; /* 세로로 배치 */
     margin-top: 54px;
     width: 100%;
     max-width: 1320px;
-    margin: 0 auto;
 }
 
 .contents1 {
     text-align: center;
 }
 
-.park-map-container {
-    display: flex;
-}
-.regions {
+/* .regions {
     display: flex;
     list-style-type: none;
     margin: 55px auto 100px auto;
@@ -93,7 +103,7 @@ footer {
     border-bottom: 1px solid #555;
     text-align: center;
 
-}
+} */
     
 .park-list {
     width: 100%;
@@ -105,12 +115,9 @@ footer {
 }
 
 .map {
-    flex: 1;
     background-color: #e0e0e0;
-    height: 720px;
     max-width: 645px;
     margin-top: 98px;
-    margin-left: 30px;
 }
 
 
@@ -183,6 +190,8 @@ p {
     width: 100%;
     max-width: 1320px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content2 > div {
@@ -200,29 +209,46 @@ p {
         width: 90%;
         align-items: center;
         justify-content: center;
-        
+        margin-top: 34px;
+    }
+    .park-list{
+        width: 100%;
+        max-width: 100%;
     }
 }
 
 
 @media screen and (max-width: 1000px){
+.search_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.map .root_daum_roughmap {
+    width: 100%;
+    max-width: 100%;
+}
 
-    
-    .location{
-        font-size: 14px;
+    .content2{
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
     }
-    .h3{
-        font-size: 16px;
+    .content2 > div {
+        width: 100%;
+        max-width: 100%;
     }
-    .detail1, .detail2{
-        font-size: 16px;
+    .map{
+        width: 100%;
+        max-width: 100%;
     }
-
-
 }
 
 
 @media screen and (max-width: 768px){
+    .title1{
+        margin-top: 30px;
+    }
     ul{
         font-size: 13px;
     }
@@ -235,28 +261,43 @@ p {
     .detail1, .detail2{
         font-size: 14px;
     }
+    .content2{
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+    }
+    .content2 > div {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search_container{
+        width: 100%;
+    }
+
+    ul.search_container li.search .search_div input[type="text"] {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px){
-    ul{
+    .park-list{
         font-size: 12px;
     }
-    .content2{
-        flex-direction: column-reverse;
-        width: 90%;
-    }
     .location{
-        font-size: 16px;
+        font-size: 14px;
     }
     .parkname{
-        font-size: 14px;
+        font-size: 16px;
     }
     .detail1, .detail2{
         font-size: 12px;
         line-height: 20px;
     }
-    .content2 > div {
-        width: 90%;
+    .content2{
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
     }
 }
 /* sub1-2 끝 */
