@@ -1,0 +1,184 @@
+
+.contents1, .contents2, .contents3 {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contents1 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 130px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+span{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.map0 .root_daum_roughmap {
+    width: 100%;
+    height: 500px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.categories ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    text-align: center;
+    font-size: 14px;
+    color: #555555;
+}
+
+.contents3{
+    margin-top: 30px;
+}
+.park-map-container{
+    max-width: 1320px;
+    width: 100%;
+}
+
+.park-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;  
+    width: 1320px;
+    justify-content: space-between;
+}
+
+.park-place {
+    background: #fff;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px #DDDDDD;
+    padding: 15px;
+    box-sizing: border-box;
+    flex : 0 0 calc(50% - 15px);
+}
+.park-list > li:nth-child(1),
+.park-list > li:nth-child(2) {
+    border-top: 1px solid black; /* 상단 항목에 검은 줄 추가 */
+}
+
+.subtitle1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.detail1, .detail2 {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.tag {
+    font-size: 16;
+    background-color: #27ae60;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+    padding: 2px 15px;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 8px;
+    margin: 0 4px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+.page-link:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+
+
+@media screen and (max-width: 1380px) {
+    .contents1, .contents2, .contents3   {
+      width: 90%;
+     }
+  
+  
+  
+  
+  }
+  @media screen and (max-width: 1000px) {
+      .title{
+          font-size: 30px;
+      }
+      .detail2, .detail1{
+          font-size: 16px;
+      }
+  }
+  @media screen and (max-width: 768px) {
+      .title{
+          font-size: 26px;
+      }
+      .detail1, .detail2{
+          font-size: 15px;
+      }
+  }
+  
+  @media screen and (max-width: 480px) {
+  .container1{
+      flex-direction: column;
+  }
+  .title{
+      font-size: 22px;
+  }
+  .c1, .c2{
+      width: 90%;
+      align-items: center;
+      margin-left: 30px;
+  }
+  .result{
+      font-size: 18px;
+  }
+  .resultcnt{
+      font-size: 14px;
+  }
+  .address{
+      font-size: 13px;
+  }
+  }
+  /* sub1-4 끝 */
