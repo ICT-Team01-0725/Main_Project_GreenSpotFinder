@@ -11,22 +11,27 @@
     <!-- fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Material icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>헤더</h1>
     </header>
 <div class="sub1-2">
+
     <section class="contents1">
         <p class="title1">지역별 공원 찾기</p>
         <p class="subtitle1">가고 싶은 공원의 위치를 확인해보세요</p>
-        <div class="search-container">
-                <input type="text" class="search_input" placeholder="상세주소로 검색하기">
-                <button type="submit" class="search-button">
-                    <i class="material-symbols-outlined">search</i>
-                </button>
-        </div>
+        <ul class="search_container">
+            <li class="search">
+                <div class="search_div">
+                    <form action="/Integrated Search.html">
+                        <input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+                        <span class="material-icons">search</span>
+                    </form>
+                </div>
+            </li>
+        </ul>
     </section>
 
 <!--    <ul class="regions">
@@ -63,10 +68,10 @@
     </ul> -->
     <section class="contents2">
 
-        <div class="content2" style="display: flex;">
+        <div class="content2">
             <div>
-                <ul style="display: flex;">
-                    <li class="left">
+                <ul>
+                    <div class="left">
                         <ul class="park-list">
                             <li class="park-place">
                                 <span class="location">서울</span>
@@ -136,9 +141,8 @@
                             <a class="page-link">&gt;</a>
                             <a class="page-link">&gt;&gt;</a>
                         </div>
-                    </li>
+                    </div>
             </div>
-            <div>
                 <div class="map">
                     <!-- * 카카오맵 - 지도퍼가기 -->
                     <!-- 1. 지도 노드 -->
@@ -160,7 +164,6 @@
                         }).render();
                     </script>
                 </div>
-            </div>
         </div>
 
 
