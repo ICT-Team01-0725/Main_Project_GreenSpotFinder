@@ -1,14 +1,46 @@
-/* sub2-2 시작 */
+/* sub1-2 시작 */
 
 
 
 
-
-
-
-
-/* div class="page" 숫자박스 수정 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+.search_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+ul.search_container li.search {
+    width: 644px;
+}
+ul.search_container li.search .search_div {
+    position: relative;
+}
+ul.search_container li.search .search_div span {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 100;
+}
+ul.search_container li.search .search_div input[type="text"] {
+    width: 644px;
+    height: 54px;
+    border: 1px solid #00A38B;
+    border-radius: 27px;
+    padding: 0 34px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+ul.search_container li.search .search_div input:focus {
+    border-color:#00A38B;
+    border: 2px solid #00A38B;
+    outline: none;
+}
+
 
 body {
     font-family: "Noto Sans KR", sans-serif;
@@ -33,9 +65,9 @@ footer {
 
 .title1 {
     font-size: 40px;
-    margin: 0 auto;
     color: black;
-    font-weight: 500;
+    margin-top: 100px;
+    font-weight: 700;
 }
 
 .subtitle1 {
@@ -43,29 +75,19 @@ footer {
     font-size: 20px;
     color: #555555;
 }
-.search_container{
-    margin-top: 39px;
-}
-.search_input {
-    margin-top: 39px;
-    border-radius: 45px;
-    width: 620px;
-    height: 54px;
-    font-size: 16px;
-}
 
 .contents2 {
+    flex-direction: column-reverse; /* 세로로 배치 */
     margin-top: 54px;
+    width: 100%;
+    max-width: 1320px;
 }
 
 .contents1 {
     text-align: center;
 }
 
-.park-map-container {
-    display: flex;
-}
-.regions {
+/* .regions {
     display: flex;
     list-style-type: none;
     margin: 55px auto 100px auto;
@@ -80,32 +102,31 @@ footer {
     border-bottom: 1px solid #555;
     text-align: center;
 
-}
+} */
+    
+
+
 .street-list {
     width: 100%;
     max-width: 645px;
+    height: 720px;
     border-top: 1px solid black;
     margin-top: 95px;
-}
-
-.overflow-y {
     overflow-y: scroll;
-    height: 720px;
 }
 
 .map {
-    flex: 1;
     background-color: #e0e0e0;
-    height: 720px;
+    max-width: 645px;
     margin-top: 98px;
-    margin-left: 30px;
-    /* background-image: url("/images/map.JPG");
-    background-size: cover;
-    background-position: center center; */
 }
 
-.tree-linedstreet {
-    background: #f5f5f5;
+
+.map .root_daum_roughmap {
+    width: 100% !important;
+}
+
+.street-place {
     padding: 25px 15px;
     border-bottom: 1px solid #DDDDDD;
 }
@@ -114,12 +135,17 @@ footer {
     display: inline-block;
     background-color: #00a884;
     color: white;
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 5px;
     font-size: 14px;
+    width: 70px;
+    line-height: 12px;
+    text-align: center;
 }
-
-h3 {
+.location, .streetname{
+    display: inline-block;
+}
+.streetname {
     font-size: 18px;
     color: #333;
     display: inline-block;
@@ -145,88 +171,132 @@ p {
     border-radius: 5px;
 
 }
-
-.h3, .detail2 {
-    font-weight: 500;
-}
-
-.detail1 {
-    font-weight: 400;
-    margin-top: 15px;
-}
-.detail2 {
-    margin-top: 11px;
+.streetname, .detail1, .detail2{
+    font-weight: 600;
 }
 .detail3{
-    margin-top: 12px;
-    font-size: 16px;
     font-weight: 400;
+}
+
+.detail1, .detail2, .detail3 {
+    margin-top: 10px;
+    font-size: 16px;
     line-height: 26px;
 }
 
-.detail1, .detail2 {
-    font-size: 16px;
-    line-height: 32px;
+
+.content2 {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media screen and (max-width: 1000px){
-    *{
+.content2 > div {
+    width: calc(50% - 16px);
+}
+
+.map .root_daum_roughmap {
+    width: 100% !important;
+}
+
+
+
+@media screen and (max-width: 1380px){
+    .contents1, .contents2 {
         width: 90%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 34px;
     }
-    
-    .regions{
+    .street-list{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+.search_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.map .root_daum_roughmap {
+    width: 100%;
+    max-width: 100%;
+}
+
+    .content2{
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+    }
+    .content2 > div {
+        width: 100%;
+        max-width: 100%;
+    }
+    .map{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .title1{
+        margin-top: 30px;
+    }
+    ul{
+        font-size: 13px;
+    }
+    .location{
+        font-size: 13px;
+    }
+    .h3{
+        font-size: 15px;
+    }
+    .detail1, .detail2, .detail3{
         font-size: 14px;
+    }
+    .content2{
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+    }
+    .content2 > div {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search_container{
+        width: 100%;
+    }
+
+    ul.search_container li.search .search_div input[type="text"] {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .street-list{
+        font-size: 12px;
     }
     .location{
         font-size: 14px;
     }
-    .h3{
+    .streetname{
         font-size: 16px;
     }
     .detail1, .detail2, .detail3{
-        font-size: 16px;
+        font-size: 12px;
+        line-height: 20px;
     }
-    .detail3{
-
+    .content2{
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
     }
-    
-    
-    }
-    
-    
-    @media screen and (max-width: 768px){
-    *{
-        width: 90%;
-        }
-        .regions{
-            font-size: 13px;
-        }
-        .location{
-            font-size: 13px;
-        }
-        .h3{
-            font-size: 15px;
-        }
-        .detail1, .detail2, .detail3{
-            font-size: 14px;
-        }
-    }
-    
-    @media screen and (max-width: 480px){
-    *{
-        width: 90%;
-        }
-        .regions{
-            font-size: 12px;
-        }
-        .location{
-            font-size: 12px;
-        }
-        .h3{
-            font-size: 14px;
-        }
-        .detail1, .detail2, .detail3{
-            font-size: 12px;
-        }
-    }
-/* sub2-2 끝 */
+}
+/* sub1-2 끝 */
