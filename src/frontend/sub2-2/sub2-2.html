@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- css 초기화 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <!-- css 불러오기 -->
-    <link rel="stylesheet" href="/css/sub2-2.css">
-    <!-- fontawsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Material icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- css 초기화 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+        <!-- css 불러오기 -->
+        <link rel="stylesheet" href="/css/sub2-2.css">
+        <!-- fontawsome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Material icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head> 
 <body>
     <header>
         <h1>헤더</h1>
     </header>
 <div class="sub2-2">
+   
     <section class="contents1">
         <p class="title1">지역별 가로수길 찾기</p>
         <p class="subtitle1">가고 싶은 가로수길의 위치를 확인해보세요</p>
-        <div class="search-container">
-                <input type="text" class="search_input" placeholder="상세주소로 검색하기">
-                <button type="submit" class="search-button">
-                    <i class="material-symbols-outlined">search</i>
-                </button>
-        </div>
+        <ul class="search_container">
+            <li class="search">
+                <div class="search_div">
+                    <form action="/Integrated Search.html">
+                        <input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+                        <span class="material-icons">search</span>
+                    </form>
+                </div>
+            </li>
+        </ul>
     </section>
 
-    <ul class="regions">
+<!--    <ul class="regions">
         <a href="">
             <li class="region">서울</li>
         </a>
@@ -60,91 +65,89 @@
         <a href="">
             <li class="region">제주</li>
         </a>
-    </ul>
+    </ul> -->
     <section class="contents2">
 
-        <div class="park-map-container">
-            <ul class="street-list">
-                <ul class="overflow-y">
-                    <li class="tree-linedstreet">
-                        <span class="location">서울</span>
-                        <h3>가로공원로</h3>
-                        <p class="detail1">서울특별시 강서구</p>
-                        <p class="detail2">화곡터널입구 ~ 화곡7치안센터</p>
-                        <p class="detail3">다양한 화목류를 이용하여 띠녹지가 조성되어 있음</p>
-                        </li>
-                    <li class="tree-linedstreet">
-                        <span class="location">서울</span>
-                        <h3>강서로</h3>
-                        <p class="detail1">서울특별시 강서구</p>
-                        <p class="detail2">국회대로7길 ~ 강서로5나길</p>
-                        <p class="detail3">주 식재수종은 은행나무이며  띠녹지가 다른 가로에 비해 발달한 가로임</p>
-                        </li>
-                    <li class="tree-linedstreet">
-                        <span class="location">서울</span>
-                        <h3>곰달래로</h3>
-                        <p class="detail1">서울특별시 강서구</p>
-                        <p class="detail2">강서공고 ~ 대한항공김포세관</p>
-                        <p class="detail3">벚나무가 식재된 가로수길로 봄꽃길로 알려져 있음</p>
-                        </li>
-                    <li class="tree-linedstreet">
-                        <span class="location">서울</span>
-                        <h3>가로공원로</h3>
-                        <p class="detail1">서울특별시 강서구</p>
-                        <p class="detail2">화곡터널입구 ~ 화곡7치안센터</p>
-                        <p class="detail3">다양한 화목류를 이용하여 띠녹지가 조성되어 있음</p>
-                        </li>
-                    <li class="tree-linedstreet">
-                        <span class="location">서울</span>
-                        <h3>강서로</h3>
-                        <p class="detail1">서울특별시 강서구</p>
-                        <p class="detail2">국회대로7길 ~ 강서로5나길</p>
-                        <p class="detail3">주 식재수종은 은행나무이며  띠녹지가 다른 가로에 비해 발달한 가로임</p>
-                        </li>
-                    <li class="tree-linedstreet">
-                        <span class="location">서울</span>
-                        <h3>곰달래로</h3>
-                        <p class="detail1">서울특별시 강서구</p>
-                        <p class="detail2">강서공고 ~ 대한항공김포세관</p>
-                        <p class="detail3">벚나무가 식재된 가로수길로 봄꽃길로 알려져 있음</p>
-                        </li>
-                    
-                </ul>
-                <div class="page">
-                    <a class="page-link">&lt;&lt;</a>
-                    <a class="page-link">&lt;</a>
-                    <a class="page-link">1</a>
-                    <a class="page-link">2</a>
-                    <a class="page-link">3</a>
-                    <a class="page-link">4</a>
-                    <a class="page-link">5</a>
-                    <a class="page-link">&gt;</a>
-                    <a class="page-link">&gt;&gt;</a>
-                </div>
-            </ul>
-
-            <div class="map">
-                <!-- * 카카오맵 - 지도퍼가기 -->
-                <!-- 1. 지도 노드 -->
-                <div style="width: 100%; height: 720px;" id="daumRoughmapContainer1729150537247" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-                <!--
-                    2. 설치 스크립트
-                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-                -->
-                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-                <!-- 3. 실행 스크립트 -->
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp" : "1729150537247",
-                        "key" : "2kx9w",
-                        "mapWidth" : "645",
-                        "mapHeight" : "720"
-                    }).render();
-                </script>
+        <div class="content2">
+            <div>
+                <ul>
+                    <div class="left">
+                        <ul class="street-list">
+                            <li class="street-place">
+                                <span class="location">서울</span>
+                                <h3 class="streetname">가로공원로</h3>
+                                <p class="detail1">서울특별시 강서구</p>
+                                <p class="detail2">화곡터널입구 ~ 화곡7치안센터</p>
+                                <p class="detail3">다양한 화목류를 이용하여 띠녹지가 조성되어 있음</p>
+                            </li>
+                            <li class="street-place">
+                                <span class="location">서울</span>
+                                <h3 class="streetname">가로공원로</h3>
+                                <p class="detail1">서울특별시 강서구</p>
+                                <p class="detail2">화곡터널입구 ~ 화곡7치안센터</p>
+                                <p class="detail3">다양한 화목류를 이용하여 띠녹지가 조성되어 있음</p>
+                            </li>
+                            <li class="street-place">
+                                <span class="location">서울</span>
+                                <h3 class="streetname">가로공원로</h3>
+                                <p class="detail1">서울특별시 강서구</p>
+                                <p class="detail2">화곡터널입구 ~ 화곡7치안센터</p>
+                                <p class="detail3">다양한 화목류를 이용하여 띠녹지가 조성되어 있음</p>
+                            </li>
+                            <li class="street-place">
+                                <span class="location">서울</span>
+                                <h3 class="streetname">가로공원로</h3>
+                                <p class="detail1">서울특별시 강서구</p>
+                                <p class="detail2">화곡터널입구 ~ 화곡7치안센터</p>
+                                <p class="detail3">다양한 화목류를 이용하여 띠녹지가 조성되어 있음</p>
+                            </li>
+                            <li class="street-place">
+                                <span class="location">서울</span>
+                                <h3 class="streetname">가로공원로</h3>
+                                <p class="detail1">서울특별시 강서구</p>
+                                <p class="detail2">화곡터널입구 ~ 화곡7치안센터</p>
+                                <p class="detail3">다양한 화목류를 이용하여 띠녹지가 조성되어 있음</p>
+                            </li>
+                          
+                        </ul>
+                        <div class="page">
+                            <a class="page-link">&lt;&lt;</a>
+                            <a class="page-link">&lt;</a>
+                            <a class="page-link">1</a>
+                            <a class="page-link">2</a>
+                            <a class="page-link">3</a>
+                            <a class="page-link">4</a>
+                            <a class="page-link">5</a>
+                            <a class="page-link">&gt;</a>
+                            <a class="page-link">&gt;&gt;</a>
+                        </div>
+                    </div>
             </div>
+                <div class="map">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1729150537247" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+    
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1729150537247",
+                            "key" : "2kx9w",
+                            "mapWidth" : "645",
+                            "mapHeight" : "720"
+                        }).render();
+                    </script>
+                </div>
         </div>
+
+
+        
     </section>
 </div>
     <footer>
