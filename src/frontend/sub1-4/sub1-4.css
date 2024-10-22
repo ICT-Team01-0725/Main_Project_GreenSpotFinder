@@ -71,7 +71,7 @@ footer {
 }
 
 .subtitle1 {
-    margin-top: 16px;
+    margin-top: 20px;
     font-size: 20px;
     color: #555555;
 }
@@ -104,16 +104,41 @@ footer {
     text-align: center;
 
 } */
-    
+
+.charger{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.resultcnt{
+    font-size: 16px;
+}
+
 .park-list {
-    width: 100%;
-    max-width: 645px;
+    display: flex;
+    flex-direction: column;
     height: 720px;
     border-top: 1px solid black;
     margin-top: 95px;
-    overflow-y: scroll;
+    overflow: hidden; /* 전체 영역에 스크롤 생기지 않도록 */
 }
 
+.parkinfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    flex-shrink: 0; /* 내용에 맞게 높이 조절 */
+    padding: 16px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.scroll {
+    flex-grow: 1; /* 나머지 공간 사용 */
+    overflow-y: auto; /* 스크롤 가능하게 설정 */
+}
 .map {
     background-color: #e0e0e0;
     max-width: 645px;
@@ -128,6 +153,8 @@ footer {
 .park-place {
     padding: 25px 15px;
     border-bottom: 1px solid #DDDDDD;
+    align-items: flex-start;
+    padding: 15px;
 }
 
 .location {
@@ -194,6 +221,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;
 }
 
 .content2 > div {
