@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 전체 박스 설정 */
+
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    height: 1080px;
+    background-color: #E9F7FF;
+    margin: 0 auto;
+
+
+    justify-content: center;
+}
+
+
+
+/* 사이드 바 */
+
+.side-bar {
+
+
+    max-width: 380px;
+    display: flex;
+}
+
+.icon-bar {
+    width: 100px;
+    background-color: blue;
+}
+
+.search-menu {
+    background-color: #2f5aff;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    height: 30vh;
+    text-align: center;
+    align-content: center;
+    background-color: #2f5aff;
+}
+
+.profile p {
+    background-color: #2f5aff;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.controller {
+    text-align: center;
+    align-content: center;
+    font-size: 25px;
+
+}
+
+.menu {
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background-color: #2f5aff;
+
+}
+
+.topmenu {
+    font-size: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    background-color: #2f5aff;
+}
+
+.topmenu p {
+    color: white;
+    background-color: #2f5aff;
+    /* padding: 10px; */
+    display: inline-block;
+}
+
+i {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #2f5aff;
+}
+
+.submenu {
+    font-size: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transform: max-height 0.3s ease-in-out;
+    background-color: #4B6EFE;
+    color: white;
+    text-align: left;
+}
+
+
+.menu.active .submenu {
+    max-height: 200px;
+    border-top: 1px solid silver;
+    transition: max-height 0.1s ease-in-out;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.menubtn {
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background-color: #2f5aff;
+}
+
+
+
+.menu.active {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1D44F7;
+}
+
+.menu.active .topmenu p,
+.menu.active .topmenu i {
+    background-color: #1D44F7;
+}
+
+.menu.active .topmenu {
+    background-color: #1D44F7;
+}
+
+.menu.active .submenu a {
+    background-color: #4B6EFE;
+    color: white
+}
+
+.logout {
+    margin-top: auto;
+    background-color: #002AC9;
+    vertical-align: bottom;
+}
+
+.logout i {
+    background-color: #002AC9;
+    padding: 10px;
+    margin-left: 0.8rem;
+    color: white;
+    
+}
+
+.logout a {
+    background-color: #002AC9;
+    text-align: left;
+    padding: 20px 20px 20px 5px;
+    display: inline-block
+}
+
+.logout a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* 메인 컨텐츠 */
+
+
+.popuplayer {
+    width: calc(100% - 380px);
+    margin: 30px;
+    box-sizing: border-box;
+
+
+    height: 950px;
+    background-color: white;
+    /* margin: 50px auto 50px auto; */
+}
+
+
+
+table {
+    border-collapse: collapse;
+}
+
+table tr td, table tr td select{
+    background-color: white;
+    text-align: center;
+}
+
+.popuptable tr td
+ {
+    border: 1px solid #ddd;
+    padding : 10px;
+    align-content: center;
+    
+}
+
+
+td:first-child{
+    width : 200px;
+    height : 40px;
+    background-color: #eee;
+    text-align: center;
+    vertical-align: center;
+    
+}
+td:last-child{
+    width: 600px;
+    text-align: left;
+    padding : 0 30px;
+}
+
+td:nth-child(2){
+    width : 500px;
+    text-align: left;
+    padding : 0 30px;
+    font-size : 12px;
+}
+
+td:nth-child(1),td:nth-child(2),td:nth-child(3){
+
+    border-left: none;
+    border-right: none;
+}
+
+.popuplayer p, .popuplayer table {
+    width : 95%;
+    margin: 20px auto;
+
+}
+
+.popuplayer p {
+    padding : 10px;
+}
+
+
+[type="checkbox"] {
+   margin : 0 5px 0 10px;
+}
+
+[type="select"] {
+    margin : 0 50px;
+}
+
+
+.btns {
+    text-align: right;
+    margin-right : 60px;
+    margin-top: 50px;
+}
+
+.btns button {
+    font-size : 16px;
+    padding : 5px 30px;
+    margin : 0 5px;
+    border-radius: 17.665px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #000;
+}
+
+.btns button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+input[type="text"] {
+    width : 200px;
+    height: 30px;
+    border : 1px solid #ddd;
+}
+
+.textarea {
+width : 700px;
+height : 200px;
+border : 1px solid #000;
+resize: none;
+
+}
