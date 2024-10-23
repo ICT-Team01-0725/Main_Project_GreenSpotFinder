@@ -1,10 +1,5 @@
-/* sub1-2 시작 */
-
-
-
-
+/* sub1-4 시작 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
 
 .search_container {
     display: flex;
@@ -12,12 +7,15 @@
     justify-content: center;
     margin-top: 30px;
 }
+
 ul.search_container li.search {
     width: 644px;
 }
+
 ul.search_container li.search .search_div {
     position: relative;
 }
+
 ul.search_container li.search .search_div span {
     position: absolute;
     top: 15px;
@@ -26,6 +24,7 @@ ul.search_container li.search .search_div span {
     font-size: 24px;
     font-weight: 100;
 }
+
 ul.search_container li.search .search_div input[type="text"] {
     width: 644px;
     height: 54px;
@@ -35,8 +34,9 @@ ul.search_container li.search .search_div input[type="text"] {
     box-sizing: border-box;
     font-size: 16px;
 }
+
 ul.search_container li.search .search_div input:focus {
-    border-color:#00A38B;
+    border-color: #00A38B;
     border: 2px solid #00A38B;
     outline: none;
 }
@@ -45,9 +45,10 @@ ul.search_container li.search .search_div input:focus {
 body {
     font-family: "Noto Sans KR", sans-serif;
 }
+
 header {
     height: 70px;
-    background-color: #fff; 
+    background-color: #fff;
     border-bottom: 1px solid #00A38B;
 }
 
@@ -57,11 +58,14 @@ footer {
     margin-top: 150px;
 }
 
-.contents1, .contents2 {
+.contents1,
+.contents2 {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
 }
+
+
 
 .title1 {
     font-size: 40px;
@@ -76,48 +80,49 @@ footer {
     color: #555555;
 }
 
-
 .contents2 {
-    flex-direction: column-reverse; /* 세로로 배치 */
-    margin-top: 54px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
     width: 100%;
     max-width: 1320px;
+    margin-top: 54px;
 }
 
 .contents1 {
     text-align: center;
 }
 
-/* .regions {
-    display: flex;
-    list-style-type: none;
-    margin: 55px auto 100px auto;
-    width: 1300px;
 
-}
-
-.region {
-    width: 121px;
-    border-collapse: collapse;
-    font-size: 16px;
-    border-bottom: 1px solid #555;
-    text-align: center;
-
-} */
-    
 .park-list {
     width: 100%;
     max-width: 645px;
-    height: 720px;
+    height: 750px;
     border-top: 1px solid black;
-    margin-top: 95px;
-    overflow-y: scroll;
 }
 
 .map {
-    background-color: #e0e0e0;
+    flex: 1;
+    background-color: white;
     max-width: 645px;
     margin-top: 98px;
+    box-sizing: border-box;
+}
+
+.left-content {
+    flex: 1;
+    flex-direction: column;
+    background-color: white;
+    max-width: 645px;
+    margin-top: 98px;
+    box-sizing: border-box;
+}
+
+
+.park-list {
+    background-color: white;
 }
 
 
@@ -132,18 +137,24 @@ footer {
 
 .location {
     display: inline-block;
-    background-color: #00a884;
-    color: white;
+    color: #00a884;
+    border-color: #00a884;
+    border-width: thin;
+    border-style: solid;
+    background-color: white;
     border-radius: 12px;
     padding: 5px;
     font-size: 14px;
-    width: 70px;
+    width: 66px;
     line-height: 12px;
     text-align: center;
 }
-.location, .parkname{
+
+.location,
+.parkname {
     display: inline-block;
 }
+
 .parkname {
     font-size: 18px;
     color: #333;
@@ -155,6 +166,40 @@ p {
     color: #666;
 }
 
+.parkname,
+.detail2 {
+    font-weight: 600;
+}
+.detail1{
+    font-weight: 500;
+}
+
+.detail1,
+.detail2 {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    text-indent: 80px;
+}
+
+
+.content2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1320px;
+    margin-top: 54px;
+}
+
+.content2>div {
+    width: calc(50% - 16px);
+}
+
+.map .root_daum_roughmap {
+    width: 100% !important;
+}
 .page {
     text-align: center;
     margin-top: 20px;
@@ -171,109 +216,106 @@ p {
 
 }
 
-.parkname, .detail2 {
-    font-weight: 500;
-}
+@media screen and (max-width: 1380px) {
 
-.detail1 {
-    font-weight: 400;
-    margin-top: 10px;
-}
-.detail2 {
-    margin-top: 10px;
-}
-
-.detail1, .detail2 {
-    font-size: 16px;
-    line-height: 26px;
-}
-
-.content2 {
-    width: 100%;
-    max-width: 1320px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.content2 > div {
-    width: calc(50% - 16px);
-}
-
-.map .root_daum_roughmap {
-    width: 100% !important;
-}
-
-
-
-@media screen and (max-width: 1380px){
-    .contents1, .contents2 {
+    .contents1,
+    .contents2 {
         width: 90%;
         align-items: center;
         justify-content: center;
         margin-top: 34px;
     }
-    .park-list{
+
+    .park-list {
         width: 100%;
         max-width: 100%;
     }
+    .content2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        gap: 30px;
+        align-items: flex-start;
+        width: 100%;
+    }
 }
 
+@media screen and (max-width: 1000px) {
+    .search_container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
 
-@media screen and (max-width: 1000px){
-.search_container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.map .root_daum_roughmap {
-    width: 100%;
-    max-width: 100%;
-}
+    .map .root_daum_roughmap {
+        width: 100%;
+        max-width: 100%;
+    }
 
-    .content2{
-        flex-direction: column-reverse;
+    .content2 {
+        flex-direction: row-reverse;
         width: 100%;
         align-items: center;
     }
-    .content2 > div {
+
+    .content2>div {
         width: 100%;
         max-width: 100%;
     }
-    .map{
+
+    .map {
         width: 100%;
         max-width: 100%;
+        margin-right: 16px;
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
     }
 }
 
-
-@media screen and (max-width: 768px){
-    .title1{
+@media screen and (max-width: 768px) {
+    .title1 {
         margin-top: 30px;
     }
-    ul{
+
+    ul {
         font-size: 13px;
     }
-    .location{
+
+    .location {
         font-size: 13px;
     }
-    .h3{
+
+    .h3 {
         font-size: 15px;
     }
-    .detail1, .detail2{
+
+    .detail1,
+    .detail2 {
         font-size: 14px;
     }
-    .content2{
-        flex-direction: column-reverse;
+
+    .content2 {
+        flex-direction: column;
         width: 100%;
         align-items: center;
     }
-    .content2 > div {
+
+    .content2>div {
         width: 100%;
         margin-top: 10px;
     }
 
-    .search_container{
+    .map,
+    .left-content {
+        flex: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search_container {
         width: 100%;
     }
 
@@ -282,24 +324,38 @@ p {
     }
 }
 
-@media screen and (max-width: 480px){
-    .park-list{
+
+@media screen and (max-width: 480px) {
+    .park-list {
         font-size: 12px;
     }
-    .location{
+
+    .location {
         font-size: 14px;
     }
-    .parkname{
+
+    .parkname {
         font-size: 16px;
     }
-    .detail1, .detail2{
+
+    .detail1,
+    .detail2 {
         font-size: 12px;
         line-height: 20px;
     }
-    .content2{
-        flex-direction: column-reverse;
+
+    .content2 {
+        flex-direction: column;
         width: 100%;
         align-items: center;
     }
+
+    .map,
+    .left-content {
+        flex: none;
+        width: 100%;
+    }
+
 }
-/* sub1-2 끝 */
+
+/* sub1-4 끝 */
