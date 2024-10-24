@@ -8,12 +8,8 @@
     font-family: "Noto Sans KR", sans-serif;
 }
 
-.tree {
-
-    width: 100px;
-    height: 100px;
-    overflow: scroll;
-    margin: 0 auto
+body {
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 header {
@@ -44,16 +40,19 @@ header {
 
 #div_flex1 p {
     font-size: 20px;
+    margin-bottom: 5px;
+    
 }
 
 #div_flex2 {
     width: 65%;
-    padding: 10px 20px;
 }
 
 #div_flex2 p {
     padding: 5px;
     font-size: 14px;
+    margin-bottom: 5px;
+    margin-left: 100px;
 }
 
 
@@ -75,9 +74,7 @@ header {
     vertical-align: center;
 }
 
-#div_flex2 p {
-    margin-bottom: 20px; 
-  }
+
 
 .table1 tr th,
 .table1 tr td,
@@ -207,6 +204,7 @@ ul.div_flex li:nth-child(even) {
     padding: 15px 10px;
     width: calc(100% - 60px);
     max-width: 1320px;
+    margin: revert-layer;
 }
 
 .table_guide {
@@ -220,17 +218,27 @@ ul.div_flex li:nth-child(even) {
      
     #div_flex1 {width:100%;}
 
-    #div_flex2 {width: 100%;}
+    #div_flex2 {
+        margin-top: 50px;
+        width: 100%;}
 
     #div_flex2 p {
+        margin-top: 5px;
         line-height: 36px;
         word-break: keep-all;
+        margin : 0px;
+        padding:0px;
+        margin-left: 20px;
     }
 
     #div_flex2 p br {
         display: none;
     }
     
+    .tablecontainer {
+       margin-left: 30px;
+    }
+
     .table_guide{
         display: block;
     }
