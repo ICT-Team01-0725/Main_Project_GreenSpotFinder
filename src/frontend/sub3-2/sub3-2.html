@@ -1,105 +1,106 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link rel="stylesheet" href="/css/sub3-2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sub3-2.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1>common header</h1>
-    </header>
-    <div class="sub2-2">
+    <div class="header"></div>
 
-        <section class="contents1">
-            <p class="title1">지역별 보호수 찾기</p>
-            <p class="subtitle1">우리 생활 속 보호수의 위치를 찾아보세요</p>
-            <ul class="search_container">
-                <li class="search">
-                    <div class="search_div">
-                        <form action="/Integrated Search.html">
-                            <input type="text" name="" id="" placeholder="상세주소로 검색하기">
-                            <span class="material-icons">search</span>
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="contents2">
-
-            <div class="content2">
-                <div>
-                    <ul>
-                        <div class="left">
-                            <ul class="tree-list">
-                                <li class="tree-place">
-                                    <span class="location">서울</span>
-                                    <h3 class="treename">보호수명</h3>
-                                    <p class="detail1">보호수 정보</p>
-                                    <p class="detail2">보호수 주소</p>
-                                </li>
-                                <li class="tree-place">
-                                    <span class="location">서울</span>
-                                    <h3 class="treename">보호수명</h3>
-                                    <p class="detail1">보호수 정보</p>
-                                    <p class="detail2">보호수 주소</p>
-                                </li>
-                                <li class="tree-place">
-                                    <span class="location">서울</span>
-                                    <h3 class="treename">보호수명</h3>
-                                    <p class="detail1">보호수 정보</p>
-                                    <p class="detail2">보호수 주소</p>
-                                </li>
-                                <li class="tree-place">
-                                    <span class="location">서울</span>
-                                    <h3 class="treename">보호수명</h3>
-                                    <p class="detail1">보호수 정보</p>
-                                    <p class="detail2">보호수 주소</p>
-                                </li>
-                            </ul>
-                            <div class="page">
-                                <a class="page-link">&lt;&lt;</a>
-                                <a class="page-link">&lt;</a>
-                                <a class="page-link">1</a>
-                                <a class="page-link">2</a>
-                                <a class="page-link">3</a>
-                                <a class="page-link">4</a>
-                                <a class="page-link">5</a>
-                                <a class="page-link">&gt;</a>
-                                <a class="page-link">&gt;&gt;</a>
-                            </div>
-                        </div>
-                </div>
-                <!-- 하단의 카카오맵 API 클래스 코드는 형주님의 공통 코드로 작성했습니다 -->
-                <div class="map">
-                    <div id="daumRoughmapContainer1729150537247" class="root_daum_roughmap root_daum_roughmap_landing">
-                    </div>
-                    <script charset="UTF-8" class="daum_roughmap_loader_script"
-                        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-                    <script charset="UTF-8">
-                        new daum.roughmap.Lander({
-                            "timestamp": "1729150537247",
-                            "key": "2kx9w",
-                            "mapWidth": "645",
-                            "mapHeight": "720"
-                        }).render();
-                    </script>
-                </div>
+    <div class="section1">
+        <h1>지역별 보호수 찾기</h1>
+        <p>우리 생활속 보호수의 위치를 찾아보세요</p>
+        <form action="">
+            <div class="search-bar">
+                <input type="text" name="" placeholder="상세주소로 검색하기">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-        </section>
+        </form>
     </div>
-    <footer>
-        <h1>common footer</h1>
-    </footer>
+ <!--    
+    <ul>
+        <a href="">
+            <li>서울</li>
+        </a>
+        <a href="">
+            <li>경기</li>
+        </a>
+        <a href="">
+            <li>인천</li>
+        </a>
+        <a href="">
+            <li>충북</li>
+        </a>
+        <a href="">
+            <li>충남</li>
+        </a>
+        <a href="">
+            <li>경북</li>
+        </a>
+        <a href="">
+            <li>경남</li>
+        </a>
+        <a href="">
+            <li>전북</li>
+        </a>
+        <a href="">
+            <li>전남</li>
+        </a>
+        <a href="">
+            <li>제주</li>
+        </a>
+    </ul> -->
+
+    <div class="container1">
+        <div class="c1">
+            <div class="list">
+                <span class="tag">서울</span> <span class="treename">보호수명</span><br>
+                <p>설명</p>
+                <p class="address">보호수 주소</p>
+            </div>
+            <div class="list">
+                <span class="tag">서울</span> <span class="treename">보호수명</span> <br>
+                <p>설명</p>
+                <p class="address">보호수 주소</p>
+            </div>
+            <div class="list">
+                <span class="tag">서울</span> <span class="treename">보호수명</span> <br>
+                <p>설명</p>
+                <p class="address">보호수 주소</p>
+            </div>
+            <div class="list">
+                <span class="tag">서울</span> <span class="treename">보호수명</span> <br>
+                <p>설명</p>
+                <p class="address">보호수 주소</p>
+            </div>
+        </div>
+        <div class="c2">
+          
+        </div>
+
+    </div>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">&lt;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&#62;</a>
+        <a href="#">&raquo;</a>
+    </div>
+
+    <div class="footer"></div>
 </body>
 
 </html>

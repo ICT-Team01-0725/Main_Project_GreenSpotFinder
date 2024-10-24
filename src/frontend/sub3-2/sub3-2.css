@@ -1,153 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.search_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-ul.search_container li.search {
-    width: 644px;
-}
-
-ul.search_container li.search .search_div {
-    position: relative;
-}
-
-ul.search_container li.search .search_div span {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    color: #333;
-    font-size: 24px;
-    font-weight: 100;
-}
-
-ul.search_container li.search .search_div input[type="text"] {
-    width: 644px;
-    height: 54px;
-    border: 1px solid #00A38B;
-    border-radius: 27px;
-    padding: 0 34px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
+
 }
 
-ul.search_container li.search .search_div input:focus {
-    border-color: #00A38B;
-    border: 2px solid #00A38B;
-    outline: none;
-}
-
-
-body {
+body{
     font-family: "Noto Sans KR", sans-serif;
 }
 
-header {
-    height: 70px;
-    background-color: #fff;
-    border-bottom: 1px solid #00A38B;
-}
-
-footer {
-    height: 70px;
-    border-top: 1px solid #00A38B;
-    margin-top: 150px;
-}
-
-.contents1,
-.contents2 {
+.header {
     width: 100%;
-    max-width: 1320px;
+    height: 70px;
+    background-color: blueviolet;
+}
+
+.section1 {
+    width: 100%;
+    max-width: 620px;
+    margin: 100px auto 70px auto;
+    text-align: center;
+}
+
+.section1 h1,
+.section1 h3 {
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 70%;
+    margin: 35px auto auto auto;
+    display: flex;
+
+}
+
+.search-bar input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: white;
+    border: 0.05px solid #ddd;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.search-bar button i {
+    background-color: white;
+}
+
+/* .search-bar button i {
+    font-size : 20px;
+    color : #000;
+} */
+
+.alignbar {
+    max-width: 369;
+    width: 100%;
     margin: 0 auto;
 }
 
-.title1 {
-    font-size: 40px;
-    color: black;
-    margin-top: 100px;
-    font-weight: 700;
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 55px auto 100px auto;
+    width: 1300px;
+
 }
 
-.subtitle1 {
-    margin-top: 16px;
-    font-size: 20px;
-    color: #555555;
+li {
+    width: 121px;
+    border-collapse: collapse;
+    font-size: 16px;
+    border-bottom: 1px solid #555;
+    text-align: center;
+
 }
 
-.contents2 {
-    flex-direction: column-reverse;
-    margin-top: 54px;
-    width: 100%;
+a {
+    text-decoration: none;
+    padding: 0 5px 0 5px;
+}
+
+a:link,
+a:visited {
+    color: #555;
+}
+
+li:hover {
+    border-bottom: 1px solid #00A38B;
+    color: #00A38B;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
     max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    margin: 0 auto;
+    gap: 30px
 }
 
-.contents1 {
-    text-align: center;
+.c2 {
+    width: calc(50% - 15px);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
 }
 
-.tree-list {
-    width: 100%;
-    max-width: 645px;
-    height: 720px;
-    border-top: 1px solid black;
-    margin-top: 95px;
+.c1 {
+    width: calc(50% - 15px);
+    border-top: 2px solid #555;
+    border-bottom: 1px solid #555;
+
 }
 
-.map {
-    background-color: #e0e0e0;
-    max-width: 645px;
-    margin-top: 98px;
+.list {
+    padding: 20px;
+    border-bottom: 1px solid #555;
+
 }
 
-
-.map .root_daum_roughmap {
-    width: 100% !important;
+.list p {
+    padding: 5px 10px 5px 80px;
 }
 
-.tree-place {
-    padding: 25px 15px;
-    border-bottom: 1px solid #DDDDDD;
-}
-
-.location {
+.tag {
+    font-size: 16;
+    background-color: #27ae60;
     display: inline-block;
-    background-color: #00a884;
+    border-radius: 10px;
     color: white;
-    border-radius: 12px;
-    padding: 5px;
-    font-size: 14px;
-    width: 66px;
-    line-height: 12px;
-    text-align: center;
-}
-
-.location,
-.treename {
-    display: inline-block;
+    padding: 2px 15px;
 }
 
 .treename {
+    font-weight: 700;
     font-size: 18px;
-    color: #333;
-    display: inline-block;
+    margin: 15px;
 }
 
-p {
+.address {
+    font-weight: 600;
     font-size: 16px;
-    color: #666;
 }
 
-.page {
+.pagination {
     text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-    width: 100%;
+    margin-top: 70px;
 }
 
-.page-link {
+.pagination a {
     border: 1px solid #555;
     display: inline-block;
     padding: 8px 16px;
@@ -156,150 +169,68 @@ p {
 
 }
 
-.treename,
-.detail1,
-.detail2 {
-    font-weight: 600;
-}
-
-.detail1,
-.detail2 {
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 39px;
-    text-indent: 80px;
-}
-
-
-.content2 {
-    width: 100%;
-    max-width: 1320px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.content2>div {
-    width: calc(50% - 16px);
-}
-
-.map .root_daum_roughmap {
-    width: 100% !important;
-}
-
-
-
-@media screen and (max-width: 1380px) {
-
-    .contents1,
-    .contents2 {
-        width: 90%;
-        align-items: center;
-        justify-content: center;
-        margin-top: 34px;
-    }
-
-    .tree-list {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-
-@media screen and (max-width: 1000px) {
-    .search_container {
+@media screen and (max-width: 760px) {
+    .container1 {
         display: flex;
-        flex-direction: row;
+        width: 90%;
+        max-width: 1320px;
+        margin: 0 auto;
+        display: flex;
+        margin: 0 auto;
+        gap: 30px;
+        flex-direction: column-reverse;
         justify-content: center;
-    }
-
-    .map .root_daum_roughmap {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .content2 {
-        flex-direction: column-reverse;
-        width: 100%;
         align-items: center;
     }
 
-    .content2>div {
+    .c1 {
         width: 100%;
-        max-width: 100%;
+        border-top: 2px solid #555;
+        border-bottom: 1px solid #555;
+        overflow-y: scroll;
+        height: 250px;
+
     }
 
-    .map {
+    .c2 {
         width: 100%;
-        max-width: 100%;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    .title1 {
-        margin-top: 30px;
-    }
-
-    ul {
-        font-size: 13px;
-    }
-
-    .location {
-        font-size: 13px;
-    }
-
-    .h3 {
-        font-size: 15px;
-    }
-
-    .detail1,
-    .detail2 {
-        font-size: 14px;
-    }
-
-    .content2 {
-        flex-direction: column-reverse;
-        width: 100%;
+        height : 500px;
+        padding: 20px;
+        /* display: flex; */
+        justify-content: center;
         align-items: center;
+        background-color: antiquewhite;
+
     }
 
-    .content2>div {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .search_container {
-        width: 100%;
-    }
-
-    ul.search_container li.search .search_div input[type="text"] {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .tree-list {
-        font-size: 12px;
-    }
-
-    .location {
+    .tag {
         font-size: 14px;
+        background-color: #27ae60;
+        display: inline-block;
+        border-radius: 10px;
+        color: white;
+        padding: 1px 10px;
     }
 
     .treename {
-        font-size: 16px;
+        font-weight: 700;
+        font-size: 15px;
+        margin: 15px;
     }
 
-    .detail1,
-    .detail2 {
-        font-size: 12px;
-        line-height: 20px;
+    .address {
+        font-weight: 600;
+        font-size: 14px;
     }
 
-    .content2 {
-        flex-direction: column-reverse;
-        width: 100%;
-        align-items: center;
+    .list p {
+        font-size : 14px;
+        padding: 5px;
     }
+
+    .pagination a {
+       font-size: 16px;
+       padding : 3px 8px;
+    }   
+
 }
