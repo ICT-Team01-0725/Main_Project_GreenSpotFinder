@@ -1,21 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-body {
-    width: 90%;
-    max-width: 1320px;
-    margin: 0 auto;    
-    padding: 20px;
+body {  
     font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
 }
 
 section {
-    width: 100%;
+    width: 90%;
     max-width: 1320px;
-    margin: 0 auto;
+    margin: 0 auto;  
 }
 
-.notice {
-    margin: 0 0 100px 0;
-}
 
 .notice p.title {
     margin: 12px 0;
@@ -46,25 +40,20 @@ section {
     font-weight: 400;
 }
 
-.content table {
-    border: 0px 0px 0px 0px ;
-    margin: 20px 0px 20px 0px ;
-}
 
-.content span.title{
+.content tt  span.title{
     font-size: 20px;
     margin-right: 10px;
     font-weight: 400;
     color: #333333;
 }
 
-.content span.cont{
+.content tt ul li span.cont{
     font-size: 20px;
     margin-right: 50px;
     font-weight: 100;
     color: #555555;
 }
-
 
 .content ul {
     justify-content: space-between; 
@@ -81,13 +70,29 @@ section {
     margin-bottom: 30px;
 }
 
+.tt ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.tt ul li{
+    width: auto;
+    padding: 0 20px 0 0;
+    border-bottom: 0;
+}
+
+
 .comment {
     padding: 0px 0px 0px 0px;   
 }
 
-.comment table tr td{
+.comment div ul li{
     padding: 10px 10px 10px 10px;
 }
+
+
 .comment span.user_icon{
     padding: 0px 10px 0px 10px;   
 }
@@ -106,9 +111,15 @@ section {
 
 .comment span.cmd_ctt{
     color:#333333;
+    margin-left: 40px;
 }
 
+.comment span.cmd_ctt1{
+    margin-left: 40px;
+    color: #00A38B;
+}
 .comment span.cmd_dt{
+    margin-left: 40px;
     padding: 0px 0px 0px 0px;   
     color:#AAAAAA;
 }
@@ -120,9 +131,23 @@ section {
 
 }
 
+
+.tt1 {
+    width: auto;
+    padding: 0 20px 0 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tt1 span del{
+    width: auto;
+    padding-right: 100px;
+    border-bottom: 0;
+}
+
+
 .comment ul li {  
     padding: 10px 10px 10px 10px;    
-    border-bottom: 1px solid #ddd;
+    
 }
 
 .comment div.cmd_write{
@@ -166,56 +191,28 @@ section {
 }
 
 
-.pagination {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.pagination a {
-    text-decoration: none;
-    color: #555;
-    padding: 5px 10px;
-    margin: 0 2px;
-    border: 1px solid #555;
-    border-radius: 4px;
-}
-
-.pagination a:hover {
-    background-color: #555;
-    color: white;
-}
-.pagination {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.pagination button {
-    border: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-.pagination button.active {
-    background-color: #4caf50;
-    color: white;
-}
-
-.pagination button:hover {
-    background-color: #f0f0f0;
-}
-
 @media screen and (max-width: 1000px) {
 
 }
 
 
 @media screen and (max-width: 768px) {
+    .content div.bodyCont img {
+        width: 100%;
+    }
     
 }
-
-
 @media screen and (max-width: 420px) {
-    
+    .content   span.title{
+        font-size: 12px;
+        font-weight: 50px;
+       
+    }
+
+    .content span.cont {
+        font-size: 12px;
+        margin-right: 50px;
+        font-weight: 50px;
+      
+    }
 }

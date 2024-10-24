@@ -1,129 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-body {
-    width: 90%;
-    max-width: 1320px;
-    margin: 0 auto;    
-    padding: 20px;
+body {  
     font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
 }
 
 section {
-    width: 100%;
+    width: 90%;
     max-width: 1320px;
-    margin: 0 auto;
+    margin: 0 auto;  
 }
 
-.notice {
-    margin: 0 0 100px 0;
-}
 
 .notice p.title {
-    margin: 12px 0;
+    margin-bottom: 50px;
     font-size: 40px;
     color: #111111;
     font-weight: 500;
 }
 
-.notice a {
-    text-decoration: none;
-}
-
-.notice div.subtitle {
-    margin: 16px 0 30px;   
-    color:#555555;
-}
-
 
 .content  {
-    border-top: 2px solid #000;
+    border-top: 1px solid #DDDDDD;
 }
 
-.content table {
-    width: 100%;
-    max-width: 1320px;
-    border: 0px 0px 0px 0px ;
-    margin: 20px 0px 20px 0px ;
+
+.content .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-.content table tr td.left {    
+.content .label {
     width: 20%;
     max-width: 200px;
     text-align: center;
     vertical-align: middle;
 }
 
-.content table tr td.right {   
+.content .input {
     width: 80%;
-    justify-content: space-between;
     text-align: left;
 }
 
-.content input.in_title{
+.in_title, .in_content, .input_file {
     width: 100%;
+    border: 1px solid #DDDDDD;
+}
+
+.in_title {
     max-width: 500px;
     height: 30px;
-    border: 1px solid #DDDDDD;
 }
 
-.content textarea.in_content{    
-    width: 100%;
-    border: 1px solid #DDDDDD;
-}
-
-.content div.in_file{
-    margin: 0px 0px 0px 0px ;
-    border: 1px solid #DDDDDD;
-}
-
-.content div.del_file{
-    width: 100%;
-}
-
-.content div.file_lst{
+.file_lst {
     display: flex;
-    justify-content: space-between; /* 파일 이름과 파일 삭제 링크를 양쪽 끝에 배치 */
+    justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    margin-left: 0px ;   
-    width: 100%;   
 }
 
-.content label.file_nm{   
-    text-align: left ; 
-    color:#0004FF;
+.file_lst label {
+    color: #0004FF;
 }
 
-.content span.cmd_f_del{  
-    text-align: right;    
-}
-
-.content a{    
+.del_file {
     color: #333333;
+    text-align: right;
 }
 
-
-
-.content h2.title {
-    margin-top:20px;
-    margin-bottom:20px;
-    font-size: 30px;
-    font-weight: 400;
+ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
 }
 
-.content ul {
-    justify-content: space-between; 
-    
-}
-
-.content ul li {       
-   border-bottom: 1px solid #ddd;
-   padding: 10px 10px;
-}
-
-.content div.bodyCont{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 
 .button_box div {  
     margin: 20px 0px 60px 0px;    

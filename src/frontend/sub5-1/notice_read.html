@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>notice</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../notice/notice_read.css">
 </head>
 
-<body>    
+<body>
     <div>
-        <section class="notice">        
-            <p class="title">공지사항</p>   
+        <section class="notice">
+            <p class="title">공지사항</p>
             <div class="subtitle">도심녹지 관련 소식을 안내합니다.</div>
-                        
-             <!-- 게시글 정보 섹션 -->
+
+            <!-- 게시글 정보 섹션 -->
             <div class="content">
                 <ul>
                     <li>
                         <h2 class="title">타이틀 입니다.</h2>
-                        <div>
-                            <table>
-                                <tr>
-                                    <td><span class="title">작성자: </span></td>
-                                    <td><span class="cont">작성자</span></td>
-                                    <td><span class="title">작성일: </span></td>
-                                    <td><span class="cont">2024.00.00 00:00:00 </span></td>
-                                    <td><span class="title">조회수: </span></td>
-                                    <td><span class="cont">3</span></td>
-                                </tr>
-                            </table>
+                        <div class="tt">
+                            <ul>
+                                <li><span class="title">작성자: </span><span class="cont">작성자</span></li>
+                                <li><span class="title">작성일: </span><span class="cont">2024.00.00 00:00:00 </span></li>
+                                <li><span class="title">조회수: </span><span class="cont">3</span></li>
+                            </ul>
                         </div>
-                    </li>                        
+                    </li>
                 </ul>
                 <ul>
-                    <li> 
+                    <li>
                         <div class="bodyCont">
                             <img src="https://via.placeholder.com/600x400" alt="게시글 이미지">
                             <br><br>
@@ -45,129 +43,175 @@
                             내용 내용 내용
                             <br>
                         </div>
-                    </li> 
-                </ul>                
+                    </li>
+                </ul>
             </div>
 
             <!-- 댓글 섹션 -->
             <div class="comment">
-                <!-- 댓글 -->
                 <ul>
                     <li>
-                        <table>
-                            <tr >
-                                <td rowspan="3"><span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span></td>
-                                <td>                                    
-                                    <span class="user_id">아이디 1 </span>
+                        <div class="tt1">
+                            <ul>
+                                <li>
+                                    <span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <span class="user_id">아이디1 </span>
                                     <button class="user_wt">작성자</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="cmd_ctt">댓글입니다.</span></td>                                
-                            </tr>
-                            <tr>
-                                <td>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><span class="cmd_ctt">댓글입니다.</span></li>
+                            </ul>
+                            <ul>
+                                <li>
                                     <span class="cmd_dt">
-                                    <span>2024.00.00 00:00</span>
-                                    <a href="" class="cmd_re"><span>답글쓰기</span></a>
+                                        <span>2024.00.00 00:00</span>
+                                        <a href="" class="cmd_re"><span>답글쓰기</span></a>
                                     </span>
-                                </td>
-                            </tr>
-                        </table>                     
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                        <table>
-                            <tr >
-                                <td rowspan="3"><span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span></td>
-                                <td>                                    
-                                    <span class="user_id">아이디 1 </span>
-                                    <button class="user_wt">작성자</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="cmd_ctt">댓글입니다.</span></td>                                
-                            </tr>
-                            <tr>
-                                <td>
+                        <div class="tt1">
+                            <ul>
+                                <li>
+                                    <span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <span class="user_id">아이디2 </span>                                   
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><span class="cmd_ctt">댓글입니다.</span></li>
+                            </ul>
+                            <ul>
+                                <li>
                                     <span class="cmd_dt">
-                                    <span>2024.00.00 00:00</span>
-                                    <a href="" class="cmd_re"><span>답글쓰기</span></a>
+                                        <span>2024.00.00 00:00</span>
+                                        <a href="" class="cmd_re"><span>답글쓰기</span></a>
                                     </span>
-                                </td>
-                            </tr>
-                        </table>                     
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                        <table>
-                            <tr >
-                                <td rowspan="3"><span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span></td>
-                                <td>                                    
+                        <div class="tt1" >
+                            <ul>
+                                <li>
+                                    <span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <span class="user_id">아이디1 </span>
+                                    <button class="user_wt">작성자</button>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><span class="cmd_ctt1">아이디2</span><span class="cmd_ctt">답글입니다.</span></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span class="cmd_dt">
+                                        <span>2024.00.00 00:00</span>
+                                        <a href="" class="cmd_re"><span>답글쓰기</span></a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    
+                    <li>
+                        <div class="tt1">
+                            <ul>
+                                <li>
+                                    <span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <span class="user_id">아이디2</span><span class="del">수정 삭제</span>                                                         
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><span class="cmd_ctt1">아이디1</span><span class="cmd_ctt">댓글입니다.</span></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span class="cmd_dt">
+                                        <span>2024.00.00 00:00</span>
+                                        <a href="" class="cmd_re"><span>답글쓰기</span></a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                    <li>
+                        <div class="tt1">
+                            <ul>
+                                <li>
+                                    <span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                                     <span class="user_id">아이디 1 </span>
                                     <button class="user_wt">작성자</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="cmd_ctt">댓글입니다.</span></td>                                
-                            </tr>
-                            <tr>
-                                <td>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><span class="cmd_ctt">댓글입니다.</span></li>
+                            </ul>
+                            <ul>
+                                <li>
                                     <span class="cmd_dt">
-                                    <span>2024.00.00 00:00</span>
-                                    <a href="" class="cmd_re"><span>답글쓰기</span></a>
+                                        <span>2024.00.00 00:00</span>
+                                        <a href="" class="cmd_re"><span>답글쓰기</span></a>
                                     </span>
-                                </td>
-                            </tr>
-                        </table>                     
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                        <table>
-                            <tr >
-                                <td rowspan="3"><span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span></td>
-                                <td>                                    
+                        <div class="tt1">
+                            <ul>
+                                <li>
+                                    <span class="user_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                                     <span class="user_id">아이디 1 </span>
                                     <button class="user_wt">작성자</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="cmd_ctt">댓글입니다.</span></td>                                
-                            </tr>
-                            <tr>
-                                <td>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><span class="cmd_ctt">댓글입니다.</span></li>
+                            </ul>
+                            <ul>
+                                <li>
                                     <span class="cmd_dt">
-                                    <span>2024.00.00 00:00</span>
-                                    <a href="" class="cmd_re"><span>답글쓰기</span></a>
+                                        <span>2024.00.00 00:00</span>
+                                        <a href="" class="cmd_re"><span>답글쓰기</span></a>
                                     </span>
-                                </td>
-                            </tr>
-                        </table>   
+                                </li>
+                            </ul>
+                        </div>
+
+
                         <div class="cmd_write">
-                            <table>
-                                <tr>                                    
-                                    <td>아이디 1 </td>                                    
-                                </tr>
-                                <tr>
-                                    <td><textarea rows="5">댓글 내용 입력</textarea></td>                                
-                                </tr>
-                                <tr>
-                                    <td style="text-align:right;"><button>등록</button></td>
-                                </tr>
-                            </table> 
-                        </div>                      
+                            <ul>
+                                <li>아이디</li>
+                            </ul>
+                            <ul>
+                                <li><textarea rows="5">댓글을 남겨 보세요</textarea></li>
+                            </ul>
+                            <ul>
+                                <li style="text-align:right;"><button>등록</button></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
-            
-            <div class="button_box">                
+
+            <div class="button_box">
                 <div>
-                    <button>다음글</button>    
+                    <button>다음글</button>
                     <button>수정</button>
                     <button>삭제</button>
-                    <button>목록</button>             
+                    <button>목록</button>
                 </div>
             </div>
 
-        </section>        
+        </section>
     </div>
 </body>
-</html>
 
+</html>

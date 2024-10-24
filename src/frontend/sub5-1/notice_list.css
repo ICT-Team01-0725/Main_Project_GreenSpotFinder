@@ -1,16 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 body {
-    width: 90%;
-    max-width: 1320px;
-    margin: 0 auto;    
-    padding: 20px;
+    box-sizing: border-box;
     font-family: "Noto Sans KR", sans-serif;
 }
 
 section {
-    width: 100%;
+    width: 90%;
     max-width: 1320px;
-    margin: 0 auto;
+}
+
+.notice {
+    margin: 0 auto 100px auto;
+}
+
+.notice p.title {
+    margin: 12px 0;
+    font-size: 40px;
+    color: #111111;
+    font-weight: 500;
+}
+
+.notice a {
+    text-decoration: none;
+}
+
+.notice div.subtitle {
+    font-size: 20px;
+    margin: 16px 0 30px;   
+    color:#555555;
 }
 
 .search-bar {
@@ -52,27 +69,6 @@ section {
     background-color: #ffffff;
 }
 
-.notice {
-    margin: 0 0 100px 0;
-}
-
-.notice p.title {
-    margin: 12px 0;
-    font-size: 40px;
-    color: #111111;
-    font-weight: 500;
-}
-
-.notice a {
-    text-decoration: none;
-}
-
-.notice div.subtitle {
-    font-size: 20px;
-    margin: 16px 0 30px;   
-    color:#555555;
-}
-
 .notice div.contents {
     border-top: 2px solid #000;
 }
@@ -99,7 +95,7 @@ section {
     color: #333;
     font-weight: 500;
     line-height: 32px;
-    word-break: keep-all;
+    word-break: keep-all; 
 }
 
 .notice ul li:hover p.title {
@@ -124,19 +120,22 @@ section {
     cursor: pointer;
 }
 
-
 .pagination {
     text-align: center;
     margin-top: 20px;
 }
 
+
 .pagination a {
     text-decoration: none;
     color: #555;
-    padding: 5px 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
     margin: 0 2px;
     border: 1px solid #555;
-    border-radius: 4px;
 }
 
 .pagination a:hover {
@@ -177,5 +176,15 @@ section {
 
 
 @media screen and (max-width: 420px) {
-    
+    .pagination a {
+        text-decoration: none;
+        color: #555;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        margin: 0 2px;
+        border: 1px solid #555;
+    }
 }
