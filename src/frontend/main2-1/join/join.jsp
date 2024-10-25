@@ -18,7 +18,7 @@
 <!-- 구글 폰트 -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
-<link rel="stylesheet" href="../screen_css/join.css">
+<link rel="stylesheet" href="../resources/css/join.css">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -30,76 +30,114 @@
 			<h1>헤더입니다.</h1>
 		</header>
 		<main>
-			<section class="container">
+			<div class="join_container">
 				<div id="box">
 					<h2 id="jointxt">회원가입</h2>
-					<form action="" style="margin-top: 29px">
+					<form action="/joinOK" style="margin-top: 29px" method="post">
 						<h3 class="h3">
 							아이디 <label class="star">*</label>
 						</h3>
-						<input class="joininput width100" type="text" name="id"
-							style="border-bottom: 1px solid #dddddd;"
+						<input class="joininput width100" type="text" name="u_id"
 							placeholder="아이디를 입력해주세요." required>
 						<h3 class="h3">
 							비밀번호 <label class="star">*</label>
 						</h3>
-						<input class="joininput width100" type="password" name="pw" id="pwid"
-							style="border-bottom: 1px solid #dddddd;"
+						<input class="joininput width100" type="password" name="u_pw" id="pwid"
 							placeholder="비밀번호를 입력해주세요." required>
 							<span id="pwtest"></span>
 						<h3 class="h3">
 							비밀번호 확인 <label class="star">*</label>
 						</h3>
-						<input class="joininput width100" type="password" name="pwchk" id="pwchkid"
-							style="border-bottom: 1px solid #dddddd;"
-							placeholder="비밀번호를 재입력해주세요." required> <span id="pwOK">비밀번호가
+						<input class="joininput width100" type="password" name="u_pwchk" id="pwchkid"
+							placeholder="비밀번호를 다시 입력해주세요." required> <span id="pwOK">비밀번호가
 							일치하지 않습니다.</span>
 						<h3 class="h3">
 							이름 <label class="star">*</label>
 						</h3>
-						<input class="joininput width100" type="text" name="name"
-							style="border-bottom: 1px solid #dddddd;"
+						<input class="joininput width100" type="text" name="u_na"
 							placeholder="이름을 입력해주세요." required>
 						<h3 class="h3">
 							휴대전화 <label class="star">*</label>
 						</h3>
-						<input class="joininput width100" type="text" name="phone"
-							style="border-bottom: 1px solid #dddddd;"
-							placeholder="전화번호를 입력해주세요." required>
+						<input class="joininput width100" id="phone" type="text" name="u_phone"
+							placeholder="-없이 입력해주세요." required>
+						<h3 class="h3">
+							성별 <label class="star">*</label>
+						</h3>
+							<select name="u_gen" id="gen">
+								<option value="male">남성</option>
+								<option value="female">여성</option>
+							</select>
+						<h3 class="h3">
+							생년월일 <label class="star">*</label>
+						</h3>
+						<div id="bir">
+							<input type="date" name="u_bir" class="birth width100">
+							<!-- <span>년</span>
+							<input type="number" name="u_bir_m" class="birth" max="12">
+							<span>월</span>
+							<input type="number" name="u_bir_d" class="birth">
+							<span>일</span>		 -->					
+						</div>
 						<div class="emailsec width100">
 							<h3 class="h3">
 								이메일 <label class="star">*</label>
 							</h3>
-							<input class="joininputemail" type="text" name="email"
+							<div id="flexbox">
+							<input class="email" id="email" type="text" name="u_em"
 								style="border-bottom: 1px solid #dddddd;"
 								placeholder="이메일을 입력해주세요." required>
-							<lable class="com">@</lable>
-							<select name="emailback" id="emailback">
-								<option value="select">선택하세요</option>
+							<span class="com">@</span>
+							<input class="email" id="emailback" type="text" name="u_emailback"
+								style="border-bottom: 1px solid #dddddd;"
+								placeholder="이메일을 입력해주세요." required readonly
+								pattern="[a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*">
+							<select name="u_emailbacks" id="emailselect" onchange="change_input(this.value)">
+								<option value="null">선택하세요</option>
 								<option value="naver.com">naver.com</option>
 								<option value="gmail.com">gmail.com</option>
 								<option value="daum.net">daum.net</option>
 								<option value="nate.com">nate.com</option>
 								<option value="hanmail.net">hanmail.net</option>
 								<option value="yahoo.com">yahoo.com</option>
-								<option value="dreamwiz.com">dreamwiz.com</option>
-								<option value="freechal.com">freechal.com</option>
-								<option value="hanmir.com">hanmir.com</option>
-								<option value="hotmail.com">hotmail.com</option>
-								<option value="korea.com">korea.com</option>
-								<option value="paran.com">paran.com</option>
+								<option value="select">직접 입력</option>
 							</select>
+							</div>
 						</div>
 						<label>
 							<div class="option width100">
-								<input class="optionchk" type="checkbox"> <span
-									class="optiontxt">약관 전체 동의하기</span>
+								<input id="allchk" type="checkbox" /> 
+								<span class="optiontxt">약관 전체 동의하기</span>
 							</div>
 						</label>
-						<button class="joinbtn width100" onclick="join_go(this_form)" disabled>회원가입</button>
+						<label>
+							<div class="optiondetail width100">
+								<input class="optionchk" id="essential1" type="checkbox" />
+								<span class="optiontxt">(필수)이용약관에 동의합니다.</span>
+							</div>
+						</label>
+						<label>
+							<div class="optiondetail width100">
+								<input class="optionchk" id="essential2" type="checkbox" />
+								<span class="optiontxt">(필수)이용약관에 동의합니다.</span>
+							</div>
+						</label>
+						<label>
+							<div class="optiondetail width100">
+								<input class="optionchk" type="checkbox" />
+								<span class="optiontxt">(선택)이용약관에 동의합니다.</span>
+							</div>
+						</label>
+						<label>
+							<div class="optiondetail width100">
+								<input class="optionchk" type="checkbox" />
+								<span class="optiontxt">(선택)이용약관에 동의합니다.</span>
+							</div>
+						</label>
+						<button class="joinbtn width100" onclick="joinTry(this.form)" disabled>회원가입</button>
 					</form>
 				</div>
-			</section>
+			</div>
 
 		</main>
 		<footer>
@@ -130,10 +168,7 @@
 					// function 실행 
 					enabled();
 				}
-			
 			}
-			
-			
 		});	
 		
 		// 비밀번호, 비밀번호 확인 키보드 입력시
@@ -158,35 +193,99 @@
 		});
 		
 		// 체크박스 변화시
-		$(".optionchk").change(function(){
+		$(".essential").change(function(){
 			enabled();
 		});
 		
-		// 이메일 뒷자리 
-		let emailbac;
-		// 이메일 뒷자리 선택시
-		$("#emailback").change(function(){
-			// 선택한 값을 emailbac 에 넣는다.
-			emailbac = document.getElementById("emailback").value;
-			// function 실행
-			enabled();
+		// 이메일 뒷자리 select 선택시
+		function change_input(v) {
+			// 선택하세요 일때
+			if(v == "null"){
+				// readonly 유지
+				$("#emailback").prop("readonly", true);
+				// 특정 이메일을 선택했을때
+			}else if(v != "select"){
+				// 이메일 입력 val을 select value값으로 설정
+				$("#emailback").val(v);
+				// readonly 유지
+				$("#emailback").prop("readonly", true);
+				// 회원가입 버튼 활성화 시도
+				enabled();
+				// 직접 입력 선택 
+			}else{
+				// readonly 해제
+				$("#emailback").prop("readonly", false);
+				// 기본값 지우기
+				$("#emailback").val(null);
+				// 회원가입 버튼 활성화 시도
+				enabled();
+			}
+		}
+		
+		// 약관 전체동의 체크 눌리면
+		$("#allchk").click(function(){
+			// 약관 전체 체크가 체크되면
+			if($("#allchk").is(":checked")){
+				// container 안에 optionchk 클래스를 찾아서 checked를 true값을 넣는다.
+				$(this).closest(".join_container").find(".optionchk").prop("checked",true);
+			// 약관 전체 체크가 해제되면
+			} else{
+				// container 안에 optionchk 클래스를 찾아서 checked를 false값을 넣는다.
+				$(this).closest(".join_container").find(".optionchk").prop("checked",false);
+			}
 		});
+		
+		// 약관을 체크 하면
+		$(".optionchk").click(function(){
+			enabled()
+			// 하위 옵션을 모두 체크 하면
+             if($("input[class='optionchk']:checked").length == 4){
+            	 // 약관 전체동의 체크 
+                 $("#allchk").prop("checked",true);
+           	// 모두 체크를 안하면
+             } else {
+            	 // 약관 전체동의 해제
+                 $("#allchk").prop("checked",false);
+             }
+         });
+		
+		
+		
 		
 		// 회원가입 버튼 활성화
 		function enabled() {
-			// 비밀번호 정규식, 비밀번호 확인, 체크박스 체크, 이메일 뒷자리 선택시 
-			if(pwtestok == 1 && pwchkok == 1 && $(".optionchk").is(":checked") && emailbac !== "select"){
-				// 버튼 활성화, 색 #111111로 변경
+			// 비밀번호 정규식, 비밀번호 확인, 필수 체크박스 체크시 
+			if(pwtestok == 1 && pwchkok == 1 && $("#essential1:checked").length == 1 && $("#essential2:checked").length == 1){
+					// 버튼 활성화, 색 #111111로 변경
 				$(".joinbtn").prop("disabled", false).css("background-color", "#111111");
-				
 			}
-			
 		}
 		
-		function join_go(f){
-			// 비밀번호 정규식, 비밀번호 확인, 체크박스 체크 후 적용
-						
+		
+		// 전화번호 입력시
+		$("#phone").keyup(function(){
+			// 입력한 값
+		    const phoneNum = phone.value;
+			// 입력한 값의 길이
+		    const length = phoneNum.length;
+			
+			// 길이가 9 이상이면
+		    if(length >= 9) {
+		    	// 2~3개 - 3~4개 - 4개
+		        let numbers = phoneNum.replace(/[^0-9]/g, "")
+		        			.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
+		        phone.value = numbers;
+		    }
+		});
+		
+		// 회원가입 시도
+		function joinTry(f){
+			// email 하나로 병합
+			f.u_em.append("@"+f.u_emailback);
+			submit();
 		}
+		
+		
     </script>
 </body>
 
