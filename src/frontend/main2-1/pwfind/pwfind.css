@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+#idfind {
+    header {
+        width: 100%;
+        height: 70px;
+        background-color: #cccccc;
+    }
+
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 50px auto;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    input {
+        border: none;
+    }
+    
+    
+    #gobutton{
+    	display: flex;
+    	justify-content: space-between;
+    }
+    
+    #submit{
+    	width: 500px;
+    	height: 46px;
+    	background-color: #ffffff;
+    	color: #00a38b;
+    	border: 1px solid #00a38b;
+    	border-radius: 5px;
+    	margin: 15px 0;
+    	font-size: 16px;
+    }
+    
+    #box {
+        width: 500px;
+        heigth: 380px;
+        text-align: left;
+        padding: 30px 0px;
+        margin: 50px auto;
+    }
+    
+    .idinput {
+        width: 500px;
+        height: 46px;
+        text-align: left;
+        margin-top: 20px;
+        font-size: 16px;
+        padding: 0px;
+        border-bottom: 1px solid #cccccc;
+        
+    }
+    
+    input::placeholder {
+        color: #cccccc;
+        font-size: 16px;
+    }
+
+
+    .h3 {
+        font-weight: 700;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+	
+	
+    footer {
+        width: 100%;
+        height: 343px;
+        border-top: 1px solid #dddddd;
+    }
+
+    .go {
+        border: none;
+        width: 245px;
+        height: 46px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+        background-color:#00a38b;
+        color: #ffffff;
+    }
+    
+     @media screen and (max-width: 560px) {
+        #box {
+            width: 89.2%;
+        }
+			
+		.idinput{
+			width: 100%;
+		}
+		
+		#submit{
+			width: 100%;
+		}
+		
+		.go{
+			width: 49%;
+		}
+		     
+    }
+
+}
