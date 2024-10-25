@@ -18,8 +18,9 @@ button {
 	border-bottom: 1px solid #cccccc;
 }
 
-#section {
-	width: 768px;
+#suc_container {
+	width: 100%;
+	max-width: 768px;
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 150px;
@@ -109,7 +110,7 @@ button {
 }
 
 @media screen and (max-width:768px) {
-	#section {
+	#suc_container {
 		width: 100%;
 	}
 	#twobtn {
