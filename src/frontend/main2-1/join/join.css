@@ -12,10 +12,10 @@
 
     }
 
-    .container {
+    .join_container {
         width: 100%;
         max-width: 1320px;
-        height: 1000px;
+        height: 1400px;
         margin: 0 auto;
     }
 
@@ -38,6 +38,7 @@
         margin-bottom: 10px;
         margin-top: 5px;
         font-size: 16px;
+        border-bottom: 1px solid #dddddd;
     }
     
     #pwtest{
@@ -48,19 +49,23 @@
         font-weight: bolder;
         font-size: 20px;
     }
-
-    .joininputemail {
-        width: 220px;
+	
+	
+    .email {
+        width: 146px;
         height: 46px;
         text-align: left;
-        margin: 10px 15px 10px 0px;
+        margin: 10px 0;
         font-size: 16px;
     }
-    #emailback {
-        width: 220px;
+    .email::placeholder{
+    	font-size: 12px;
+    }
+    #emailselect {
+        width: 140px;
         height: 46px;
         text-align: left;
-        margin: 10px 0px 10px 15px;
+        margin: 10px 0px;
         border-radius: 5px;
         font-size: 16px;
         border: 1px solid #cccccc;
@@ -91,12 +96,21 @@
         font-weight: 700;
         margin-top: 30px;
     }
-
-    .optionchk{
+	
+	
+	#allchk{
         width: 20px;
         height: 20px;
         margin: 18px 10px 18px 18px;
         vertical-align:-5px;
+    }
+	
+	
+    .optionchk{
+        width: 16px;
+        height: 16px;
+        margin: 18px 10px 18px 18px;
+        vertical-align:-3px;
     }
 
 
@@ -105,8 +119,17 @@
         width: 500px;
         height: 56px;
         background-color: #dddddd;
+        border-radius: 5px;
         
     }
+    .optiondetail {
+        margin: 10px 0px 10px 0px;
+        width: 500px;
+        height: 48px;
+        background-color: #eeeeee;
+        border-radius: 5px;
+    }
+    
 
     .optiontxt{
         line-height: 0;
@@ -126,34 +149,79 @@
         font-size: 16px;
         font-weight: 600;
         text-align: center;
-        margin-top: 25px;
+        margin-top: 20px;
         background-color:#999999;
         color: #ffffff;
+    }
+    
+    #flexbox{
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    }
+    
+    .com {
+    	font-size: 14px;
+    }
+    
+    #gen{
+    	width: 500px;
+    	height: 46px;
+    	border: 1px solid #dddddd;
+    	border-radius: 5px;
+    	margin: 10px 0;
+    }
+    
+    #bir{
+   	 	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	margin: 10px 0;
+    	
+    }
+    
+    .birth{
+    	width: 500px;
+    	height: 46px;
+    	border-bottom: 1px solid #dddddd;
+    	text-align: center;
     }
 
 
 
+    @media screen and (max-width: 1380px) {
+    	.join_container{
+    		width: 90%;
+    	}
+	}
     @media screen and (max-width: 560px) {
         #box {
-            width: 90%;
+            width: 100%;
             padding: 50px 5%;
         }
 
-		.joininputemail{
+		#email{
 			width: 42%;
-			margin: 10px 3% 10px 0;
+			
 		}
 		
 		#emailback{
 			width: 42%;
-			margin: 10px 0 10px 3%;
 		}
         .width100{
         	width: 100%;
         }
         
+        #gen{
+        	width: 100%
+        }
+        
     }
-
+    @media screen and (max-width: 420px) {
+    	.email::placeholder{
+    		font-size: 11px;
+    	}
+	}
     
 
 
