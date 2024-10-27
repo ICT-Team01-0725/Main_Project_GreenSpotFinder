@@ -1,3 +1,5 @@
+-- 동일한 폴더 경로에 존재하는 road_json_to_csv의 Python, SQL 파일 중 하나를 실행하면 됩니다
+
 -- Pandas로  CSV로 변환한 JSON 파일을 SQL 테이블로 로드하기 
 
 -- local_infile 옵션 활성화하기 (프롬포트 혹은 터미널 추가 설정 필요)
