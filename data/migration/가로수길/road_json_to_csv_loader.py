@@ -1,3 +1,4 @@
+# 동일한 폴더 경로에 존재하는 road_json_to_csv의 Python, SQL 파일 중 하나를 실행하면 됩니다
 import pandas as pd
 from sqlalchemy import create_engine
 import ast
