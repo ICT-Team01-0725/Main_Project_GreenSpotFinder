@@ -5,6 +5,13 @@ import ast
 # CSV 파일 읽기
 df = pd.read_csv('C:\\Users\\5\\Desktop\\DATA\\data\\seeders\\가로수길\\전국가로수길정보표준데이터.csv')
 
+"""
+이용하고 있는 데이터는 
+JSON을 CSV로 변환한 것으로
+기존 JSON의 칼럼명은 두 개였기 때문에 (fields, records)
+각각이 리스트와 프레임을 생성할 수 있도록 하는 작업이 필요합니다
+"""
+
 # 첫 번째 줄의 'fields' 칼럼에서 필드 정보를 가져와서 리스트로 변환
 fields = ast.literal_eval(df['fields'][0])
 
