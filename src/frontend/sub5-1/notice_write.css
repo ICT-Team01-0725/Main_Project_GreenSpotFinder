@@ -5,30 +5,31 @@ body {
 }
 
 section {
-    width: 90%;
+    width: 100%;
     max-width: 1320px;
     margin: 0 auto;  
 }
 
-
-.notice p.title {
-    margin-bottom: 50px;
-    font-size: 40px;
-    color: #111111;
-    font-weight: 500;
+.spase_top{
+    padding-top: 90px;
 }
-
 
 .content  {
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid #ddd;
 }
-
 
 .content .row {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 10px 0;
 }
+
+.content ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+
 
 .content .label {
     width: 20%;
@@ -68,10 +69,6 @@ section {
     text-align: right;
 }
 
-ul li {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-}
 
 
 .button_box div {  
@@ -104,7 +101,11 @@ ul li {
     width: 600px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1380px) {
+    .section {
+       width: 100%;
+       
+   }
 
 }
 

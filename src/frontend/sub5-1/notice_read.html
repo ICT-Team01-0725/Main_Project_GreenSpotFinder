@@ -10,16 +10,18 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../notice/common.css">
     <link rel="stylesheet" href="../notice/notice_read.css">
 </head>
-
 <body>
     <div>
         <section class="notice">
-            <p class="title">공지사항</p>
-            <div class="subtitle">도심녹지 관련 소식을 안내합니다.</div>
-
-            <!-- 게시글 정보 섹션 -->
+            <ul class="contents_box">
+                <li class="textLeft"> <!-- textLeft : 제목 왼쪽 정렬 | textCenter : 제목 가운데 정렬 -->
+                      <h2 class="great_title">공지사항</h2>
+                      <p class="subheading_title">도심녹지 관련 소식을 안내합니다</p>
+                </li>
+            </ul>            
             <div class="content">
                 <ul>
                     <li>
@@ -114,9 +116,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
-
-                    
+                    </li>                   
                     <li>
                         <div class="tt1">
                             <ul>
@@ -138,9 +138,6 @@
                             </ul>
                         </div>
                     </li>
-
-
-
                     <li>
                         <div class="tt1">
                             <ul>
@@ -184,34 +181,34 @@
                                 </li>
                             </ul>
                         </div>
-
-
                         <div class="cmd_write">
                             <ul>
                                 <li>아이디</li>
                             </ul>
                             <ul>
-                                <li><textarea rows="5">댓글을 남겨 보세요</textarea></li>
+                                <li><textarea rows="2">댓글을 남겨 보세요</textarea></li>
                             </ul>
                             <ul>
-                                <li style="text-align:right;"><button>등록</button></li>
+                                <li>
+                                    <div class="cmd_btn">
+                                        <button>등록</button>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </li>
                 </ul>
             </div>
-
-            <div class="button_box">
-                <div>
-                    <button>다음글</button>
+            <div class="button_box">                
+                <div class="btn_l"><button>다음글</button></div>
+                <div class="btn_r">
                     <button>수정</button>
                     <button>삭제</button>
-                    <button>목록</button>
+                    <button>목록</button>                
                 </div>
             </div>
 
         </section>
     </div>
 </body>
-
 </html>

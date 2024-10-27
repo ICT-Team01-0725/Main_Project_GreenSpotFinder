@@ -4,33 +4,34 @@ body {
     font-family: "Noto Sans KR", sans-serif;
 }
 
-section {
-    width: 90%;
+section.notice {
+    width: 100%;
     max-width: 1320px;
+    margin: 0 auto;
 }
 
-.notice {
+.contents {
     margin: 0 auto 100px auto;
 }
 
-.notice p.title {
+.contents p.title {
     margin: 12px 0;
     font-size: 40px;
     color: #111111;
     font-weight: 500;
 }
 
-.notice a {
+.contents a {
     text-decoration: none;
 }
 
-.notice div.subtitle {
+.contents div.subtitle {
     font-size: 20px;
     margin: 16px 0 30px;   
     color:#555555;
 }
 
-.search-bar {
+.search-bar {  
     display : flex;
     justify-content: space-between;
     /*justify-content: center;*/
@@ -69,27 +70,27 @@ section {
     background-color: #ffffff;
 }
 
-.notice div.contents {
+div.contents {
     border-top: 2px solid #000;
 }
 
-.notice ul {
+.contents ul {
      justify-content: space-between; 
      
 }
 
-.notice ul li {       
+.contents ul li {       
     border-bottom: 1px solid #ddd;
     padding: 30px 30px;
     cursor: pointer;
 }
 
-.notice ul li span {
+.contents ul li span {
     font-weight: 400;
     color: #09BA00;
 }
 
-.notice ul li p.title {
+.contents ul li p.title {
     margin: 12px 0;
     font-size: 20px;
     color: #333;
@@ -98,12 +99,12 @@ section {
     word-break: keep-all; 
 }
 
-.notice ul li:hover p.title {
+.contents ul li:hover p.title {
     color: #00A38B;
     transition: all 0.3s;
 }
 
-.notice ul li em {
+.contents ul li em {
     font-weight: 400;
 }
 
@@ -165,10 +166,11 @@ section {
 }
 
 
-@media screen and (max-width: 1000px) {
-
+@media screen and (max-width: 1380px) {
+    .contents {
+       width: 100%;
+    }
 }
-
 
 @media screen and (max-width: 768px) {
     

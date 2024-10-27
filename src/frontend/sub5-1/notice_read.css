@@ -5,7 +5,7 @@ body {
 }
 
 section {
-    width: 90%;
+    width: 100%;
     max-width: 1320px;
     margin: 0 auto;  
 }
@@ -30,6 +30,7 @@ section {
 
 
 .content  {
+    margin-top: 20px;
     border-top: 2px solid #000;
 }
 
@@ -62,12 +63,13 @@ section {
 
 .content ul li {       
    border-bottom: 1px solid #ddd;
-   padding: 10px 10px;
+   padding: 10px 0px;
+   margin-bottom: 20px;
 }
 
 .content div.bodyCont{
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .tt ul {
@@ -169,17 +171,34 @@ section {
     outline: none; 
 }
 
+
+
 .cmd_write button {
     padding: 6px 16px 6px 16px;
     background-color: #ffffff;
-    border: 1px solid #555;
+    border: 1px solid #00A38B;
     border-radius: 4px;    
     cursor: pointer;
+    color: #00A38B;
 }
 
-.button_box div {  
-    margin: 20px 0px 60px 0px;    
-    text-align: right;  
+
+
+.cmd_write .cmd_btn{
+    text-align: right;
+    margin-right: 20px;
+    
+}
+
+
+.button_box {  
+    margin: 20px 10px 60px 10px;   
+    display: flex;
+    justify-content:space-between;    
+}
+
+.button_box .btn_l{
+    text-align: left; 
 }
 
 .button_box button {    
@@ -191,7 +210,12 @@ section {
 }
 
 
-@media screen and (max-width: 1000px) {
+
+
+@media screen and (max-width: 1380px) {
+    .section {
+       width: 90%;
+   }
 
 }
 
@@ -213,6 +237,9 @@ section {
         font-size: 12px;
         margin-right: 50px;
         font-weight: 50px;
-      
+    }
+
+    .content h2.title {
+        font-size: 25px;
     }
 }
