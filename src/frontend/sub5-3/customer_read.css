@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {  
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;  
+}
+
+
+
+
+.content  {
+    margin-top: 20px;
+    border-top: 2px solid #000;
+}
+
+.content h2.title {
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+.content tt  span.title{
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.content tt ul li span.cont{
+    font-size: 20px;
+    margin-right: 50px;
+    font-weight: 100;
+    color: #555555;
+}
+
+.content ul {
+    justify-content: space-between; 
+    
+}
+
+.content ul li {       
+   border-bottom: 1px solid #ddd;
+   padding: 10px 0px;
+   margin-bottom: 20px;
+}
+
+.content div.bodyCont{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.tt ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.tt ul li{
+    width: auto;
+    padding: 0 20px 0 0;
+    border-bottom: 0;
+}
+
+
+.comment {
+    padding: 0px 0px 0px 0px;   
+}
+
+.comment div ul li{
+    padding: 10px 10px 10px 10px;
+}
+
+
+.comment span.user_icon{
+    padding: 0px 10px 0px 10px;   
+}
+
+.comment span.user_id{
+    margin-right: 20px;   
+}
+
+.comment button.user_wt{
+    padding: 2px 10px 2px 10px;   
+    background-color: #ffffff;
+    border: 1px solid #00A38B;
+    border-radius: 4px;  
+    color: #00A38B; 
+}
+
+.comment span.cmd_ctt{
+    color:#333333;
+    margin-left: 40px;
+}
+
+.comment span.cmd_ctt1{
+    margin-left: 40px;
+    color: #00A38B;
+}
+.comment span.cmd_dt{
+    margin-left: 40px;
+    padding: 0px 0px 0px 0px;   
+    color:#AAAAAA;
+}
+
+.comment a.cmd_re{
+    padding: 10px 10px 10px 10px;   
+    color:#AAAAAA;
+    text-decoration: none;
+
+}
+
+
+.tt1 {
+    width: auto;
+    padding: 0 20px 0 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tt1 span del{
+    width: auto;
+    padding-right: 100px;
+    border-bottom: 0;
+}
+
+
+.comment ul li {  
+    padding: 10px 10px 10px 10px;    
+    
+}
+
+.comment div.cmd_write{
+    padding-left: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 4px; 
+}
+
+.cmd_write ul li{    
+    width: 100%;
+}
+
+.cmd_write textarea {
+    border:none;
+    width: 98%;
+}
+
+.cmd_write textarea:focus {
+    outline: none; 
+}
+
+.cmd_write button {
+    padding: 6px 16px 6px 16px;
+    background-color: #ffffff;
+    border: 1px solid #00A38B;
+    border-radius: 4px;    
+    cursor: pointer;
+    color: #00A38B;
+}
+
+
+
+.cmd_write .cmd_btn{
+    text-align: right;
+    margin-right: 20px;
+    
+}
+
+.button_box {  
+    margin: 20px 10px 60px 10px;   
+    display: flex;
+    justify-content:space-between;    
+}
+
+.button_box .btn_l{
+    text-align: left; 
+}
+
+.button_box .btn_r{
+    text-align: right; 
+}
+
+.button_box button {    
+    padding: 6px 16px 6px 16px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 1380px) {
+    .section {
+       width: 90%;
+   }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .content div.bodyCont img {
+        width: 90%;
+    }
+    
+}
+@media screen and (max-width: 420px) {
+    .content   span.title{
+        font-size: 12px;
+        font-weight: 50px;
+       
+    }
+
+    .content span.cont {
+        font-size: 12px;
+        margin-right: 50px;
+        font-weight: 50px;
+    }
+
+    .content h2.title {
+        font-size: 25px;
+    }
+}

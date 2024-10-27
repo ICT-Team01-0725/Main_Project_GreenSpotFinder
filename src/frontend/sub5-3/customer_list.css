@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+section {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+
+div.search-text {
+    text-align: left;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.list {  
+    margin-top: 40px;
+    border-top: 2px solid #000;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.list_header, .list_row {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.list_header {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list_row {
+    font-size: 14px;    
+}
+
+.item {    
+    align-items:center;   
+    padding: 0 10px;     
+}
+
+
+.t_num {  
+    text-align: center;
+    width:100px;
+}
+
+.t_tit {      
+    flex: 1;
+    text-align: center;
+}
+
+.t_stt {    
+    text-align: center;
+    width:100px;
+}
+
+.t_dt {   
+    text-align: center;
+    width:100px;
+}
+
+.l_num {   
+    display:flex;
+    align-items: center;
+    justify-content:center; 
+    width:100px;
+}
+
+.l_tit {   
+    display:flex;
+    align-items: center;
+    flex: 1;
+    text-align: left;    
+}
+
+.l_stt {    
+    display:flex;
+    align-items: center;
+    justify-content:center; 
+    width:100px;
+}
+
+.l_dt {   
+    display:flex;
+    align-items: center;
+    justify-content:center; 
+    width:100px;
+}
+
+
+.status {
+    border-radius: 13px;
+    color: rgb(85, 85, 85);
+    font-size: 12px;
+    width: 74px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+}
+
+.qna .list {  
+    border-top: 2px solid #000;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.pending {
+    color: #555555;
+    border: 1px solid #555;
+}
+
+.completed {
+    color: #09BA00;
+    border: 1px solid #09BA00;
+}
+
+
+.button_box div {  
+    margin: 20px 0px 60px 0px;    
+    text-align: right;  
+}
+
+.button_box button {    
+    padding: 6px 16px 6px 16px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #555;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 2px;
+    border: 1px solid #555;
+}
+
+
+
+.pagination a:hover {
+    background-color: #555;
+    color: white;
+}
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    border: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.pagination button.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #f0f0f0;
+}
+
+
+@media screen and (max-width: 1380px) {
+    .contents {
+       width: 90%;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+
+@media screen and (max-width: 460px) {
+    .status {
+        width: 50px;
+    }
+
+    .pagination a {
+        text-decoration: none;
+        color: #555;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        margin: 0 2px;
+        border: 1px solid #555;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+
+@media screen and (max-width: 420px) {
+    
+}

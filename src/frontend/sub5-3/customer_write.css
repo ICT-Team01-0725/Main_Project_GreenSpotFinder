@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {  
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;  
+}
+
+.spase_top{
+    padding-top: 90px;
+}
+
+.content  {
+    border-top: 1px solid #ddd;
+}
+
+.content .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.content ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+
+
+.content .label {
+    width: 20%;
+    max-width: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content .input {
+    width: 80%;
+    text-align: left;
+}
+
+.in_title, .in_content, .input_file {
+    width: 100%;
+    border: 1px solid #DDDDDD;
+}
+
+.in_title {
+    max-width: 500px;
+    height: 30px;
+}
+
+.file_lst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file_lst label {
+    color: #0004FF;
+}
+
+.del_file {
+    color: #333333;
+    text-align: right;
+}
+
+
+
+.button_box div {  
+    margin: 20px 0px 60px 0px;    
+    text-align: center;  
+}
+
+.button_box button.write {    
+    padding: 6px 16px 6px 16px;
+    background-color: #333333;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+    color:#ffffff;
+}
+
+.button_box button.cancle {    
+    padding: 6px 16px 6px 16px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+/* input[type=file] {
+    width: 600px;
+} */
+
+.input_file {
+    width: 600px;
+}
+
+@media screen and (max-width: 1380px) {
+    .section {
+       width: 100%;
+       
+   }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    
+
+    .input_file {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    
+}
+
+

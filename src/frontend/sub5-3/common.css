@@ -1,0 +1,139 @@
+/* 서브 타이틀 정렬 */
+.textleft {
+    text-align: left;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.contents_box {
+    padding-top: 153px
+}
+
+h2.great_title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    word-break: keep-all;
+}
+
+p.subheading_title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #555;
+    margin-top: 12px;
+    word-break: keep-all;
+}
+
+.content_text {
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    line-height: 36px;
+    margin-top: 40px;
+    word-break: keep-all;
+}
+/* 서브 타이틀 정렬 */
+
+
+
+@media screen and (max-width: 1380px) {
+    #sub_container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* 서브 타이틀 정렬 */
+    .contents_box {
+        padding-top: 120px
+    }
+
+    h2.great_title {
+        font-size: 36px;
+    }
+
+    p.subheading_title {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+
+    .content_text {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    /* 서브 타이틀 정렬 */
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    /* 서브 타이틀 정렬 */
+    .contents_box {
+        padding-top: 120px
+    }
+
+    h2.great_title {
+        font-size: 36px;
+    }
+
+    p.subheading_title {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+
+    .content_text {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    /* 서브 타이틀 정렬 */
+}
+
+
+@media screen and (max-width: 768px) {
+    /* 서브 타이틀 정렬 */
+    .contents_box {
+        padding-top: 100px
+    }
+
+    h2.great_title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+    p.subheading_title {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 12px;
+    }
+
+    .content_text {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    /* 서브 타이틀 정렬 */
+}
+
+@media screen and (max-width: 480px){
+    /* 서브 타이틀 정렬 */
+    .contents_box {
+        padding-top: 90px
+    }
+
+    h2.great_title {
+        font-size: 26px;
+    }
+    
+    p.subheading_title {
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    .content_text {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    /* 서브 타이틀 정렬 */
+}
