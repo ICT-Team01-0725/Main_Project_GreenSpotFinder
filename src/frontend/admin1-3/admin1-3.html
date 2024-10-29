@@ -14,156 +14,163 @@
 </head>
 
 <body>
-
-  <div class="container">
-
-    <!-- 사이드 바 -->
-    <div class="side-bar">
-      <div class="icon-bar"></div>
-      <div class="search-menu">
-        <div class="profile">
-          <img src="" alt="">
-          <p>계정 이름</p>
+    <div class="container">
+        <!-- 사이드 바 -->
+        <div class="side-bar">
+            <div class="icon-bar"></div>
+            <div class="search-menu">
+                <div class="profile">
+                    <img src="" alt="">
+                    <p>계정 이름</p>
+                </div>
+                <div class="controller">
+                    <div class="menu active">
+                        <div class="topmenu">
+                            <i class="fa-solid fa-user"></i>
+                            <p>회원관리</p>
+                        </div>
+                        <div>
+                            <div class="submenu">
+                                <a href="">회원 목록 조회</a>
+                            </div>
+                            <div class="submenu">
+                                <a href="">회원 관리</a>
+                            </div>
+                            <div class="submenu">
+                                <a href="">회원 휴몇 및 삭제 관리</a>
+                            </div>
+                        </div>
+                        <button class="menubtn">
+                            <i class="fa-solid fa-chevron-up icon open"></i>
+                            <i class="fa-solid fa-chevron-down icon close"></i>
+                        </button>
+                    </div>
+                    <div class="menu">
+                        <div class="topmenu">
+                            <i class="fa-solid fa-comment"></i>
+                            <p>고객센터</p>
+                        </div>
+                        <div>
+                            <div class="submenu">회원 목록 조회</div>
+                            <div class="submenu">회원 관리</div>
+                            <div class="submenu">회원 휴몇 및 삭제 관리</div>
+                            <button class="menubtn">
+                                <i class="fa-solid fa-chevron-up icon open"></i>
+                                <i class="fa-solid fa-chevron-down icon close"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="topmenu">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <p>게시판 관리</p>
+                        </div>
+                        <div>
+                            <div class="submenu">회원 목록 조회</div>
+                            <div class="submenu">회원 관리</div>
+                            <div class="submenu">회원 휴몇 및 삭제 관리</div>
+                            <button class="menubtn">
+                                <i class="fa-solid fa-chevron-up icon open"></i>
+                                <i class="fa-solid fa-chevron-down icon close"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="logout">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">로그아웃</a>
+                </div>
+            </div>
         </div>
-        <div class="controller">
-          <div class="menu active">
-            <div class="topmenu">
-              <i class="fa-solid fa-user"></i>
-              <p>회원관리</p>
+        <!-- 메인컨텐츠 -->
+        <div class="popuplayer">
+            <p style="font-size : 40px; border-bottom: 2px solid #000; font-weight: 500;">팝업레이어</p>
+            <p style="background-color: #eee !important;">초기화면 접속 시 자동으로 뜰 팝업레이어를 설정합니다.</p>
+            <table class="popuptable">
+                <tr>
+                    <td>구분</td>
+                    <td>커뮤니티에 표시될 것인지, 어느 곳에 표시할 것인지를 설정합니다.
+                        <select name="popupset" id=""></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>접속 기기</td>
+                    <td>커뮤니티에 표시될 것인지, 오느 곳에 표시할 것인지를 설정합니다.
+                        <select name="popupset" id="">커뮤니티</select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>시간</td>
+                    <td>커뮤니티에 표시될 것인지, 오느 곳에 표시할 것인지를 설정합니다.
+                        <select name="popupset" id="">PC/모바일</select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>시간 일시</td>
+                    <td><input type="text">
+                        <input type="checkbox">
+                        <span>시작일시를 오늘로</span></td>
+                </tr>
+                <tr>
+                    <td>종료 일시</td>
+                    <td><input type="text">
+                        <input type="checkbox">
+                        <span>종료일시를 오늘로부터 7일 후로</span></td>
+                </tr>
+                <tr>
+                    <td>팝업레이어 좌측 위치</td>
+                    <td><input type="text" placeholder="10px"></td>
+                </tr>
+                <tr>
+                    <td>팝업 레이어 넓이</td>
+                    <td><input type="text" placeholder="10px"></td>
+                </tr>
+                <tr>
+                    <td>팝업 레이어 높이</td>
+                    <td><input type="text" placeholder="10px"></td>
+                </tr>
+                <tr>
+                    <td>팝업 레이어 제목</td>
+                    <td><input type="text" placeholder="제목을 입력해주세요"></td>
+                </tr>
+                <tr>
+                    <td>내용</td>
+                    <td>
+                        <textarea class="textarea" name="" id="" placeholder="내용을 입력하세요"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="btns">
+                <button type="submit">저장</button>
+                <button type="reset">취소</button>
             </div>
-            <div>
-              <div class="submenu"><a href="">회원 목록 조회</a></div>
-              <div class="submenu"><a href="">회원 관리</a></div>
-              <div class="submenu"><a href="">회원 휴몇 및 삭제 관리</a></div>
-            </div>
-            <button class="menubtn"></button>
-          </div>
-
-          <div class="menu">
-            <div class="topmenu">
-              <i class="fa-solid fa-comment"></i>
-              <p>고객센터</p>
-            </div>
-            <div>
-              <div class="submenu">회원 목록 조회</div>
-              <div class="submenu">회원 관리</div>
-              <div class="submenu">회원 휴몇 및 삭제 관리</div>
-              <button class="menubtn"></button>
-            </div>
-          </div>
-
-          <div class="menu">
-            <div class="topmenu">
-              <i class="fa-solid fa-clipboard-list"></i>
-              <p>게시판 관리</p>
-            </div>
-            <div>
-              <div class="submenu">회원 목록 조회</div>
-              <div class="submenu">회원 관리</div>
-              <div class="submenu">회원 휴몇 및 삭제 관리</div>
-              <button class="menubtn"></button>
-            </div>
-          </div>
         </div>
-        <div class="logout">
-          <i class="fa-solid fa-arrow-right"></i>
-          <a href="">로그아웃</a>
-
-        </div>
-      </div>
+        <!-- container div -->
     </div>
-
-    <!-- 메인컨텐츠 -->
-
-    <div class="popuplayer">
-      <p style="font-size : 40px; border-bottom: 2px solid #000; font-weight: 500;">팝업레이어</p>
-      <p style="background-color: #eee; !important">초기화면 접속 시 자동으로 뜰 팝업레이어를 설정합니다.</p>
-      <table class="popuptable">
-        <tr>
-          <td>구분</td>
-          <td>커뮤니티에 표시될 것인지, 어느 곳에 표시할 것인지를 설정합니다.
-            <select name="popupset" id=""></select>
-          </td>
-        </tr>
-        <tr>
-          <td>접속 기기</td>
-          <td>커뮤니티에 표시될 것인지, 오느 곳에 표시할 것인지를 설정합니다.
-            <select name="popupset" id="">커뮤니티</select>
-          </td>
-        </tr>
-        <tr>
-          <td>시간</td>
-          <td>커뮤니티에 표시될 것인지, 오느 곳에 표시할 것인지를 설정합니다.
-            <select name="popupset" id="">PC/모바일</select>
-          </td>
-        </tr>
-        <tr>
-          <td>시간 일시</td>
-          <td><input type="text"> <input type="checkbox"> <span>시작일시를 오늘로</span></td>
-        </tr>
-        <tr>
-          <td>종료 일시</td>
-          <td><input type="text"> <input type="checkbox"> <span>종료일시를 오늘로부터 7일 후로</span></td>
-        </tr>
-        <tr>
-          <td>팝업레이어 좌측 위치</td>
-          <td><input type="text" placeholder="10px"></td>
-        </tr>
-        <tr>
-          <td>팝업 레이어 넓이</td>
-          <td><input type="text" placeholder="10px"></td>
-        </tr>
-        <tr>
-          <td>팝업 레이어 높이</td>
-          <td><input type="text" placeholder="10px"></td>
-        </tr>
-
-        <tr>
-          <td>팝업 레이어 제목</td>
-          <td><input type="text" placeholder="제목을 입력해주세요"></td>
-        </tr>
-
-        <tr>
-          <td>내용</td>
-          <td><textarea class="textarea" name="" id="" placeholder="내용을 입력하세요"></textarea></td>
-        </tr>
-
-      </table>
-      <div class="btns">
-        <button type="submit">저장</button>
-        <button type="reset">취소</button>
-      </div>
-
-
-    </div>
-
-    <!-- container div -->
-  </div>
-
-  <script>
-    const btns = document.querySelectorAll(".topmenu");
-
-    function removeActiveClasses() {
-      btns.forEach((btn) => {
-        btn.parentElement.classList.remove("active");
-      });
-    }
-
-
-    btns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const menuitem = btn.parentNode;
-        const isActive = menuitem.classList.contains("active");
-
-        removeActiveClasses();
-
-        if (!isActive) {
-          menuitem.classList.add("active");
+    <script>
+        const btns = document.querySelectorAll(".topmenu, .menubtn");
+        function removeActiveClasses() {
+            btns.forEach((btn) => {
+                btn
+                    .parentElement
+                    .classList
+                    .remove("active");
+            });
         }
-
-      })
-    });
-  </script>
+        btns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const menuitem = btn.parentNode;
+                const isActive = menuitem
+                    .classList
+                    .contains("active");
+                removeActiveClasses();
+                if (!isActive) {
+                    menuitem
+                        .classList
+                        .add("active");
+                }
+            })
+        });
+    </script>
 </body>
-
 </html>
