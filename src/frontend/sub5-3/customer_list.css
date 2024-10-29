@@ -4,7 +4,7 @@ body {
     font-family: "Noto Sans KR", sans-serif;
 }
 
-section {
+section.customer {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
@@ -34,12 +34,13 @@ div.search-text {
 
 .list_header {
     background-color: #f2f2f2;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
 }
 
 .list_row {
-    font-size: 14px;    
+    font-size: 16px;    
 }
 
 .item {    
@@ -108,12 +109,6 @@ div.search-text {
     line-height: 26px;
 }
 
-.qna .list {  
-    border-top: 2px solid #000;
-    list-style-type: none;
-    padding: 0px;
-}
-
 .pending {
     color: #555555;
     border: 1px solid #555;
@@ -131,130 +126,102 @@ div.search-text {
 }
 
 .button_box button {    
-    padding: 6px 16px 6px 16px;
+    width: 100px;
+    height: 36px;
     background-color: #ffffff;
     border: 1px solid #555;
     border-radius: 4px;    
     cursor: pointer;
 }
 
-.pagination {
-    text-align: center;
-    margin-top: 20px;
+
+/* paging_number */
+.paging_num_ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
 }
 
-.pagination a {
-    text-decoration: none;
-    color: #555;
-    display: inline-block;
+.paging_num_ul li {
     width: 40px;
     height: 40px;
-    text-align: center;
     line-height: 40px;
-    margin: 0 2px;
-    border: 1px solid #555;
-}
-
-
-
-.pagination a:hover {
-    background-color: #555;
-    color: white;
-}
-.pagination {
     text-align: center;
-    margin-top: 20px;
-}
-
-.pagination button {
-    border: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
+    border: 1px solid #ddd;
+    color: #555;
     margin: 0 5px;
     cursor: pointer;
 }
-.pagination button.active {
-    background-color: #4caf50;
-    color: white;
+
+.paging_num_ul li.prev,
+.paging_num_ul li.next {
+    padding: 0;
 }
 
-.pagination button:hover {
-    background-color: #f0f0f0;
+.paging_num_ul li:hover {
+    border: 1px solid #111;
+    color: #111;
 }
+
+.paging_num_ul li.active {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #111;
+}
+/* paging_number */
 
 
 @media screen and (max-width: 1380px) {
-    .contents {
-       width: 90%;
+    section.customer {
+        width: 90%;
     }
 }
-
-
 
 @media screen and (max-width: 768px) {
     
-}
-
-
-@media screen and (max-width: 460px) {
-    .status {
-        width: 50px;
+    /* paging_number */
+    .paging_num_ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
     }
 
-    .pagination a {
-        text-decoration: none;
-        color: #555;
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        text-align: center;
-        line-height: 24px;
-        margin: 0 2px;
-        border: 1px solid #555;
+    .paging_num_ul li {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
     }
+
+    .paging_num_ul li.active {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    /* paging_number */
 }
 
+@media screen and (max-width: 480px) {
+    /* paging_number */
+    .paging_num_ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
 
+    .paging_num_ul li {
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1000px) {
-
-}
-
-
-@media screen and (max-width: 768px) {
-    
+    .paging_num_ul li.active {
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+    }
+    /* paging_number */
 }
 
 
