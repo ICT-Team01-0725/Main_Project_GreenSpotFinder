@@ -1,150 +1,271 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin : 0px;
-    padding : 0px;
-    box-sizing : border-box;
-    font-family: "Noto Sans KR", sans-serif;
-    background-color: #e9f7ff;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 /* 전체 박스 설정 */
 
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+
 
 .container {
- 
-display : flex;
-width : 100%;
-height : 100vh;
+
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    height: 1080px;
+    background-color: #E9F7FF;
+    margin: 0 auto;
+
+
+    justify-content: center;
 }
+
 
 
 
 /* 사이드 바 */
 
 .side-bar {
-    width : 20%;
-    display : flex;
+    max-width: 380px;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
 }
 
 .icon-bar {
-    width : 30%;
+    width: 100px;
     background-color: blue;
 }
 
 .search-menu {
     background-color: #2f5aff;
-    width : 80%;
-    display : flex;
+    width: 280px;
+    display: flex;
     flex-direction: column;
 }
 
 .profile {
-    height : 30vh;
+    height: 30vh;
+    max-height: 206px; /* 추가 */
     text-align: center;
     align-content: center;
     background-color: #2f5aff;
+}
+
+.profile p {
+    background-color: #2f5aff;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .controller {
     text-align: center;
     align-content: center;
     font-size: 25px;
-    
+
 }
 
 .menu {
- padding : 10px;
- position: relative;
- overflow : hidden;
- transition : 0.3s ease;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background-color: #2f5aff;
 }
 
 .topmenu {
- font-size : 1rem;
- padding : 1rem;
- cursor: pointer;
- background-color: 2F5AFF;
+    font-size: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    background-color: #2f5aff;
+    text-align: left;
 }
 
-.submenu{
-    font-size : 1rem;
-    max-height : 0;
+.topmenu p {
+    color: white;
+    background-color: #2f5aff;
+    /* padding: 10px; */
+    display: inline-block;
+}
+
+i {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #2f5aff;
+}
+
+.submenu {
+    font-size: 1rem;
+    max-height: 0;
     overflow: hidden;
     transform: max-height 0.3s ease-in-out;
+    background-color: #4B6EFE;
+    color: white;
+    text-align: left;
 }
 
 
 .menu.active .submenu {
     max-height: 200px;
     border-top: 1px solid silver;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.1s ease-in-out;
     overflow: hidden;
-    padding : 20px;
+    padding: 20px;
 }
 
 .menubtn {
-cursor: pointer;
-display: flex;
-font-size : 1rem;
-position : absolute;
-top: 1rem;
-right: 1rem;
-border : none;
-background-color: #2f5aff;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    position: absolute;
+    top: 1rem; /* 삭제 */
+    top: 18.6px; /* 추가 */
+    right: 1rem;
+    border: none;
+    background-color: #2f5aff;
 }
 
-.topmenu.active {
-    background-color: #1D44F7;
-}
+
 
 .menu.active {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1D44F7;
 }
 
+.menu.active .topmenu p,
+.menu.active .topmenu i {
+    background-color: #1D44F7;
+}
+
+.menu.active .topmenu {
+    background-color: #1D44F7;
+}
+
+.menu.active .submenu a {
+    background-color: #4B6EFE;
+    color: white
+}
+
+/* 메뉴 아이콘 추가 시작 */
+.menubtn:focus {
+    outline: 0;
+}
+
+.icon.close {
+    display: none;
+}
+
+.menu.active .icon.close {
+    display: block;
+}
+
+.menu.active .icon.open {
+    display: none;
+}
+
+.fa-chevron-up, .fa-chevron-down {
+    font-size: 14px; 
+    color: #fff;
+}
+/* 메뉴 아이콘 추가 끝 */
+
+
+
+.logout {
+    margin-top: auto;
+    background-color: #002AC9;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+/* 추가 시작 */
+.logout:hover {
+    background-color: #001f8f;
+    transition: all 0.3s;
+}
+
+.logout:hover i {
+    background-color: #001f8f;
+    transition: all 0.3s;
+}
+
+.logout i {
+    background-color: #002AC9;
+    padding: 10px;
+    margin-left: 0.8rem;
+    color: white;
+    
+}
+
+/* 추가 끝 */
+
+.logout a {
+    text-align: left;
+    padding: 20px 20px 20px 5px;
+    display: inline-block
+}
+
+.logout a:visited,
+a:active,
+a:link {
+    text-decoration: none;
+    color: white;
+}
 
 /* 메인컨텐츠 영역 */
 
 .main-content {
-    border : 1px solid #000;
-    width : 50%;
-    display : flex;
+    width: calc(90% - 380px);
+    margin: 30px 0px 0px 370px;
+    display: flex;
     flex-direction: column;
-    gap : 20px;
+    gap: 20px 0;
 }
 
 .usertable, .inquirytable, .servicetable {
-    width : 90%;
-    margin : 30px auto 0px auto;
-    justify-content: center;
+    width: 90%;
+    margin: 10px 0px 10px 60px;
     align-items: center;
     background-color: white;
-    
+    height: 30vh;
 }
 
 table {
-    margin : 5px auto;
-    width : 95%;
+    margin: 5px auto;
+    width: 95%;
     border-spacing: 10px;
     text-align: center;
     background-color: white;
     border-top: 2px solid #555;
+    border-collapse: collapse;
 }
 
 /* table tr {
 } */
 
-table tr th, table tr td {
-    padding : 0.05rem 0.5rem;
+table tr th,
+table tr td {
+    padding: 10px;
     background-color: white;
+    border-bottom: 1px solid #f8f8f8;
 }
 
 .main-content p {
     font-size: 1.3rem;
     font-weight: 500;
     background-color: white;
-    padding : 5px 0 10px 20px;
+    padding: 5px 0 10px 20px;
     display: inline-block;
+    margin-top: 25px;
 }
 
 .main-content a {
@@ -152,13 +273,15 @@ table tr th, table tr td {
     display: inline-block;
     float: right;
     background-color: white;
-    padding : 10px;
-    margin : 0 30px 0 0 ;
+    padding: 10px;
+    margin: 27px 30px 0 0;
 }
 
-a:visited, a:active, a:link {
+a:visited,
+a:active,
+a:link {
     text-decoration: none;
-    color : black;
+    color: black;
 }
 
 
@@ -166,8 +289,7 @@ a:visited, a:active, a:link {
 /* 차트 영역 */
 
 .chart {
-    border: 1px solid #000;
-    width: 30%;
+    width: 35%;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -176,13 +298,13 @@ a:visited, a:active, a:link {
 }
 
 .linegraph {
- width : 90%;
- height : 50% ;
- background-color: white;
-} 
+    width: 90%;
+    height: 50%;
+    background-color: white;
+}
 
 .circlegraph {
- width : 90%;
-height : 45%;
-background-color: white;
+    width: 90%;
+    height: 45%;
+    background-color: white;
 }
