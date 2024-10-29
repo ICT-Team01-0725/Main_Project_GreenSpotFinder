@@ -4,42 +4,44 @@ body {
     box-sizing: border-box;
 }
 
-section {
+section.customer {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;  
 }
 
-.spase_top{
-    padding-top: 90px;
-}
-
 .content  {
     border-top: 1px solid #ddd;
+    margin-top: 80px;
 }
 
-.content .row {
+.content li.row {
     display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
+    align-items: center;
 }
 
-.content ul li {
+.content li.top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content > ul > li {
     border-bottom: 1px solid #ddd;
-    padding: 10px;
+    padding: 16px 0px;
 }
 
-
+.content > ul > li:last-child {
+    padding: 16px 0px;
+}
 
 .content .label {
-    width: 20%;
-    max-width: 200px;
+    width: 200px;
     text-align: center;
     vertical-align: middle;
 }
 
 .content .input {
-    width: 80%;
+    width: calc(100% - 200px);
     text-align: left;
 }
 
@@ -67,9 +69,15 @@ section {
 .del_file {
     color: #333333;
     text-align: right;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 16px;
 }
 
-
+.del_file:hover {
+    color: red;
+    transition: all 0.3s;
+}
 
 .button_box div {  
     margin: 20px 0px 60px 0px;    
@@ -77,50 +85,79 @@ section {
 }
 
 .button_box button.write {    
-    padding: 6px 16px 6px 16px;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
     background-color: #333333;
     border: 1px solid #555;
-    border-radius: 4px;    
+    border-radius: 5px;    
     cursor: pointer;
     color:#ffffff;
 }
 
 .button_box button.cancle {    
-    padding: 6px 16px 6px 16px;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
     background-color: #ffffff;
     border: 1px solid #555;
-    border-radius: 4px;    
+    border-radius: 5px;    
     cursor: pointer;
+    color:#555;
 }
 
-/* input[type=file] {
-    width: 600px;
-} */
-
 .input_file {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 @media screen and (max-width: 1380px) {
-    .section {
-       width: 100%;
-       
-   }
-
-}
-
-
-@media screen and (max-width: 768px) {
-    
-
-    .input_file {
-        width: 100%;
+    section.customer {
+        width: 90%;
     }
 }
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
+    .input_file {
+        width: 100%;
+    }
     
 }
 
+
+@media screen and (max-width: 600px) {
+    .content li.row {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .content li.top {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .content .label {
+        width: 200px;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    .content .input {
+        width: 100%;
+    }
+
+    
+    .del_file {
+        color: #333333;
+        text-align: right;
+        text-decoration: none;
+        font-size: 16px;
+        margin-right: 0px;
+    }
+}
 
