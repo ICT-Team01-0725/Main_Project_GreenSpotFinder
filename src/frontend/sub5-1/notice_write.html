@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notice</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
-    <link rel="stylesheet" href="../notice/common.css">
-    <link rel="stylesheet" href="../notice/notice_write.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>notice</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../notice/common.css">
+        <link rel="stylesheet" href="../notice/notice_write.css">
+    </head>
 
 <body>    
     <div>
         <section class="notice">        
             <ul class="contents_box">
                 <li class="textLeft"> <!-- textLeft : 제목 왼쪽 정렬 | textCenter : 제목 가운데 정렬 -->
-                      <h2 class="great_title">공지 작성</h2>                     
+                    <h2 class="great_title">공지 작성</h2>                              
                 </li>
-            </ul>                            
-            <div class="spase_top"></div>              
+            </ul>                                   
             <div class="content">
                 <ul>
-                    <li>
-                        <div class="row">
-                            <div class="label">제목</div>
-                            <div class="input"><input type="text" class="in_title"></div>
-                        </div>
+                    <li class="row">
+                        <div class="label">제목</div>
+                        <div class="input"><input type="text" class="in_title"></div>
                     </li>
-                </ul>
-                <ul>
-                    <li>
-                        <div class="row">
-                            <div class="label">내용</div>
-                            <div class="input"><textarea class="in_content" rows="20"></textarea></div>
-                        </div>
+                    <li class="top">
+                        <div class="label">내용</div>
+                        <div class="input"><textarea class="in_content" rows="20"></textarea></div>
                     </li>
-                </ul>
-                <ul>
-                    <li>
-                        <div class="row">
-                            <div class="label">첨부파일1</div>
-                            <div class="input">
-                                <input type="file" class="input_file">
-                                <div class="file_lst">
-                                    <label>만화로 배우는 자바.pdf</label>
-                                    <a href="javascript:delfile();" class="del_file">파일삭제</a>
-                                </div>
+                    <li class="row">
+                        <div class="label">첨부파일</div>
+                        <div class="input">
+                            <input type="file" class="input_file">
+                            <div class="file_lst">
+                                <label><input type="checkbox" name="file_del"> 만화로 배우는 자바.pdf</label>
+                                
+                                <a href="javascript:delfile();" class="del_file">파일삭제</a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-                                   
             <div class="button_box">                
                 <div>
                     <button class="write">작성완료</button>    
@@ -64,4 +62,3 @@
     </div>
 </body>
 </html>
-
