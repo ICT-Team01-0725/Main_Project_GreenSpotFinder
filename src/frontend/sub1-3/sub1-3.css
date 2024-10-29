@@ -1,17 +1,20 @@
+
 /* sub1-3 시작 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-.contents1, .contents2, .contents3 {
+#sub_container {
+    width: 100%;
     max-width: 1320px;
     margin: 0 auto;
-    padding: 20px;
 }
+
 
 .contents1 {
     text-align: center;
     margin-bottom: 40px;
     margin-top: 130px;
 }
+
 
 .title {
     font-size: 32px;
@@ -25,212 +28,359 @@
 }
 
 .icon{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: #ddd;
     border-radius: 50%;
     margin-bottom: 5px;
+    margin: 0px auto;
+    margin-bottom: 10px;
 }
 
-.category, .tag{
-    border-bottom: 1px solid #DDDDDD;
-}
 
 .map0 .root_daum_roughmap {
     width: 100%;
     height: 500px;
 }
-
 .categories {
     display: flex;
     justify-content: center;
-    gap: 20px;
     margin-top: 20px;
 }
 
 .categories ul {
     display: flex;
-    gap: 10px;
+    margin-bottom: 30px;
     list-style: none;
-    padding: 0;
+    width: 100%;
+    justify-content: space-around;
 }
-
 .categories li {
     text-align: center;
     font-size: 14px;
     color: #555555;
+    border-bottom: 1px solid #DDDDDD;
 }
-
-.contents3{
-    margin-top: 30px;
-    width: 100%;
-}
-.park-map-container{
-    max-width: 1320px;
-    width: 100%;
-}
-
-.park-list {
+/* 지역별_스크롤  */
+ul.region_scroll_ul {
     display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-width: 1320px;
-    width: 100%;
     justify-content: space-between;
-    overflow-y: scroll;
-    height: 280px;
+    align-items: center;
 }
-
-.park-place {
-    background: #fff;
+ul.region_scroll_ul > li {
+    width: 100%;
+    max-width: 1320px;
+    height: auto;
+}
+ul.region_scroll_ul li.region_list {
+    overflow-y: scroll;
+    overflow-y: hidden;
+    margin-top: 30px;
+}
+ul.region_scroll_ul li.region_map {
+    height: 723px;
+    background-color: #555555;
+}
+.scroll_list{
     border-bottom: 1px solid #DDDDDD;
     border-top: 1px #DDDDDD;
     padding: 15px;
     box-sizing: border-box;
-    flex : 0 0 calc(50% - 15px);
 }
-.park-list > li:nth-child(1),
-.park-list > li:nth-child(2) {
-    border-top: 1px solid black;
+ul.scroll_list li.content {
+    padding: 0px 16px;
+    word-break: keep-all;
 }
-
-.subtitle1 {
+ul.scroll_list li.content h4 {
     font-size: 18px;
-    font-weight: 700;
-    margin: 10px 0;
+    color: #333;
+    font-weight: 500;
 }
-
-.detail1, .detail2 {
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
+ul.scroll_list li.content p.text {
+    font-size: 16px;
+    color: #555;
+    margin: 17px 0;
+    line-height: 26px;
 }
-
-.tag {
-    font-size: 16;
-    background-color: #27ae60;
+ul.scroll_list li.content p.address {
+    font-size: 16px;
+    color: #333;
+}
+.scroll_list .category span {
     display: inline-block;
-    border-radius: 10px;
-    color: white;
-    padding: 2px 15px;
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 13px;
+    background-color: #00A38B;
+    text-align: center;
+    color: #fff;
+}
+.scroll_list_ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
-.page {
+.scroll_list_ul > li:nth-child(1),
+.scroll_list_ul > li:nth-child(2) {
+    border-top: 2px solid black;
+}
+
+.scroll_list_ul > li {
+    cursor: pointer;
+    width: calc(50% - 15px);
+}
+
+.scroll_list_ul > li:hover {
+    background-color: #f8f8f8;
+    transition: all 0.3s;
+}
+.scroll_list_ul li:hover ul.scroll_list li.content h4 {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+ul.scroll_list {
     display: flex;
-    justify-content: center;
+    padding: 30px;
+}
+li.region_map .root_daum_roughmap {
+    width: 100% !important;
+    height: 100% !important;
+}
+li.region_map .root_daum_roughmap .wrap_map {
+    height: calc(100% - 31.33px) !important;
+}
+.page {
+    text-align: center;
     margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
 }
 
 .page-link {
+    border: 1px solid #555;
     display: inline-block;
-    padding: 8px;
-    margin: 0 4px;
-    font-size: 14px;
-    color: #555;
-    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
 }
-
-.page-link:hover {
-    background-color: #ddd;
-    color: #000;
+.text{
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
 }
-
-
 
 @media screen and (max-width: 1380px) {
-    .contents1, .contents2, .contents3   {
-      width: 90%;
-     }
-     .park-list{
-        display: flex;
-        width: 90%;
-     }
 
-    .detail1{
-        line-height: 20px;
+#sub_container {
+    width: 90%;
+}
+
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    li.region_map .root_daum_roughmap {
+        width: 100% !important;
+        height: 320px !important;
     }
-  }
-  @media screen and (max-width: 1000px) {
-      .title{
-          font-size: 30px;
-      }
-      .detail2, .detail1{
-          font-size: 16px;
-      }
-      .contents2, .contents3{
-        margin: 0 auto;
-        padding: 0;
-      }
-      .subtitle{
-        margin-bottom: 30px;
-      }
+    /* 지역별_scroll */
+    ul.region_scroll_ul {
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        align-items: flex-start; 
+    }
 
-      
-      .park-list {
-        display: flex;
-        flex-direction: row-reverse;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        max-width: 100%;
+    ul.region_scroll_ul > li {
         width: 100%;
-        height: 500px;
-        overflow-y: scroll;
+        height: 723px;
+
     }
-    .park-list > li:nth-child(2) {
-        display: none;
+
+    ul.region_scroll_ul li.region_map {
+        height: auto;
+        margin-bottom: 30px;
+    }
+    /* 지역별_scroll */
+
+    /* 지역별_Paging */
+    ul.region_paging_ul {
+        flex-direction: column-reverse;
+    }
+
+    ul.region_paging_ul li.region_map {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    ul.region_paging_ul > li {
+        width: 100%;
+        height: 723px;
+    }
+    /* 지역별_Paging */
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .scroll_list .category span {
+        display: inline-block;
+        width: 60px;
+        height: 18px;
+        line-height: 18px;
+        border-radius: 9px;
+        background-color: #00A38B;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    ul.scroll_list li.content {
+        text-align: left;
+    }
+
+    li.region_map .root_daum_roughmap {
+        height: 300px !important;
+    }
+
+.scroll_list_ul > li:nth-child(2) {
+    border-top: 0px solid black;
+}
+
+    /* 지역별_scroll */
+    ul.region_scroll_ul > li {
+        height: 380px;
+    }
+    /* 지역별_scroll */
+
+    /* paging_number */
+    .paging_num_ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .paging_num_ul li {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .scroll_list_ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .scroll_list_ul > li {
+        width: 100%;
+    }
+    .paging_num_ul li.active {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    /* paging_number */
+    
+}
+
+@media screen and (max-width: 480px) {
+    /* 지역별_scroll */
+    ul.scroll_list {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    ul.scroll_list li.content {
+        padding: 16px 0px 0px 0px;
+    }
+
+    .scroll_list .category span {
+        width: 60px;
+        height: 26px;
+        line-height: 26px;
+        border-radius: 13px;
+        font-size: 14px;
+    }
+
+    ul.scroll_list li.content p.text {
+        font-size: 14px;
+        margin: 12px 0;
+        line-height: 26px;
+    }
+
+    ul.scroll_list li.content p.address {
+        font-size: 14px;
+    }
+    /* 지역별_scroll */
+
+    /* 지역별_Paging */
+    .paging_list_ul {
+        height: auto;
+    }
+
+    ul.paging_list {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    ul.paging_list li.content {
+        padding: 16px 0px 0px 0px;
+    }
+
+    .paging_list .category span {
+        width: 60px;
+        height: 26px;
+        line-height: 26px;
+        border-radius: 13px;
+        font-size: 14px;
     }
     
-    .park-place {
-        box-sizing: border-box;
-        width: 100%;
-        background: #fff;
-        border-bottom: 1px solid #DDDDDD;
-        padding: 15px;
-        flex: 1 0 auto;
+
+    ul.region_paging_ul li.region_list {
+        border: 0;
     }
-  }
-  @media screen and (max-width: 768px) {
-      .title{
-          font-size: 26px;
-      }
-      .detail1, .detail2{
-          font-size: 15px;
-      }
-      .contents1, .contents2, .contents3{
-        margin: 0 auto;
-      }
-      .park-list {
-        margin: 0 auto; 
-        width: 90%; 
+
+    ul.paging_list li.content p.text {
+        font-size: 14px;
+        margin: 12px 0;
+        line-height: 26px;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
-  .container1{
-      flex-direction: column;
-  }
-  .title{
-      font-size: 22px;
-  }
-  .result{
-      font-size: 18px;
-  }
-  .resultcnt{
-      font-size: 14px;
-  }
-  .contents1, .contents2, .contents3{
-    margin: 0 auto;
-  }
-  
-  .park-list {
-    margin: 0 auto; 
-    width: 90%; 
+
+    ul.paging_list li.content p.address {
+        font-size: 14px;
+    }
+    /* 지역별_Paging */
+    
+
+    /* paging_number */
+    .paging_num_ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .paging_num_ul li {
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+    }
+
+    .paging_num_ul li.active {
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+    }
+    /* paging_number */
 }
-  .address{
-      font-size: 13px;
-  }
-  }
-  /* sub1-3 끝 */
+
+/* sub1-3끝 */ 
