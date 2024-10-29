@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,24 +20,26 @@
 
 
     <div class="body">
-        <div class="faqhead">
-            <p>자주하는 질문</p>
-            <span>1:1 문의 전에 필요한 정보를 빠르게 확인해보세요</span>
-        </div>
+        <ul class="contents_box">
+            <li class="textcenter"> <!-- textLeft : 제목 왼쪽 정렬 | textCenter : 제목 가운데 정렬 -->
+                  <h2 class="great_title">지역별 보호수 찾기</h2>
+                  <p class="subheading_title">우리 생활속 보호수의 위치를 찾아보세요</p>
+            </li>
+        </ul>
         <div class="search-bar">
-            <div>전체 19건</div>
+            <p>전체 19건</p>
             <div class="search-text">
                 <input type="text" name="" value="" placeholder="검색어를 입력해주세요">
-                <button type="submit"></button>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
 
         <div class="container">
             <div class="faq active">
                 <div class="faq_question">
-                    <span>공원</span>
-                    <a href="">도심 공원의 이용시간은 어떻게 되나요?</a>
-                    <p>2024.10.01</p>
+                    <div class="subtitle"><span>공원</span></div>
+                    <div class="subject"><p class="question">도심 공원의 이용시간은 어떻게 되나요?</p>
+                    <p>2024.10.01</p></div>
                 </div>
 
                 <div class="faq_answer">
@@ -48,9 +51,9 @@
 
             <div class="faq">
                 <div class="faq_question">
-                    <span>공원</span>
-                    <a href="">공원 부대시설의 불편사항은 어디에 신고하나요?</a>
-                    <p>2024.09.26</p>
+                    <div class="subtitle"><span>공원</span></div>
+                    <div class="subject"><p class="question">공원 부대시설의 불편사항은 어디에 신고하나요?</p>
+                    <p>2024.09.26</p></div>
                 </div>
 
                 <div class="faq_answer">
@@ -62,9 +65,9 @@
 
             <div class="faq">
                 <div class="faq_question">
-                    <span>공원</span>
-                    <a href="">가로수길의 위생관련 신고는 어디에 하나요?</a>
-                    <p>2024.08.03</p>
+                    <div class="subtitle"><span>공원</span></div>
+                    <div class="subject"><p class="question">가로수길의 위생관련 신고는 어디에 하나요?</p>
+                    <p>2024.08.03</p></div>
                 </div>
 
                 <div class="faq_answer">
@@ -76,9 +79,9 @@
 
             <div class="faq">
                 <div class="faq_question">
-                    <span>공원</span>
-                    <a href="">가로수길에서 발견된 보행 불편물은 개인이 처리해도 되나요?</a>
-                    <p>2024.08.01</p>
+                   <div cLass="subtitle"><span>공원</span></div>
+                    <div class="subject"><p class="question">가로수길에서 발견된 보행 불편물은 개인이 처리해도 되나요?</p>
+                    <p>2024.08.01</p></div>
                 </div>
 
                 <div class="faq_answer">
@@ -90,9 +93,9 @@
 
             <div class="faq">
                 <div class="faq_question">
-                    <span>공원</span>
-                    <a href="">보호수 신청은 어떻게 하나요?</a>
-                    <p>2024.07.25</p>
+                    <div class="subtitle"><span>공원</span></div>
+                    <div class="subject"><p class="question">보호수 신청은 어떻게 하나요?</p>
+                    <p>2024.07.25</p></div>
                 </div>
                 <div class="faq_answer">
                     <p>일반 도심공원은 24시간 개방, 시설형 도심공원은 오전 6시부터 밤 10시까지 운영됩니다.</p>
