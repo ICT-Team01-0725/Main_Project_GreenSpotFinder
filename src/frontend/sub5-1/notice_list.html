@@ -1,94 +1,125 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notice</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
-    <link rel="stylesheet" href="../notice/common.css">
-    <link rel="stylesheet" href="../notice/notice_list.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>notice</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../notice/common.css">
+        <link rel="stylesheet" href="../notice/notice_list.css">
+    </head>
 
-<body>    
-    <div>  
-        <section class="notice">        
-            <ul class="contents_box">
-                <li class="textLeft"> <!-- textLeft : 제목 왼쪽 정렬 | textCenter : 제목 가운데 정렬 -->
-                      <h2 class="great_title">공지사항</h2>
-                      <p class="subheading_title">도심녹지 관련 소식을 안내합니다</p>
-                </li>
-            </ul>                                  
-            <div class="search-bar">
-                <div class="search-text">전체 28건</div>
-                <div class="search-box">
-                    <input type="text" name="" value="" placeholder="검색어를 입력해주세요">
-                    <button class="material-icons" type="submit">search</button>
-                </div>
-            </div>
-            
-            <div class="contents">
-                <ul>
-                    <li>
-                        <span class="category">공원</span>    
-                        <a href="notice_read.html" >            
-                            <p class="title">소공원 정비사업 시행 안내</p>                
-                        </a>
-                        <em>2024.10.10</em>               
-                    </li>
-                    <li>
-                        <span class="category">공원</span>
-                        <a href="notice_read.html" >
-                            <p class="title">서울특별시 공원 데이터 갱신 관련 서버 작업 공지</p>
-                        </a>
-                        <em>2024.09.30</em>
-                    </li>
-                    <li>
-                        <span class="category">가로수길</span>
-                        <a href="notice_read.html" >
-                            <p class="title">2024년도 2차 가로수길 안전 시설물 만족도 조사</p>
-                        </a>
-                        <em>2024.09.23</em>
-                    </li>
-                    <li>
-                        <span class="category">녹지행사</span>
-                        <a href="notice_read.html" >
-                            <p class="title">2024 매헌시민의 숲 가을축제 안내</p>
-                        </a>
-                        <em>2024.08.26</em>
-                    </li>
-                    <li>
-                        <span class="category">보호수</span>
-                        <a href="notice_read.html" >
-                            <p class="title">2024년 보호수 지정 고시 (2023년 12월말 기준)</p>
-                        </a>
-                        <em>2024.07.08</em>
+    <body>
+        <div>
+            <section class="notice">
+                <ul class="contents_box">
+                    <li class="textLeft">
+                        <!-- textLeft : 제목 왼쪽 정렬 | textCenter : 제목 가운데 정렬 -->
+                        <h2 class="great_title">공지사항</h2>
+                        <p class="subheading_title">도심녹지 관련 소식을 안내합니다</p>
                     </li>
                 </ul>
-            </div>
-            <div class="button_box">
-                <div> 
-                    <a href="notice_read.html" >            
-                    <button>글쓰기</button> 
-                    </a>                
+                <div class="search-bar">
+                    <div class="search-text">전체 28건</div>
+                    <div class="search-box">
+                        <input type="text" name="" value="" placeholder="검색어를 입력해주세요">
+                        <button class="material-icons" type="submit">search</button>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 페이지 네비게이션 -->
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">&lt;</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">&#62;</a>
-                <a href="#">&raquo;</a>
-            </div>
-        </section>        
-    </div>
-</body>
+                <div class="contents">
+                    <ul>
+                        <li>
+                            <span class="category">공원</span>
+                            <a href="notice_read.html">
+                                <p class="title">소공원 정비사업 시행 안내</p>
+                            </a>
+                            <em>2024.10.10</em>
+                        </li>
+                        <li>
+                            <span class="category">공원</span>
+                            <a href="notice_read.html">
+                                <p class="title">서울특별시 공원 데이터 갱신 관련 서버 작업 공지</p>
+                            </a>
+                            <em>2024.09.30</em>
+                        </li>
+                        <li>
+                            <span class="category">가로수길</span>
+                            <a href="notice_read.html">
+                                <p class="title">2024년도 2차 가로수길 안전 시설물 만족도 조사</p>
+                            </a>
+                            <em>2024.09.23</em>
+                        </li>
+                        <li>
+                            <span class="category">녹지행사</span>
+                            <a href="notice_read.html">
+                                <p class="title">2024 매헌시민의 숲 가을축제 안내</p>
+                            </a>
+                            <em>2024.08.26</em>
+                        </li>
+                        <li>
+                            <span class="category">보호수</span>
+                            <a href="notice_read.html">
+                                <p class="title">2024년 보호수 지정 고시 (2023년 12월말 기준)</p>
+                            </a>
+                            <em>2024.07.08</em>
+                        </li>
+                    </ul>
+                    <div class="button_box">
+                        <div>
+                            <a href="notice_read.html">
+                                <button>글쓰기</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <ul class="paging_num_ul">
+                            <li class="material-icons prev">
+                                keyboard_double_arrow_left
+                            </li>
+                            <li class="material-icons prev">
+                                chevron_left
+                            </li>
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li class="material-icons next">
+                                chevron_right
+                            </li>
+                            <li class="material-icons next">
+                                keyboard_double_arrow_right
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 페이지 네비게이션 -->
+                <!-- <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">&lt;</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">&#62;</a>
+                    <a href="#">&raquo;</a>
+                </div> -->
+            </section>
+        </div>
+    </body>
 </html>
-
