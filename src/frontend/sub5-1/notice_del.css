@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
 }
 
-section {
+section.notice {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;  
@@ -14,29 +14,39 @@ section {
 .content  {
     margin-top: 20px;
     border-top: 2px solid #000;
+    padding: 120px 0;
+}
+
+.content > ul {
     display: flex;
     justify-content: center; /* 가로 가운데 정렬 */
     vertical-align: middle;
-    padding: 120px;
 }
 
-.content-box{ 
+.content > ul > li {
+    margin: 0 auto;
+}
+
+.content-box { 
     border-top: 2px solid #000000;
     width: 600px;
     text-align: left;
 }
 
-.content-box ul li {
+.content-box > ul > li {
     border-bottom: 1px solid #dddd;
-    display: flex;
-    align-items: center; /* 세로 가운데 정렬 */
     height: 56px;
+    line-height: 56px;
     word-break: keep-all;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
 }
 
 .content-box p {
     color: #333333;
- 
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .content-box label {
@@ -46,16 +56,17 @@ section {
 
 .content-box input {
     border: 1px solid #DDDDDD;
-    
+    width: 100%;
+    max-width: 200px;
+    height: 30px;
 }
 
 .content ul {
     justify-content: space-between; 
-    
 }
 
-.content ul li {          
-   padding: 10px 10px;
+.content > ul > li {          
+    padding: 10px 10px;
 }
 
 .button_box div {  
@@ -82,11 +93,9 @@ section {
 
 
 @media screen and (max-width: 1380px) {
-    .section {
+    section.notice {
         width: 90%;
     }
- 
-
 }
 
 
@@ -94,24 +103,39 @@ section {
     .content-box {
         width: 100%;
     }
+
+    .content > ul > li {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .content-box > ul > li {
+        height: auto;
+        line-height: normal;
+        padding: 10px 5%;
+    }
+
+    .content-box p {
+        font-size: 18px;
+    }
 }
 
 
 @media screen and (max-width: 420px) {
-    .content-box ul li {
-        font-size: 13px;
-        padding: 10px 10px; 
-        height: 30px;
-       
+    .content-box p {
+        font-size: 16px;
     }
     
     .content-box label {
-        font-size: 12px;
-        margin: 50px; 
-        
+        font-size: 14px;
+        margin: 0 16px 0 0; 
+    }
+
+    .button_box div {
+        margin: 30px 0px 0px 0px;
+        text-align: center;
     }
     
 }
-
 
 
