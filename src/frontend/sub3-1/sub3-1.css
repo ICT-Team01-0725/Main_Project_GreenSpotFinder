@@ -20,16 +20,15 @@ header {
 }
 
 .container {
-    max-width: 1250px;
     width: 100%;
+    max-width: 1320px;
     display: flex;
     margin: 150px auto 100px auto;
-
 }
 
 #div_flex1 {
-    width: 35%;
-    padding: 10px 20px;
+    /* width: 35%; */
+    width: 452px;
 }
 
 #div_flex1 h2 {
@@ -45,14 +44,13 @@ header {
 }
 
 #div_flex2 {
-    width: 65%;
+    /* width: 65%; */
+    width: calc(100% - 452px);
 }
 
 #div_flex2 p {
-    padding: 5px;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-left: 100px;
+    font-size: 20px;
+    line-height: 36px;
 }
 
 
@@ -63,15 +61,21 @@ header {
     margin: 0 auto;
 }
 
-.table {
+/* .table {
     margin-bottom: 80px;
+} */
+
+.sub3-1 .title {
+    margin-top: 80px;
 }
+
+
 .tablecontainer {
     max-width: 1320px;
     width: 100%;
     margin: 100px auto 100px auto;
     text-align: center;
-    vertical-align: center;
+    /* vertical-align: center; */ /* 삭제 - 아무 기능 안함 */
 }
 
 
@@ -82,33 +86,37 @@ header {
 .talbe2 tr th {
     border: 1px solid #ddd;
     padding : 10px;
-    
+    vertical-align: middle;
+    line-height: 26px;
+    word-break: keep-all;
 }
 
 .tablecontainer p {
     text-align: left;
     margin-bottom: 15px;
-    font-size: 17px;    
+    font-size: 20px;    
     font-weight: 600;
-
 }
+
 .tablecontainer span {
-   display:block;
-   text-align: right;
-   font-size: 14px;
-   
+    display:block;
+    text-align: right;
+    font-size: 14px;
 }
 
 .tablehead1 {
-width:10%;
+    width:10%;
+    min-width: 150px;
 }
+
 .tablehead2 {
-width:10%;
+    width: 10%;
+    min-width: 160px;
+    vertical-align: middle;
 }
 
 .tablehead1, .tablehead2, .tablehead3, .tablehead4{
-font-weight: 600;
-
+    font-weight: 600;
 }
 
 
@@ -211,33 +219,108 @@ ul.div_flex li:nth-child(even) {
     display: none;
 }
 
-@media screen and (max-width: 760px) {
+
+
+
+#div_flex1 {
+    /* width: 35%; */
+    width: 452px;
+}
+
+#div_flex1 h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#div_flex1 p {
+    font-size: 20px;
+    margin-bottom: 5px;
+    counter-reset: #555;
+    
+}
+
+#div_flex2 {
+    /* width: 65%; */
+    width: calc(100% - 452px);
+}
+
+
+
+
+
+
+@media screen and (max-width: 1380px) {
+    .container,
+    .tablecontainer, 
+    .container2 {
+        width: 90%;
+    }
+
+    #div_flex1 {
+        /* width: 35%; */
+        width: 352px;
+    }
+    
+    #div_flex1 h2 {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    #div_flex2 {
+        /* width: 65%; */
+        width: calc(100% - 352px);
+    }
+
+    #div_flex2 p {
+        font-size: 18px;
+        line-height: 36px;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+    #div_flex2 p {
+        line-height: 36px;
+        word-break: keep-all;
+    }
+
+
+    #div_flex2 p br {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
     }
-     
-    #div_flex1 {width:100%;}
+    
+    #div_flex1 {
+        width:100%;
+    }
 
     #div_flex2 {
         margin-top: 50px;
-        width: 100%;}
+        width: 100%;
+    }
 
     #div_flex2 p {
         margin-top: 5px;
         line-height: 36px;
         word-break: keep-all;
         margin : 0px;
-        padding:0px;
-        margin-left: 20px;
-    }
-
-    #div_flex2 p br {
-        display: none;
+        padding: 0px;
+        margin-left: 0px;
     }
     
-    .tablecontainer {
-       margin-left: 30px;
-    }
+    /* 삭제 */
+    /* .tablecontainer {
+        margin-left: 30px;
+    } */
 
     .table_guide{
         display: block;
@@ -245,14 +328,41 @@ ul.div_flex li:nth-child(even) {
     
     .table {
         overflow-x: scroll;
-        width : 90%;
+        width : 100%;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+    }
+
+    .tablecontainer {
+        margin: 50px auto 50px auto;
     }
 
     .table1, .table2{
         width : 1100px;
-    }
-        
+    } 
 
+    .table1 {
+        margin: 0px auto 0px auto;
     }
-    
- 
+
+    .table2 {
+        margin: 0px auto 0px auto;
+    }
+
+    .tablecontainer p {
+        text-align: left;
+        margin-bottom: 15px;
+        font-size: 18px;    
+        font-weight: 600;
+    }
+
+    .guide {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .sub3-1 .title {
+        margin-top: 50px;
+    }
+
+}
