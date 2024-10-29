@@ -4,14 +4,29 @@ body {
     box-sizing: border-box;
 }
 
-section {
+section.customer {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;  
 }
 
 
+.customer p.title {
+    margin: 12px 0;
+    font-size: 40px;
+    color: #111111;
+    font-weight: 500;
+}
 
+.customer a {
+    text-decoration: none;
+}
+
+.customer div.subtitle {
+    font-size: 20px;
+    margin: 16px 0 30px;   
+    color:#555555;
+}
 
 .content  {
     margin-top: 20px;
@@ -19,40 +34,41 @@ section {
 }
 
 .content h2.title {
-    margin-top:10px;
-    margin-bottom:10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
+.tt ul li {
+    margin-bottom: 30px;
+}
 
-.content tt  span.title{
-    font-size: 20px;
-    margin-right: 10px;
-    font-weight: 400;
+.tt ul li span.title {
     color: #333333;
+    font-weight: 500;
+    margin-right: 16px;
 }
 
-.content tt ul li span.cont{
-    font-size: 20px;
-    margin-right: 50px;
-    font-weight: 100;
+.tt ul li span.cont {
     color: #555555;
 }
 
+
+
 .content ul {
     justify-content: space-between; 
-    
 }
 
-.content ul li {       
-   border-bottom: 1px solid #ddd;
-   padding: 10px 0px;
-   margin-bottom: 20px;
+.content > ul > li {       
+    border-bottom: 1px solid #ddd;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .content div.bodyCont{
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -65,10 +81,12 @@ section {
 
 .tt ul li{
     width: auto;
-    padding: 0 20px 0 0;
+    padding: 0 30px 0 0;
     border-bottom: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 20px;
 }
-
 
 .comment {
     padding: 0px 0px 0px 0px;   
@@ -142,7 +160,7 @@ section {
     border-radius: 4px; 
 }
 
-.cmd_write ul li{    
+.cmd_write table{    
     width: 100%;
 }
 
@@ -154,6 +172,8 @@ section {
 .cmd_write textarea:focus {
     outline: none; 
 }
+
+
 
 .cmd_write button {
     padding: 6px 16px 6px 16px;
@@ -172,8 +192,9 @@ section {
     
 }
 
+
 .button_box {  
-    margin: 20px 10px 60px 10px;   
+    margin: 20px 0px 60px 0px;   
     display: flex;
     justify-content:space-between;    
 }
@@ -182,49 +203,109 @@ section {
     text-align: left; 
 }
 
-.button_box .btn_r{
-    text-align: right; 
+.button_box button {    
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background-color: transparent;
+    color: #333;
+    border-radius: 5px;    
+    cursor: pointer;
 }
 
-.button_box button {    
-    padding: 6px 16px 6px 16px;
-    background-color: #ffffff;
-    border: 1px solid #555;
-    border-radius: 4px;    
-    cursor: pointer;
+.button_box button:hover {
+    border: 1px solid #00A38B;
+    color: #00A38B;
+    transition: all 0.3s;
 }
 
 
 
 
 @media screen and (max-width: 1380px) {
-    .section {
-       width: 90%;
-   }
-
+    section.customer {
+        width: 90%;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
     .content div.bodyCont img {
-        width: 90%;
+        width: 100%;
+    }
+
+    .content h2.title {
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-size: 28px;
+    }
+
+    .tt ul li{
+        padding: 0 20px 0 0;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .tt ul li:last-child {
+        margin-bottom: 24px;
     }
     
+    .tt ul li span.title {
+        margin-right: 12px;
+    }
+
+    .button_box button {    
+        width: 80px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .content h2.title {
+        margin-top: 20px;
+        margin-bottom: 16px;
+        font-size: 28px;
+    }
+
+    .tt ul li:last-child {
+        margin-bottom: 20px;
+    }
+
+    .tt ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tt ul li {
+        margin-bottom: 10px;
+    }
+
+    .button_box button {    
+        width: 70px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+}
+
+
 @media screen and (max-width: 420px) {
-    .content   span.title{
-        font-size: 12px;
+    .content span.title{
+        font-size: 14px;
         font-weight: 50px;
-       
     }
 
     .content span.cont {
-        font-size: 12px;
+        font-size: 14px;
         margin-right: 50px;
         font-weight: 50px;
     }
 
     .content h2.title {
-        font-size: 25px;
+        font-size: 24px;
     }
 }
