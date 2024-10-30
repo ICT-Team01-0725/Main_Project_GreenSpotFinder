@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+            rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../css/admin.css">
+        <title>관리자 페이지</title>
+    </head>
+<div class="admin1-2">
+    <body>
+
+        <div class="container">
+
+            <!-- 사이드 바 -->
+            <div class="side-bar">
+                <div class="icon-bar"></div>
+                <div class="search-menu">
+                    <div class="profile">
+                        <img src="" alt="">
+                        <p>계정 이름</p>
+                    </div>
+                    <div class="controller">
+                        <div class="menu active">
+                            <div class="topmenu">
+                                <i class="fa-solid fa-user"></i>
+                                <p>회원관리</p>
+                            </div>
+                            <div>
+                                <div class="submenu">
+                                    <a href="">회원 목록 조회</a>
+                                </div>
+                                <div class="submenu">
+                                    <a href="">회원 관리</a>
+                                </div>
+                                <div class="submenu">
+                                    <a href="">회원 휴몇 및 삭제 관리</a>
+                                </div>
+                            </div>
+                            <button class="menubtn">
+                                <i class="fa-solid fa-chevron-up icon open"></i>
+                                <i class="fa-solid fa-chevron-down icon close"></i>
+                            </button>
+                        </div>
+
+                        <div class="menu">
+                            <div class="topmenu">
+                                <i class="fa-solid fa-comment"></i>
+                                <p>고객센터</p>
+                            </div>
+                            <div>
+                                <div class="submenu">회원 목록 조회</div>
+                                <div class="submenu">회원 관리</div>
+                                <div class="submenu">회원 휴몇 및 삭제 관리</div>
+                                
+                                <button class="menubtn">
+                                    <i class="fa-solid fa-chevron-up icon open"></i>
+                                    <i class="fa-solid fa-chevron-down icon close"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="menu">
+                            <div class="topmenu">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                                <p>게시판 관리</p>
+                            </div>
+                            <div>
+                                <div class="submenu">회원 목록 조회</div>
+                                <div class="submenu">회원 관리</div>
+                                <div class="submenu">회원 휴몇 및 삭제 관리</div>
+                                
+                                <button class="menubtn">
+                                    <i class="fa-solid fa-chevron-up icon open"></i>
+                                    <i class="fa-solid fa-chevron-down icon close"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logout">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="">로그아웃</a>
+
+                    </div>
+                </div>
+            </div>
+
+           
+      
+          <!-- 메인 컨텐트 -->
+          <div class="main-content">
+            <div class="usertable">
+              <div>
+                <p>회원 목록</p>
+                <div class="search-bar">
+                    <i class="fa fa-search search-icon"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                </div>
+              <table>
+                <tr>
+                  <th><input type="checkbox"></th>
+                  <th>아이디</th>
+                  <th>이름</th>
+                  <th>신고내용</th>
+                  <th>게시글 수</th>
+                  <th>신고 누적 수</th>
+                  <th>신고일</th>
+                  <th>처리일</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>hong</td>
+                  <td>홍길동</td>
+                  <td>타이틀입니다.</td>
+                  <td>1</td>
+                  <td>00</td>
+                  <td>2024.00.00</td>
+                  <td>2024.00.00</td>
+                </tr>
+               
+      
+              </table>
+            </div>
+           
+      
+            </div>
+          </div>
+      
+      
+      
+        </div>
+        <script>
+            const btns = document.querySelectorAll(".topmenu, .menubtn");
+
+
+
+
+            function removeActiveClasses() {
+                btns.forEach((btn) => {
+                    btn
+                        .parentElement
+                        .classList
+                        .remove("active");
+                });
+            }
+
+            btns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const menuitem = btn.parentNode;
+                    const isActive = menuitem
+                        .classList
+                        .contains("active");
+
+                    removeActiveClasses();
+
+                    if (!isActive) {
+                        menuitem
+                            .classList
+                            .add("active");
+                    }
+
+                })
+            });
+        </script>
+    </body>
+</div>
+</html>
