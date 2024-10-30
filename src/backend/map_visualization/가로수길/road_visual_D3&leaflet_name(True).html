@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시각화_가로수길(가로수길경로평균지점)_name(True)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+
+        #loading {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading">Loading data...</div>
+    <div id="map"></div>
+
+    <script>
+        // 흑백 지도 생성
+        const map = L.map('map').setView([36.5, 127.5], 7);
+
+        // 흑백 타일 레이어 추가
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            maxZoom: 19
+        }).addTo(map);
+
+        // JSON 파일 로드 및 지도에 데이터 표시
+        d3.json("./시각화_전국가로수길정보표준데이터_name(True).json").then(data => {
+            console.log("Total Rows:", data.length);
+
+            // 지우고 싶은 평균 좌표 배열
+            const coordinatesToRemove = [
+                { lat: "35.22", lon: "124.58" },
+                { lat: "34.82", lon: "125.24" },
+                { lat: "35.20", lon: "129.50" }
+            ];
+
+            // 유효한 좌표로 필터링하여 각 포인트 계산 후 지도에 추가
+            data.forEach(d => {
+                const r_na = d["r_na"]; // 가로수길 이름
+                const r_s_lat = parseFloat(d["r_s_lat"]); // 시작 위도
+                const r_s_lon = parseFloat(d["r_s_lon"]); // 시작 경도
+                const r_e_lat = parseFloat(d["r_e_lat"]); // 종료 위도
+                const r_e_lon = parseFloat(d["r_e_lon"]); // 종료 경도
+
+                // 유효한 좌표인지 확인 후, 평균 좌표 계산
+                if (!isNaN(r_s_lat) && !isNaN(r_s_lon) && !isNaN(r_e_lat) && !isNaN(r_e_lon)) {
+                    const avg_lat = ((r_s_lat + r_e_lat) / 2).toFixed(2); // 평균 위도 (소수점 두 자리)
+                    const avg_lon = ((r_s_lon + r_e_lon) / 2).toFixed(2); // 평균 경도 (소수점 두 자리)
+
+                    // 특정 평균 좌표가 제거할 목록에 포함되는지 확인
+                    const isToRemove = coordinatesToRemove.some(coord => {
+                        return coord.lat === avg_lat && coord.lon === avg_lon;
+                    });
+
+                    // 제거할 목록에 포함되지 않을 경우에만 마커 추가
+                    if (!isToRemove) {
+                        // 평균 좌표에 초록색 마커 추가
+                        L.circleMarker([avg_lat, avg_lon], {
+                            radius: 5,
+                            color: '#00A38B', // 점의 색깔
+                            fillColor: '#00A38B',
+                            fillOpacity: 0.4, // 투명도 40%
+                            weight: 0 // 원의 가장자리 색을 없애기 위해 두께를 0으로 설정
+                        }).addTo(map)
+                        .bindPopup(`Avg: Lat: ${avg_lat}, Lon: ${avg_lon}<br>Road Name: ${r_na}`); // 팝업에 가로수길 이름 추가
+                    }
+                }
+            });
+
+            // 로딩 메시지 숨기기
+            document.getElementById("loading").style.display = "none";
+        }).catch(error => {
+            console.error("Error loading the JSON file:", error);
+            document.getElementById("loading").textContent = "Error loading data. Please check the console.";
+        });
+    </script>
+</body>
+
+</html>
