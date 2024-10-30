@@ -1,151 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/sub2-3-3.css">
-    <title>2-3-3</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub3-3.css">
 </head>
-
 <body>
-    <div class="header"></div>
+    <header>
+        헤더
+    </header>
+    <div id="sub_container">
+        <ul class="contents_box">
+            <li class="textcenter">
+                <h2 class="great_title">보호수 현황표</h2>
+                <p class="subheading_title">대한민국의 보호수 현황을 확인해보세요</p>
 
-    <div class="section1">
-        <h1>보호수 현황표</h1>
-        <p>대한민국의 보호수 현황을 확인해보세요</p>
-        <form action="">
-            <div class="search-bar">
-                <input type="text" name="" placeholder="상세주소로 검색하기">
-                <button type="submit"></button>
-            </div>
-        </form>
-    </div>
+                <!-- 검색바 -->
+                <ul class="sub_search_container">
+                    <li class="sub_search">
+                        <div class="sub_search_div">
+                            <form action="/Integrated Search.html">
+                                <input type="text" name="" id="" placeholder="상세주소로 검색하기">
+                                <span class="material-icons">search</span>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 검색바 -->
 
-    <div class="searchalign">
-        <ul>
-            <a href="">
-                <li class="sa1">주소순</li>
-            </a>
-            <a href="">
-                <li class="sa2">지정일순</li>
-            </a>
-            <a href="">
-                <li class="sa3">수령순</li>
-            </a>
+                <div class="table_guide">
+                    <div class="guide">
+                        좌우로 드래그 해주세요.
+                    </div>
+                </div>
+                
+                <div>
+                    <ul class="result_bar">
+                        <li>전체 12890건</li>
+                        <li>
+                            <select name="" id="" class="search_category">
+                                <option value="" selected>주소순</option>
+                                <option value="">지정일순</option>
+                                <option value="">수령순</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table">
+                    <table class="status_table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>지정정보</th>
+                                <th>수종명 (학명)</th>
+                                <th>위치</th>
+                                <th>지정일</th>
+                                <th>수령</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00001</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00002</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00003</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00004</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00005</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00006</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00007</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00008</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00009</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                            <tr>
+                                <td>00010</td>
+                                <td>노목-보목</td>
+                                <td>주목 (Taxus cuspidata)</td>
+                                <td>흥천군 내면 창촌리 산3</td>
+                                <td>2016.10.04</td>
+                                <td>1140</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- paging 영역 start -->
+                <div>
+                    <ul class="paging_num_ul">
+                        <li class="material-icons prev">
+                            keyboard_double_arrow_left
+                        </li>
+                        <li class="material-icons prev">
+                            chevron_left
+                        </li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="material-icons next">
+                            chevron_right
+                        </li>
+                        <li class="material-icons next">
+                            keyboard_double_arrow_right
+                        </li>
+                    </ul>
+                </div>
+                <!-- paging 영역 end -->
+
+
+            </li>
         </ul>
     </div>
-
-    <div class="container">
-        <p>전체 12890건</p>
-        <div class="tablecontainer">
-            <ul class="listhead">
-                <li class="list1">No</li>
-                <li class="list2">지정정보</li>
-                <li class="list3">수종명( 학명 )</li>
-                <li class="list4">위치</li>
-                <li class="list5">지정일</li>
-                <li class="list6">수령</li>
-            </ul>
-            <ul>
-                <li class="list1">00001</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00002</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00003</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00004</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00005</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00006</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00007</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00008</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00009</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-            <ul>
-                <li class="list1">00010</li>
-                <li class="list2">노목-보목</li>
-                <li class="list3">주목 (Taxus cuspidata)</li>
-                <li class="list4">흥천군 내면 창촌리 산3</li>
-                <li class="list5">2016.10.04</li>
-                <li class="list6">1140</li>
-            </ul>
-
-
-        </div>
-        <div class="pagination">
-            <a href="">$laquo</a>
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">$raquo</a>
-        </div>
-    </div>
-
-
+    <footer>
+        푸터
+    </footer>
 </body>
-
 </html>
