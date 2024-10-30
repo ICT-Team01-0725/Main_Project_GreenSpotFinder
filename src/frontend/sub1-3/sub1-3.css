@@ -126,6 +126,9 @@ ul.scroll_list li.content p.address {
 
 }
 
+ul.scroll_list li.content {
+    text-align: left;
+}
 .scroll_list_ul > li:nth-child(1),
 .scroll_list_ul > li:nth-child(2) {
     border-top: 2px solid black;
@@ -163,12 +166,23 @@ li.region_map .root_daum_roughmap .wrap_map {
 }
 
 .page-link {
-    border: 1px solid #555;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    margin: 0 1px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    align-content: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.page-link.active {
+    border: 1px solid #333;
+}
+
+.page-link:hover { 
+    border: 1px solid #333;
+    transition: all 0.3s;
 }
 .text{
 overflow: hidden;
@@ -184,6 +198,9 @@ display: -webkit-box;
     width: 90%;
 }
 
+ul.scroll_list li.content {
+    text-align: left;
+}
 
 }
 
@@ -193,6 +210,8 @@ display: -webkit-box;
         width: 100% !important;
         height: 320px !important;
     }
+
+
     /* 지역별_scroll */
     ul.region_scroll_ul {
         flex-wrap: wrap;
@@ -245,9 +264,6 @@ display: -webkit-box;
         line-height: 18px;
     }
 
-    ul.scroll_list li.content {
-        text-align: left;
-    }
 
     li.region_map .root_daum_roughmap {
         height: 300px !important;
@@ -383,4 +399,4 @@ display: -webkit-box;
     /* paging_number */
 }
 
-/* sub1-3끝 */ 
+/* sub1-3 끝 */
