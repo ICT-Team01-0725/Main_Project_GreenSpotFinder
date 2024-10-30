@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시각화_보호수</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+
+        #loading {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading">Loading data...</div>
+    <div id="map"></div>
+
+    <script>
+        // 흑백 지도 생성
+        const map = L.map('map').setView([36.5, 127.5], 7);
+
+        // 흑백 타일 레이어 추가
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            maxZoom: 18
+        }).addTo(map);
+
+        // JSON 파일 로드 및 지도에 데이터 표시
+        d3.json("./시각화_전국보호수정보_lat&lon.json").then(data => {
+            console.log("Total Rows:", data.length);
+
+            // 유효한 좌표로 필터링하여 각 포인트 계산 후 지도에 추가
+            data.forEach(d => {
+                const t_lat = parseFloat(d["t_lat"]); // 위도
+                const t_lon = parseFloat(d["t_lon"]); // 경도
+                const t_tty = d["t_tty"]; // 나무 종류
+                const t_ad = d["t_ad"]; // 한글 주소
+
+                // 유효한 좌표인지 확인
+                if (!isNaN(t_lat) && !isNaN(t_lon)) {
+                    // 유효한 좌표에 마커 추가
+                    L.circleMarker([t_lat, t_lon], {
+                        radius: 5,
+                        color: '#00A38B', // 점의 색깔
+                        fillColor: '#00A38B',
+                        fillOpacity: 0.4, // 투명도 40%
+                        weight: 0 // 원의 가장자리 색을 없애기 위해 두께를 0으로 설정
+                    }).addTo(map)
+                    .bindPopup(`나무종류 : ${t_tty}<br>주소: ${t_ad}`); // 팝업에 나무 종류, 주소 및 좌표 추가
+                }
+            });
+
+            // 로딩 메시지 숨기기
+            document.getElementById("loading").style.display = "none";
+        }).catch(error => {
+            console.error("Error loading the JSON file:", error);
+            document.getElementById("loading").textContent = "Error loading data. Please check the console.";
+        });
+    </script>
+</body>
+
+</html>
