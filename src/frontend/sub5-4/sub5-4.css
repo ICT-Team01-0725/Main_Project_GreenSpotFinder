@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
+
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 
 .footer {
     width: 100%;
-    height: 70px;
     background-color: darkblue;
 }
 
@@ -50,20 +49,18 @@ body {
 
 .search-bar {
     width: 100%;
-   display:flex;
-   justify-content: flex-end
-   
-   
+    display: flex;
+    justify-content: flex-end
 }
 
 .search-bar p {
-    display:inline-block;
+    display: inline-block;
     margin-top: 20px;
 }
 
 .search-text {
     margin-left: auto;
-    display:flex;
+    display: flex;
     border-right: none;
 }
 
@@ -93,33 +90,28 @@ body {
     border-bottom: 1px solid #555;
 }
 
-.container div {
-    margin-top: 20px;
-}
 
 
 .container div span {
-    margin: 30px 17px;
     border: 1px solid #09BA00;
     border-radius: 15px;
-    padding: 3px 5px;
     color: #09BA00;
+    display:inline-block;
+    padding : 5px 10px;
 }
 
+.subtitle {
+    width: 100px;
+}
 
+.subject {
+    width: calc(100% - 120px);
+}
 
 .question {
-    font-size : 20px !important; 
+    font-size: 20px !important;
     font-weight: 500 !important;
-    display : inline-block !important;
-    margin-bottom: 20px !important;
 }
-
-.faq_question .subject p {
-    margin-bottom : 15px;
-}
-
-
 
 .faq {
     position: relative;
@@ -132,13 +124,18 @@ body {
 }
 
 
-.container .faq{
+.container .faq {
     margin: 0px;
     align-items: center;
 }
 
 .faq .faq_question .subject .question {
     font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 
@@ -146,17 +143,24 @@ body {
 .container .faq .faq_answer {
     background-color: white;
     margin: 0px;
-    padding-top: 1rem;
     border-bottom: 1px solid #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 
 .container .faq .faq_question {
-    padding: 1rem;
+    padding: 50px 20px;
     cursor: pointer;
-    display:flex;
+    display: flex;
 }
 
+.day {
+    margin-top : 20px;
+}
 
 
 .faq_answer {
@@ -187,7 +191,7 @@ body {
     top: 1rem;
     right: 1rem;
     background-color: white;
-    border : none;
+    border: none;
 }
 
 
@@ -207,8 +211,10 @@ body {
     text-decoration: none;
 }
 
-a:active, a:visited, a:link {
-    color : #555;
+a:active,
+a:visited,
+a:link {
+    color: #555;
 }
 
 
@@ -249,9 +255,10 @@ p.subheading_title {
 
 @media screen and (max-width:1320px) {
     .body {
-        width : 90%;
-        margin : auto;
-    }    
+        width: 90%;
+        margin: auto;
+    }
+
     .contents_box {
         padding-top: 120px
     }
@@ -273,7 +280,7 @@ p.subheading_title {
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
     .content_text {
         font-size: 20px;
@@ -284,8 +291,8 @@ p.subheading_title {
         word-break: keep-all;
     }
 
-      /* 서브 타이틀 정렬 */
-      .contents_box {
+    /* 서브 타이틀 정렬 */
+    .contents_box {
         padding-top: 90px
     }
 
@@ -293,8 +300,8 @@ p.subheading_title {
         font-size: 26px;
         padding-top: 90px;
     }
-    
-    p.subheading_title {    
+
+    p.subheading_title {
         font-size: 18px;
         margin-top: 12px;
     }
@@ -303,38 +310,33 @@ p.subheading_title {
         font-size: 16px;
         line-height: 32px;
     }
+
     /* 서브 타이틀 정렬 */
-    
-    .faq_question .question , .faq_question .faq_answer{
+
+    .faq_question .question,
+    .faq_question .faq_answer {
         word-break: keep-all;
         font-size: 10px;
     }
- 
-    
-    .subtitle {
-        width: 70px;
-    }
-    
-    .container div span{
-        margin : 10px 5px;
+
+
+    .container div span {
+        margin: 10px 5px;
     }
 }
 
 @media screen and (max-width: 480px) {
- 
-    .subtitle {
-        width: 80px
-    }
-    
-    .container div span{
-      font-size : 10px;
-      margin : 10px 2px;
+
+    .container div span {
+        font-size: 10px;
+        margin: 10px 2px;
     }
 
-    .faq_question .subject .question, .faq_question .faq_answer{
+    .faq_question .subject .question,
+    .faq_question .faq_answer {
         word-break: keep-all;
         font-size: 10px;
     }
- 
+
 
 }
