@@ -19,42 +19,44 @@
         <link rel="stylesheet" href="../customer/common.css">
         <link rel="stylesheet" href="../customer/customer_del.css">
     </head>
-<body>    
-    <div>
-        <section class="customer">        
-            <ul class="contents_box">
-                <li class="textLeft"> <!-- textLeft : 제목 왼쪽 정렬 | textCenter : 제목 가운데 정렬 -->
-                      <h2 class="great_title">고객의 소리</h2>
-                      <p class="subheading_title">신고 및 불편사항 접수 후 신속히 처리하겠습니다</p>
-                </li>
-            </ul>                                   
-            <div class="content">
-                <ul>
-                    <li>                                                 
-                            <div class="content-box">
-                                <ul>
-                                    <li>
-                                        <p>게시글 등록 시 입력한 비밀번호를 입력해주세요.</p>
-                                    </li>
-                                    <li>
-                                        <form action="#" method="POST">
-                                            <label for="password">비밀번호</label>
-                                            <input type="password" id="password" name="password" required>                                    
-                                        </form>   
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="button_box">                
-                                <div>
-                                    <button class="write">삭제</button>    
-                                    <button class="cancle">취소</button>             
-                                </div>
-                            </div>                       
-                    </li> 
-                </ul>                
-            </div>       
-        </section>        
-    </div>
-</body>
-</html>
 
+    <body>
+        <div>
+            <section class="customer">
+                <ul class="contents_box">
+                    <li class="textLeft">
+                        <!-- textLeft : 제목 왼쪽 정렬 | textCenter : 제목 가운데 정렬 -->
+                        <h2 class="great_title">고객의 소리</h2>
+                        <p class="subheading_title">신고 및 불편사항 접수 후 신속히 처리하겠습니다</p>
+                    </li>
+                </ul>
+                
+                <form action="#" method="POST">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <div class="content-box">
+                                    <ul>
+                                        <li>
+                                            <p>게시글 등록 시 입력한 비밀번호를 입력해주세요.</p>
+                                        </li>
+                                        <li>
+                                                <label for="password">비밀번호</label>
+                                                <input type="password" id="password" name="password" required="required">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="button_box">
+                                    <div>
+                                        <button class="write">삭제</button>
+                                        <button class="cancle">취소</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>
