@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_qna</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/my_report.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common_profile_animation.js" defer></script>
+</head>
+
+<body>
+    <div>
+        <section class="my_report">
+            <ul class="contents_box">
+                <li class="textcenter">
+                    <h2 class="great_title">불편사항 신고내역</h2>
+                    <p class="subheading_title">나의 신고 내역을 확인해보세요</p>
+                </li>
+            </ul>
+
+            <!-- user proflie -->
+            <div class="user_profile">
+                <ul class="user_profile_ul">
+                    <li class="user_profile_photo">
+                        <div>
+                            <figure>
+                                <img src="./images/rewiew_1.jpg" alt="rewiew_1">
+                            </figure>
+                        </div>
+                    </li>
+                    <li class="user_profile_contents">
+                        <div class="my_profile">
+                            <p class="name">손흥민</p>
+                            <p class="birth">kim03189</p>
+                            <ul class="my_btn">
+                                <li>
+                                    <button>내 프로필</button>
+                                </li>
+                                <li>
+                                    <button>회원정보 수정</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="my_num">
+                            <ul>
+                                <li>
+                                    <p>나의 리뷰</p>
+                                    <span class="nums" data-count="10">0</span>
+                                </li>
+                                <li>
+                                    <p>나의 스크랩</p>
+                                    <span class="nums" data-count="50">0</span>
+                                </li>
+                                <li>
+                                    <p>내가 쓴 게시물</p>
+                                    <span class="nums" data-count="100">0</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="search-text">전체 10건</div>
+
+            <ul class="list">
+                <li class="list_header">
+                    <div class="item t_num">No</div>
+                    <div class="item t_tit">제목</div>
+                    <div class="item t_stt">처리상태</div>
+                    <div class="item t_dt">등록일</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">10</div>
+                    <div class="item l_tit">제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.
+                        제목입니다.</div>
+                    <div class="item l_stt"><span class="status pending">미답변</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">9</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status pending">미답변</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">8</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status pending">미답변</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">7</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status pending">미답변</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">6</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status pending">미답변</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">5</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status pending">미답변</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">4</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status pending">미답변</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">3</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status completed">답변완료</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">2</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status completed">답변완료</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+                <li class="list_row">
+                    <div class="item l_num">1</div>
+                    <div class="item l_tit">제목입니다.</div>
+                    <div class="item l_stt"><span class="status completed">답변완료</span></div>
+                    <div class="item l_dt">2024.00.00</div>
+                </li>
+            </ul>
+
+            <div>
+                <ul class="paging_num_ul">
+                    <li class="material-icons prev">
+                        keyboard_double_arrow_left
+                    </li>
+                    <li class="material-icons prev">
+                        chevron_left
+                    </li>
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li class="material-icons next">
+                        chevron_right
+                    </li>
+                    <li class="material-icons next">
+                        keyboard_double_arrow_right
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
