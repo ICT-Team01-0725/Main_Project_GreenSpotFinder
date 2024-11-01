@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+
+
+body {
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section.my_info_check {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contents_box {
+    margin-bottom: 40px;
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 5px; /* 기본 간격 설정 */
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.categories ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.categories li {
+    text-align: center;
+    font-size: 14px;
+    color: #555555;
+}
+
+.content {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.info-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.info {
+    font-size: 16px;
+    color: #CCCCCC;
+    display: block;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    padding-left: 5px; /* 왼쪽 패딩 추가 */
+    max-width: 400px; /* 최대 너비 설정 */
+    overflow: hidden; /* 텍스트 오버플로우 숨기기 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    text-overflow: ellipsis; /* 텍스트 잘릴 경우 ... 표시 */
+}
+
+.masked {
+    color: #bbb;
+}
+
+@media screen and (max-width: 1000px) {
+    section.my_info_check {
+        max-width: 900px;
+        padding: 10px;
+    }
+
+    .categories ul {
+        width: 70%; /* 너비 조정 */
+    }
+
+    .info {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .info-group {
+        margin-bottom: 15px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
+
+    .categories ul {
+        justify-content: space-between;
+    }
+
+    .categories li {
+        flex: 1; 
+        margin: 0 5px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categories {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .categories ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .categories li {
+        margin: 0 2px; 
+        flex: 1; 
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+}
