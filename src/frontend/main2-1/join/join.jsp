@@ -18,10 +18,9 @@
 <!-- 구글 폰트 -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
-<link rel="stylesheet" href="../resources/css/join.css">
+<link rel="stylesheet" href="logincss/join.css">
 
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -33,12 +32,16 @@
 			<div class="join_container">
 				<div id="box">
 					<h2 id="jointxt">회원가입</h2>
-					<form action="/joinOK" style="margin-top: 29px" method="post">
+					<form action="/emailchk" style="margin-top: 29px" method="post">
 						<h3 class="h3">
 							아이디 <label class="star">*</label>
 						</h3>
-						<input class="joininput width100" type="text" name="u_id"
+						<div id="idflex">
+						<input class="joininput" type="text" name="u_id" id="uid"
 							placeholder="아이디를 입력해주세요." required>
+						<button id="id_chk" onclick="idchk(this.form)">중복 확인</button>
+						</div>
+						<label id="idchkresult">중복 확인을 해주세요</label>
 						<h3 class="h3">
 							비밀번호 <label class="star">*</label>
 						</h3>
@@ -149,6 +152,57 @@
 		let pwtestok = 0;
 		// 비밀번호 확인 일치 검사
 		let pwchkok = 0;
+		// 아이디 중복 확인
+		let idchkok = 0;
+		
+		// 중복 확인
+		function idchk(f){
+			const id = f.u_id.value;
+			// 아이디를 입력하지 않았을 때
+			if(id == "" || id.length == 0){
+				alert("아이디를 입력하세요");
+				// 아이디에 focus
+				f.querySelector("#uid").focus();
+			}
+			
+			$.ajax({
+				// idchk 로 이동
+				url : "/idchk",
+				type : "post",
+				dataType : "json",
+				// u_id에 id값 입력
+				data : {
+					"u_id" : id
+				},
+				// 작업 성공시
+				success : function(result){
+					// 결과가 true 일때 
+					if(result == true){
+						// 사용 가능한 id
+						idchkok = 1;
+						$("#idchkresult").text("사용 가능한 ID 입니다.");
+						enabled();
+					}else{
+						idchkok=0;
+						$("#idchkresult").text("사용 불가능한 ID 입니다.");
+						enabled();
+					}
+				},
+				error : function(){
+					alert("이런 젠장"),
+					console.log(idchkok)
+					}
+			});
+			
+		}
+		
+		
+		$("#uid").keyup(function(){
+			idchkok=0;
+			$("#idchkresult").text("중복 확인을 해주세요");
+			enabled();
+		})
+		
 		
 		$("#pwid").keyup(function(){
 			// 비밀번호 정규식
@@ -181,12 +235,14 @@
 			// 값이 같으면
 			if(p == pwch){
 				$("#pwOK").text("비밀번호가 일치합니다.");
+				$("#pwOK").css("color", "green");
 				pwchkok = 1;
 				// function 실행
 				enabled();
 			// 값이 다르면
 			}else{
 				$("#pwOK").text("비밀번호가 일치하지 않습니다.");
+				$("#pwOK").css("color", "red");
 				pwchkok = 0;
 			}
 			
@@ -233,6 +289,7 @@
 				// container 안에 optionchk 클래스를 찾아서 checked를 false값을 넣는다.
 				$(this).closest(".join_container").find(".optionchk").prop("checked",false);
 			}
+			enabled()
 		});
 		
 		// 약관을 체크 하면
@@ -254,10 +311,13 @@
 		
 		// 회원가입 버튼 활성화
 		function enabled() {
+			console.log(idchkok+","+pwtestok+","+pwchkok+","+ $("#essential1:checked").length+","+$("#essential2:checked").length)
 			// 비밀번호 정규식, 비밀번호 확인, 필수 체크박스 체크시 
-			if(pwtestok == 1 && pwchkok == 1 && $("#essential1:checked").length == 1 && $("#essential2:checked").length == 1){
+			if(idchkok == 1 && pwtestok == 1 && pwchkok == 1 && $("#essential1:checked").length == 1 && $("#essential2:checked").length == 1){
 					// 버튼 활성화, 색 #111111로 변경
 				$(".joinbtn").prop("disabled", false).css("background-color", "#111111");
+			} else{
+				$(".joinbtn").prop("disabled", true).css("background-color", "#999999");
 			}
 		}
 		
@@ -269,19 +329,15 @@
 			// 입력한 값의 길이
 		    const length = phoneNum.length;
 			
-			// 길이가 9 이상이면
-		    if(length >= 9) {
-		    	// 2~3개 - 3~4개 - 4개
-		        let numbers = phoneNum.replace(/[^0-9]/g, "")
-		        			.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
-		        phone.value = numbers;
-		    }
+		    // 2~3개 - 3~4개 - 4개
+		    let numbers = phoneNum.replace(/[^0-9]/g, "")
+		       			.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
+		    phone.value = numbers;
 		});
 		
 		// 회원가입 시도
 		function joinTry(f){
-			// email 하나로 병합
-			f.u_em.append("@"+f.u_emailback);
+			console.log(f);
 			submit();
 		}
 		
