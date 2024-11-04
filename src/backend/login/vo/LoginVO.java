@@ -1,7 +1,15 @@
-package com.ict.project.vo;
+package com.ict.project.login.vo;
 
 public class LoginVO {
-	private String u_id, u_pw, u_na, u_phone, u_gen, u_bir, u_em, u_out, a_idx, u_outr, u_kakao, u_naver;
+	private String u_id, u_pw, u_na, u_phone, u_gen, u_bir, u_em, u_out, a_idx, u_outr, u_kakao, u_naver, u_pic;
+
+	public String getU_pic() {
+		return u_pic;
+	}
+
+	public void setU_pic(String u_pic) {
+		this.u_pic = u_pic;
+	}
 
 	public String getU_id() {
 		return u_id;
