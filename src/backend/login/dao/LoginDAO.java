@@ -1,14 +1,23 @@
-package com.ict.project.dao;
+package com.ict.project.login.dao;
 
-import org.springframework.web.servlet.ModelAndView;
 
-import com.ict.project.vo.LoginVO;
+import java.util.List;
+
+import com.ict.project.login.vo.LoginVO;
 
 public interface LoginDAO {
-	public int loginOK();
 	
-	public int joinOK();
+	public int kakaologinOK(String u_kakao);
+	
+	public int naverloginOK(String u_naver);
 	
 	public int joinOK(LoginVO lvo);
 	
+	public String idChk(String u_id);
+	
+	public LoginVO loginOK(String u_id);
+	
+	public List<String> getId(String u_em);
+	
+	public LoginVO pwFind(LoginVO lvo);
 }
