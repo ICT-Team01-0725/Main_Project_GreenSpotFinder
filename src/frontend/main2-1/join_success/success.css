@@ -6,6 +6,10 @@ button {
 	border: none;
 }
 
+button:hover{
+	cursor: pointer;
+}
+
 * {
 	/* width height 속성 설정시 padding으로 값이 늘어나지 않음 */
 	box-sizing: border-box;
@@ -67,12 +71,20 @@ button {
 	color: #ff5500;
 }
 
+#infoup:hover{
+	cursor: pointer;
+}
+
 #twobtn {
 	border-top: 1px solid #dddddd;
 	width: 768px;
 	padding-top: 50px;
 	height: 197px;
 }
+
+.btn:hover{
+	cursor: pointer;
+} 
 
 .btn {
 	width: 200px;
