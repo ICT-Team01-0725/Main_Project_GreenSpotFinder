@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-
-
-
 body {
     box-sizing: border-box;
     font-family: "Noto Sans KR", sans-serif;
@@ -52,7 +49,7 @@ section.my_info_check {
 }
 
 .content {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     padding-bottom: 20px;
 }
@@ -82,13 +79,15 @@ section.my_info_check {
     font-size: 16px;
     color: #CCCCCC;
     display: block;
-    padding: 5px 0;
     border-bottom: 1px solid #ddd;
     padding-left: 5px; /* 왼쪽 패딩 추가 */
-    max-width: 400px; /* 최대 너비 설정 */
+    padding-left: 0;
+    max-width: 100%; /* 최대 너비 설정 */
     overflow: hidden; /* 텍스트 오버플로우 숨기기 */
     white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     text-overflow: ellipsis; /* 텍스트 잘릴 경우 ... 표시 */
+    height: 46px;
+    line-height: 46px;
 }
 
 .masked {
@@ -97,7 +96,7 @@ section.my_info_check {
 
 @media screen and (max-width: 1000px) {
     section.my_info_check {
-        max-width: 900px;
+        width: 90%;
         padding: 10px;
     }
 
@@ -124,7 +123,7 @@ section.my_info_check {
     }
 
     .label {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .info {
@@ -162,15 +161,11 @@ section.my_info_check {
         height: 70px;
     }
 
-    .title {
-        font-size: 18px;
-    }
-
     .label {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .info {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
