@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-
+	
     body {
         font-family: 'Noto Sans KR', sans-serif;
 		box-sizing: border-box;
     }
 
-    .container {
+    .login_container {
         width: 100%;
         max-width: 1320px;
         height: 830px;
@@ -33,6 +33,7 @@
         margin-bottom: 30px;
         margin-top: 5px;
         font-size: 16px;
+        padding: 0;
     }
 
     #loginbtn {
@@ -76,8 +77,12 @@
         font-size: 12px;
         text-decoration: none;
         padding: 0 20px;
+        
     }
 
+    .tmp:hover {
+        cursor: pointer;
+    }
     .sns:hover {
         cursor: pointer;
     }
@@ -90,32 +95,35 @@
     }
 
     .naver {
-        background-color: #00cb48;
+        background-color: #03c75a;
         background-size: 30px 30px;
         background-position: 15px center;
-        background-image: url("./images/bear.jpg");
+        background-image: url("/resources/images/naver1.png");
         background-repeat: no-repeat;
         color: #ffffff;
+        border-radius: 12px;
     }
 
     .kakao {
-        background-color: #ffe400;
+        background-color: #FEE500;
         background-size: 30px 30px;
         background-position: 15px center;
-        background-image: url("./images/bear.jpg");
+        background-image: url("/resources/images/kakao1.png");
         background-repeat: no-repeat;
+        border-radius: 12px;
     }
 
     .ptag {
         line-height: 26px;
         font-size: 16px;
+        color: #555555;
     }
 
     button {
         border: none;
         border-radius: 5px;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     header {
@@ -131,7 +139,12 @@
         height: 343px;
         border-top: 1px solid #dddddd;
     }
-
+    
+    @media screen and (max-width: 1380px) {
+    	.login_container{
+    		width: 90%;
+    	}
+	}
     @media screen and (max-width: 560px) {
         #box {
             width: 90%;
@@ -156,8 +169,9 @@
             padding: 0 3%;
         }
     }
+    
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
         .ptag {
             line-height: 24px;
             font-size: 14px;
