@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입자 수 월별 분석</title> 
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+  <style>
+
+    /* 관리자 대시보드 01 화면 크기 : 380px x 795px */
+
+    body {
+      width: 380px;
+      height: 795px;
+      margin: 20px;         
+      padding: 10px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; 
+    }
+
+    #signupChart {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="signupChart"></div>
+
+  <script>
+    // Thymeleaf에서 전달된 데이터를 JavaScript 변수에 바인딩
+    // Thymeleaf에서 데이터를 서버로 전달하여 HTML 로 렌더링하면 주석이 제거되고,
+    // Java 객체로서 JavaScript 변수에 삽입됨
+    // (즉, 서버에서 데이터를 전달받아 JSON 형식으로 변환되어 Javascript 배열로 취급되는 것)
+
+    const monthlySignupData = /*[[${monthlySignupData}]]*/[];
+
+    // 영어 달을 숫자로 변환하는 함수
+    function getMonthNumber(month) {
+      const months = {
+        "January": "1", "February": "2", "March": "3", "April": "4", 
+        "May": "5", "June": "6", "July": "7", "August": "8", 
+        "September": "9", "October": "10", "November": "11", "December": "12"
+      };
+      return months[month] || month;
+    }
+
+    // 영어 달 약어를 대문자로 반환하는 함수
+    function getMonthAbbreviation(month) {
+      const monthAbbrs = {
+        "January": "JAN", "February": "FEB", "March": "MAR", "April": "APR", 
+        "May": "MAY", "June": "JUN", "July": "JUL", "August": "AUG", 
+        "September": "SEP", "October": "OCT", "November": "NOV", "December": "DEC"
+      };
+      return monthAbbrs[month] || month;
+    }
+
+    // 영어 달 약어를 월 이름으로 바꾸는 함수
+    function getMonthNameFromAbbr(abbr) {
+      const monthAbbrsToFull = {
+        "JAN": "January", "FEB": "February", "MAR": "March", "APR": "April", 
+        "MAY": "May", "JUN": "June", "JUL": "July", "AUG": "August", 
+        "SEP": "September", "OCT": "October", "NOV": "November", "DEC": "December"
+      };
+      return monthAbbrsToFull[abbr] || abbr;
+    }
+
+    // 현재 달을 기준으로 5개월의 데이터를 추출하는 함수
+    function getLast5MonthsData() {
+      const now = new Date();
+      const currentMonth = now.getMonth(); 
+      // 0부터 11까지 (0 = January, 11 = December)
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      // 5달의 데이터를 추출
+      const relevantData = [];
+      for (let i = 0; i < 5; i++) {
+        const index = (currentMonth - i + 12) % 12;         // 현재 달을 포함하여 과거 4달
+        relevantData.unshift(monthlySignupData[index]);     // 앞에 추가하여 최신 달이 맨 뒤에 오게
+      }
+
+      return relevantData;
+    }
+
+    // 5개월의 데이터를 동적으로 가져와서 차트 설정
+    const last5MonthsData = getLast5MonthsData();
+    const signupMonthsAbbr = last5MonthsData.map(item => getMonthAbbreviation(item.month));     // 영어 약어 대문자
+    const signupMonthsNumber = last5MonthsData.map(item => getMonthNumber(item.month));         // 숫자로 변환된 달
+    const signupCounts = last5MonthsData.map(item => item.signups);
+
+    const signupChart = echarts.init(document.getElementById('signupChart'));
+    signupChart.setOption({
+      title: { 
+        text: '회원가입자 수 월별 분석', 
+        left: 'center',
+        textStyle: {
+          fontSize: 24 
+        }
+      },
+      tooltip: { 
+        trigger: 'axis',
+        formatter: function (params) {
+          const monthAbbr = params[0].name;  
+          const count = params[0].data; // 해당하는 가입자 수
+          // 월 약어를 월 이름으로 변환 후 숫자 월로 변환
+          const fullMonthName = getMonthNameFromAbbr(monthAbbr); // "January", "February", ...
+          const monthNumber = getMonthNumber(fullMonthName); // 숫자로 변환
+          return `${monthNumber}월 회원가입자수 : ${count} 명`; // 툴팁에서 숫자 월을 사용하여 한글 형식으로 반환
+        }
+      },
+      xAxis: { 
+        type: 'category', 
+        data: signupMonthsAbbr,     // 영어 약어 달을 사용 (대문자 처리)
+        axisLabel: {
+          formatter: function (value) {
+            return value;           // 가로축 레이블에 변형 없이 영어 약어 그대로 출력
+          }
+        }
+      },
+      yAxis: { 
+        type: 'value' 
+      },
+      series: [{
+        data: signupCounts,
+        type: 'line',
+        itemStyle: { color: '#1D44F7' },
+        lineStyle: {
+          width: 4          // 선 굵기 설정 (예: 4)
+        }
+      }]
+    });
+  </script>
+</body>
+</html>
