@@ -1,0 +1,16 @@
+[ monthly_signup_stats / 파일별 기능 설명 ]
+
+# pom.xml
+: Thymeleaf, Spring Boot, JPA, MySQL 의존성 추가
+
+# application.properties
+: MySQL 데이터베이스 연결 설정
+
+# MonthSignupEntity.java
+: JPA 엔티티 클래스
+
+# MonthSignupRepository.java
+: JPA 리포지토리 인터페이스
+
+# MonthSignupController.java
+: Spring MVC 컨트롤러
