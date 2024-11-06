@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+.weather-widget {
+  width: 250px;
+  height: 150px;
+  background-color: #A7CAF9; /* Light blue background */
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: left;  
+}
+
+.weather-widget .temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.weather-widget .status,
+.weather-widget .location {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.weather-widget .feels-like {
+  font-size: 14px;
+  color: #F2F2F2;
+  margin-top: 10px;
+}
+
+/* Weather icon styling */
+.weather-icon {  
+  vertical-align: middle;  
+  margin-right: 10px;
+  float: right; 
+  border: 1px solid black;
+}
