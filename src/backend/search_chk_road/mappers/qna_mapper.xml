@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qna">
+		
+	<insert id="insert" parameterType="gb2vo">
+		insert into qna_tbl(qna_title, qna_content)
+		values(#{qna_title}, #{qna_content})
+	</insert>
+	
+	<delete id="delete" parameterType="String">
+		delete from qna_tbl where gb2_idx = #{gb2_idx}
+	</delete>
+	
+	<update id="update" parameterType="gb2vo">
+		update guestbook2
+		set gb2_name= #{gb2_name}, gb2_subject = #{gb2_subject}, gb2_content = #{gb2_content},
+		    gb2_email = #{gb2_email}, gb2_f_name = #{gb2_f_name}
+		where gb2_idx = #{gb2_idx}    
+	</update>
+</mapper>
+
+
+
+
+
+

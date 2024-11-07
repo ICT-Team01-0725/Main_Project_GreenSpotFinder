@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+
+	
+		<!-- property-placeholder 설정 => properties 파일 위치 지정 : Namespaces 에서context 선택 -->
+	<context:property-placeholder location="classpath:props/jdbc.properties" />	
+	
+	
+		<!-- DB접속 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.pwd}" />
+		
+		<!-- 동시에 사용할 수 있는 최대 커넥션의 수 -->
+		<property name="maxActive" value="${jdbc.maxActive}" />
+		<!-- 커넥션 풀에 반납할 때 최대로 유지되는 커넥션의 수 -->
+		<property name="maxIdle" value="${jdbc.maxIdle}" />
+		<!-- 커넥션 풀에 반납할 때 최소로 유지되는 커넥션의 수 -->
+		<property name="minIdle" value="${jdbc.minIdle}" />
+	</bean>
+	
+	<!-- mybatis config (config 위치)-->
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+	
+	<!-- MyBatis에서 실제로 실행하는클래스 -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactoryBean" />
+	</bean>
+	
+	<!-- 트랜젝션 처리 -->
+	
+	<!-- DAO는 어노테이션 -->
+		
+</beans>

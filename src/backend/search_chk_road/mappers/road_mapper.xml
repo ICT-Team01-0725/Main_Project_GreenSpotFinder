@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="road">
+	<select id="searchRoadByAddress" 	
+		resultType="roadList">
+		SELECT * FROM ictede_db.road_tbl
+		WHERE r_na LIKE #{%searchKeyword%} OR r_ce_ad LIKE #{%searchKeyword%}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
