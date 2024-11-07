@@ -19,7 +19,7 @@ public class Common {
 	@Autowired
 	private EmailService emailService;
 	
-	
+	// 이메일 보내는 메서드
 	@RequestMapping("/emailsend")
 	public ModelAndView emailSend(HttpServletRequest request, ModelAndView mv) {
 		try {
@@ -40,20 +40,20 @@ public class Common {
 				// 임시번호 서버에 출력
 				System.out.println("임시번호 : "+randomNumber);
 				
+				
 				HttpSession session = request.getSession();
 				
 				// 해당 임시번호를 DB에 저장하기 또는 세션에 저장하기
-				session.setAttribute("sessionNumber", randomNumber);
+				session.setAttribute("randomNumber", randomNumber);
 				
 				System.out.println(session.getAttribute("u_em"));
 				//.get("u_em").toString()
 				// EmailService 호출해서 사용하기
 				emailService.sendemail(randomNumber, session.getAttribute("u_em").toString());
 				
-				// cmd값 session에서 꺼내서 viewName에 저장
+				// cmd값 꺼내서 viewName에 저장
 				mv.setViewName("redirect:/"+session.getAttribute("cmd").toString());
 				session.removeAttribute("cmd");
-				session.removeAttribute("u_em");
 				
 				System.out.println(request.getSession().getAttribute("cmd"));
 				

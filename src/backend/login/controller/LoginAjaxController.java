@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ict.project.login.service.LoginService;
+import com.ict.project.login.vo.LoginVO;
 
 
 @RestController
@@ -25,4 +26,13 @@ public class LoginAjaxController {
 		}
 		return result;
 	}
+	
+	@RequestMapping("/detail")
+	@ResponseBody
+	public LoginVO getdetail(String u_id) {
+		LoginVO lvo = loginService.getDetail(u_id);
+		
+		return lvo;
+	}
+	
 }
