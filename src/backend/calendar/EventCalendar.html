@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력</title>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.2/main.min.css' rel='stylesheet' />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id='calendar'></div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.2/main.min.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [], // 초기 이벤트
+                eventDidMount: function(info) {
+                    if (info.event.extendedProps.isHoliday) {
+                        info.el.style.backgroundColor = '#ffcccc'; // 연한 붉은색
+                    }
+                }
+            });
+
+            const apiKey = '1ifF5169eHQGz9EcSbNZ8axnj%2BIUkN9gsy%2FyDuF58ZX2kT8H254nUpzp3rKSdP6rIhREcwrqmsv1MByZvTnGTQ%3D%3D';
+
+            const fetchHolidays = async (year) => {
+                const apiUrl = `http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService?serviceKey=${apiKey}&solYear=${year}&numOfRows=100&pageNo=1&resultType=xml`;
+                
+                try {
+                    const response = await fetch(apiUrl);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const data = await response.text(); // XML을 텍스트로 가져옵니다.
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, 'text/xml');
+
+                    const items = xmlDoc.getElementsByTagName('item');
+                    const holidays = [];
+
+                    for (let i = 0; i < items.length; i++) {
+                        const dateName = items[i].getElementsByTagName('dateName')[0].textContent; // 공휴일 이름
+                        const locdate = items[i].getElementsByTagName('locdate')[0].textContent;   // 공휴일 날짜
+
+                        holidays.push({
+                            title: dateName, // 공휴일 이름
+                            start: locdate,  // 공휴일 날짜
+                            isHoliday: true
+                        });
+                    }
+                    return holidays;
+                } catch (error) {
+                    console.error(`공휴일 데이터를 ${year}년 불러오는 중 오류 발생:`, error);
+                    return [];
+                }
+            };
+
+            const fetchAllHolidays = async () => {
+                const allHolidays = [];
+                for (let year = 2020; year <= 2034; year++) {
+                    const holidays = await fetchHolidays(year);
+                    allHolidays.push(...holidays);
+                }
+                calendar.addEventSource(allHolidays);
+                calendar.render(); // 이벤트를 추가한 후 달력을 렌더링합니다.
+            };
+
+            calendar.render(); // 달력 렌더링
+            fetchAllHolidays(); // 공휴일 데이터 가져오기 호출
+        });
+    </script>
+</body>
+</html>
