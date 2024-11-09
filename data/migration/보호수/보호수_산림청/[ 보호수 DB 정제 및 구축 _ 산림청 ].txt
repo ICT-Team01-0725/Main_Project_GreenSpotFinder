@@ -1,0 +1,53 @@
+[ 보호수 DB 정제 및 구축 _ 산림청 ]
+
+
+~ 보호수 카테고리에 들어가는 내용이지만, 현황표만을 표시하기 위해 따로 DB를 구축했습니다 ~
+~ 통합 DB 시도 중, 서브페이지별 필요도에 대해 생각하며 기획과 다른 방향으로 진행했습니다 ~ 
+
+
+01. 공공데이터 선정
+
+: seeder 폴더에 보관되어 있는 xlsx 파일이
+여러 개의 시트로 나와 있어 필요한 시트 중 필요한 칼럼과 데이터행들을 가져오는 과정이 필요했음
+
+
+02. Tool 선정
+
+: 필요한 시트의 위치를 확인하기 위해 MS Excel을 이용한 다음에
+다른 카테고리의 자료들과 동일하게 Pandas로 DataFrame을 생성하고
+MySQL로 검색로직 구현을 위한 테이블을 생성함.
+또한 정적 DB에 속하지만 공공데이터의 갱신가능성을 고려하여 Liquibase로 버전관리 작업을 거침.
+
+
+03. 파일명 기반의 정제 과정 설명
+
+1... <데이터 정제>
+	--> tree_stat_sheet_check.py
+		: Excel 파일에서 특정 시트를 읽어낼 수 있는지 여부와 범위를 선택하고
+		  필요한 행의 번호를 읽어내어 작업을 진행할 수 있도록 기초작업 진행
+	--> tree_stat_xlsx_to_csv.py
+		: 여러 시트로 이뤄진 Excel 파일에서 특정 시트를 선택하여 
+		  모든 데이터를 문자열로 변환하고 빈값을 " - " 로 처리함
+		: 존재하고 있는 기존 칼럼들을 필요한 데이터값으로 변환하기 위해
+		  특정 열을 선택하고 열의 명칭을 바꾸는
+		  지정정보, 수종명(학명), 위치, 지정일 표준화, 수령 계산 등의 작업을 거침
+
+2... <MySQL 데이터 삽입>
+	--> tree_stat_create_table.sql
+		: 공통의 자료형, 변수명을 가진 table로 작업이 가능하도록 CREATE TABLE 문 작성
+	--> tree_stat_pandas_to_sql_01.py
+		: Pandas 와 mysql.connector 이용
+	--> tree_stat_pandas_to_sql_02.py
+		: Pandas 와 SQL Alchemy 이용
+	--> tree_stat_pandas_to_sql_03.py
+		: Pandas 와 pymysql 이용
+	--> tree_csv_to_sql.py
+		: 저장되어 있는 csv 파일의 DB 연결 설정 및 DataFrame으로 읽히는지 여부 확인
+
+3... <배포용 SQL문 생성>
+	--> tree_stat_sqltable_to_sql.py
+		: 데이터를 DataFrame으로 읽어와 SQL 파일로 저장함 (오류 발생시, 필터링 거침)
+	--> tree_stat.sql
+		: 생성된 테이블로 바로 데이터를 삽입할 수 있는 sql 파일
+
+
