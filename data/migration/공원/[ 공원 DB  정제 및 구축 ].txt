@@ -1,0 +1,52 @@
+[ 공원 DB : 정제 및 구축 ]
+
+
+01. 공공데이터 선정
+
+: seeder 폴더에 보관되어 있는 xml 파일이 
+전국도시공원정보표준데이터로 공공데이터 포털에서 다운로드받은 데이터 원본
+
+
+02. Tool 선정
+
+: 대용량 데이터에서 효과적으로 작용할 수 있는 Python pandas를 활용하여 정제 과정 시작함.
+그리고 원본데이터가 xml 파일인 점을 고려하여 xml.etree를 활용하여 파싱 작업을 진행함.
+정제된 데이터는 MySQL에서 공통으로 작업할 수 있도록 함.
+또한 정적 DB에 속하지만 공공데이터의 갱신가능성을 고려하여 Liquibase로 버전관리 작업을 거침.
+
+
+03. 파일명 기반의 정제 과정 설명
+
+1... <데이터 정제>
+	--> park_xml_loader.py
+		: xml에 존재하는 태그, 칼럼 이름을 매칭하여 메모리 낭비를 방지하고, 처리속도를 향상시킴
+		 interparse로 XML 파일 파싱
+		 리스트를 DataFrame으로 변환하여 csv로 저장하고 저장여부 메시지 출력
+	--> park_dataframe_cleaner.py
+		: 저장되어 있는 csv 파일의 문자열 앞뒤 공백 제거 및 데이터 타입 변경
+
+2... <MySQL 데이터 삽입>
+	--> park_pandas_to_sql_01.py
+		: pandas와 mysql.connector 이용
+	--> park_pandas_to_sql_02.py
+		: pandas와 sqlalchemy 이용
+
+
+3... <배포용 SQL문 생성>
+	--> park_create_table.sql
+		: 팀원 간 일관된 데이터 삽입을 위한 MySQL 내 테이블 생성
+	--> park_sqltable_to_sql.py
+		: 저장되어 있는 DataFrame을 SQL 파일로 저장하고, 오류 필터링
+	--> park_pandas_to_sql_solution.sql
+		:  문자열 저장 DB 공간 효율화 작업
+
+
+
+04. 추가 작업
+
+: insert every values park_db.sql 
+	--> 기존에 제시한 파일과 다르게 insert문 하나에 모든 DB값을 넣어
+	      컴퓨터 사양에 따른 삽입 속도 상승
+
+
+
