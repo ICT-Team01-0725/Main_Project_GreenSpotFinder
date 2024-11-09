@@ -1,0 +1,50 @@
+[ 보호수 DB 정제 및 구축 _ 공공데이터포털 ]
+
+
+~ 보호수 카테고리에 들어가는 내용이지만, 지도 출력을 위해 따로 DB를 구축했습니다 ~
+~ 통합 DB 시도 중, 서브페이지별 필요도에 대해 생각하며 기획과 다른 방향으로 진행했습니다 ~ 
+
+
+01. 공공데이터 선정
+
+: seeder 폴더에 보관되어 있는 xlsx 파일이 
+대한민국 지역별 보호수 정보에 대한 공공데이터 포털에서 다운로드받은 데이터로 
+총 17개의 xlsx 파일들로 나와있는데,
+공통 칼럼을 가지고 있는 자료로 하나의 통합파일이 필요했음.
+
+
+02. Tool 선정
+
+: xlsx 파일들을 csv로 변환하여 저장하기 위해 MS Excel로 저장작업을 거치고
+다른 카테고리의 자료들과 동일하게 Pandas로 DataFrame을 생성하고
+Numpy로 빈 문자열들을 일괄적으로 대체하고
+MySQL로 검색로직 구현을 위한 테이블을 생성함.
+또한 정적 DB에 속하지만 공공데이터의 갱신가능성을 고려하여 Liquibase로 버전관리 작업을 거침.
+
+
+03. 파일명 기반의 정제 과정 설명
+
+1... <데이터 정제>
+	--> xlsx 파일들을 csv 파일로 변환하여 UTF-8 인코딩으로 MS Excel에서 작업
+	--> tree_area_multicsv_to_csv_loader.py
+		: os 모듈로 파일 경로를 관리하고, chardet 모듈로 파일의 인코딩을 감지하도록 함 
+		 Pandas로 DataFrame을 생성하고, Numpy로 replace 메서드를 사용하여 빈 문자열을 대체함
+		 파일을 병합하여 저장했는지 여부를 확인하는 문구를 print로 확인함
+
+
+2... <MySQL 데이터 삽입>
+	--> tree_area_pandas_to_sql_solution.sql
+		: 데이터의 효율화를 위해 table의 자료형의 크기 조절
+	--> tree_area_create_table.sql
+		: 공통의 자료형, 변수명을 가진 table로 작업이 가능하도록 CREATE TABLE 문 작성
+	--> tree_area_pandas_to_sql.py
+		: 병합된 csv 파일을 Pandas, SQL Alchemy를 이용하여 
+		 MySQL에 데이터가 삽입되도록 만듦
+
+
+3... <배포용 SQL문 생성>
+	--> tree_area_sqltable_to_sql.py
+		: DataFrame을 SQL 파일로 저장
+	--> tree_area.sql
+		: 생성된 테이블로 바로 데이터를 삽입할 수 있는 sql 파일
+
