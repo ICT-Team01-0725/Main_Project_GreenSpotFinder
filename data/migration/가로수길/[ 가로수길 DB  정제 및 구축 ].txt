@@ -1,0 +1,61 @@
+[ 가로수길 DB : 정제 및 구축 ]
+
+
+01. 공공데이터 선정
+
+: seeder 폴더에 보관되어 있는 JSON 파일이 
+전국가로수길표준데이터로 공공데이터 포털에서 다운로드받은 데이터 원본
+
+
+02. Tool 선정
+
+: 대용량 데이터에서 효과적으로 작용할 수 있는 Python pandas를 활용하여 정제 과정 시작함.
+그리고 SQL Alchemy를 활용하여 파일이 로컬에 저장될 수 있게 하였고,
+정제된 데이터는 MySQL에서 공통으로 작업할 수 있도록 함.
+JSON을 바로 불러와 검색기능을 활용하는 방안도 있지만, 
+서버에서의 검색반응속도와 효율성을 고려하여 정제작업을 거침.
+또한 정적 DB에 속하지만 공공데이터의 갱신가능성을 고려하여 Liquibase로 버전관리 작업을 거침.
+
+
+03. 파일명 기반의 정제 과정 설명
+
+1... <데이터 정제>
+	--> road_json_to_csv_converter.py
+		: Pandas를 통해 JSON을 CSV로 변환하여 저장
+	--> road_json_to_csv_loader.py
+		: Pandas, SQL Alchemy를 이용하여 DataFrame 생성
+		  기존의 JSON의 칼럼명이 fields, records로 두 개였기 때문에
+		  웹앱에서의 필요성에 따라 리스트와 프레임을 생성해야 함
+		 : 칼럼 이름 변경, 칼럼 삭제, SQL 테이블로의 업로드
+
+
+2... <MySQL 데이터 삽입>
+	--> road_json_to_csv_converter.py
+	--> road_pandas_to_sql_solution.sql
+		: 변수별 자료형에서 문제 발생시, 일괄적으로 MODIFY문을 통해 자료형 변경
+		: SELECT MAX 문을 통해 칼럼별 최댓값을 출력받고
+		  MODIFY 문을 통해 VARCHAR의 크기 재설정
+
+
+3... <배포용 SQL문 생성>
+	--> road_create_table.sql
+		: 팀원들간의 공통적인 자료형, 크기를 설정할 수 있는 CREATE TABLE 문 생성
+	--> road_sqltable_to_sql.py 
+		: MySQL 내 삽입된 road.db_road.tbl 의 데이터를 DataFrame으로 읽어
+		  DataFrame 내용을 SQL 파일로 저장함
+		: 한글데이터가 포함되어 있으므로 UTF-8 인코딩을 해야하며
+		  자료값을 문자열로 변환하며 오류발생시 필너팅이 가능하도록 safe_values, errors 선정
+		: 콘솔을 통해 저장 여부를 확인할 수 있도록 print문 선정 
+
+
+04. 추가 작업
+
+: insert every values road_db.sql 
+	--> 기존에 제시한 파일과 다르게 insert문 하나에 모든 DB값을 넣어
+	      컴퓨터 사양에 따른 삽입 속도 상승
+: new_grant_user.sql
+	--> MySQL Workbench에서 사용자별 작업이 가능하도록 권한 부여
+
+
+
+
