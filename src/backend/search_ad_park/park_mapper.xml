@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="park-mapper">
+
+    <!-- 상위 4개 공원 가져오기 -->
+    <select id="getTop4Parks" resultType="com.ict.edu.parkvo.ParkVO">
+        SELECT * FROM park_db.park_tbl
+        ORDER BY p_na ASC
+        LIMIT 4
+    </select>
+
+    <!-- 주소로 공원 검색하기 -->
+    <select id="searchParks" resultType="com.ict.edu.parkvo.ParkVO">
+        SELECT * FROM park_db.park_tbl
+        WHERE p_ad LIKE CONCAT('%', #{p_ad}, '%')
+        LIMIT 4
+    </select>
+</mapper>
