@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC 
+ "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="tree">
+	<select id="count" resultType="String">
+		select count(*) from tree_db
+	</select>
+	<select id="pagelist" parameterType="Map" resultType="tvo">
+		select * from tree_db order by t_idx desc limit #{limit} offset #{offset}
+	</select>
+	
+</mapper>
