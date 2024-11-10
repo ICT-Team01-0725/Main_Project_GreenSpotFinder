@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="tree-mapper">
+
+    <!-- 상위 4개 보호수 가져오기 -->
+    <select id="getTop4Trees" resultType="com.ict.edu.treevo.TreeVO">
+        SELECT * FROM tree_db.tree_area_tbl
+        ORDER BY t_na ASC  
+        LIMIT 4
+    </select>
+
+    <!-- 주소로 보호수 검색하기 -->
+    <!-- t_ad, t_rad 모두 활용하기 -->
+    <select id="searchTrees" resultType="com.ict.edu.treevo.TreeVO">
+        SELECT * FROM tree_db.tree_area_tbl
+        WHERE 
+            (t_ad LIKE CONCAT('%', #{t_ad}, '%') OR #{t_ad} IS NULL OR #{t_ad} = '')
+            AND (t_rad LIKE CONCAT('%', #{t_rad}, '%') OR #{t_rad} IS NULL OR #{t_rad} = '')
+    </select>
+
+</mapper>
