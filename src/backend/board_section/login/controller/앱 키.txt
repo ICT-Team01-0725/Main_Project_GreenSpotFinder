@@ -1,0 +1,8 @@
+kakao
+java script 0e4ccdb548ca74e6213debb7aad29378
+rest api 	673fbc7db4cc9805a5120f9f38a7289a
+sec 		WdAz4aeZDRQoNzqnC00TmUVwrxlctYqq
+
+naver
+rest api 	bv_786diGR8Y0y00e9Bx
+sec   		mZsU2OCm0L
