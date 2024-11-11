@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="review">
+	<select id="reviewcount" resultType="int">
+		select count(*) from review_db
+	</select>
+	
+	<select id="reviewlist" parameterType="map" resultType="revo">
+		select * from review_db order by rev_idx desc limit #{limit} offset #{offset}
+	</select>
+
+	<insert id="reviewinsert" parameterType="revo">
+		insert into review_db(rev_tle, rev_con, u_idx, rev_dat, rev_up, rev_bor, rev_ref, rev_filename)
+		value (#{rev_tle}, #{rev_con}, #{u_idx}, now(), '0', #{rev_bor}, #{rev_ref}, #{rev_filename})
+	</insert>
+    
+    <update id="reviewhit" parameterType="String">
+    	update review_db set rev_hit = rev_hit + 1 where rev_idx = #{rev_idx}
+    </update>
+    
+    <select id="reviewdetail" parameterType="String" resultType="revo">
+    	select * from review_db where rev_idx = #{rev_idx}
+    </select>
+	
+    <update id="reviewupdate" parameterType="revo">
+    	update review_db 
+    	set rev_tle = #{rev_tle}, rev_con = #{rev_con}, rev_up = '1', rev_filename = #{rev_filename}
+    	<![CDATA[ 
+    		where rev_idx = #{rev_idx}
+    	]]>
+    </update>
+    
+	<update id="reviewdelete" parameterType="String">
+		update review_db set where rev_idx = #{rev_idx}
+	</update>
+	
+    
+</mapper>
+

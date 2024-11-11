@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC 
+ "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="qna">
+	
+	<select id="qna_list" resultType="qvo" parameterType="Map">
+		select * from qna_db order by q_idx desc limit #{offset}, #{limit} 
+	</select>
+	
+	<select id="qna_count" resultType="int">
+		select count(*) from qna_db
+	</select>
+	
+	<select id="qna_detail" parameterType="String" resultType="qvo">
+		select * from qna_db where q_idx = #{q_idx}
+	</select>
+	
+	<insert id="qna_insert" parameterType="qvo">
+		insert into qna_db (u_idx, q_tle, q_con, q_dat, q_ans, a_idx, q_acon)
+		values (#{u_idx}, #{q_tle}, #{q_con}, now(), '0', #{a_idx}, #{q_acon})
+	</insert>
+	
+	<update id="qna_update" parameterType="qvo">
+		update qna_db set q_ans='1', a_idx=#{a_idx}, q_acon=#{q_acon}
+		where q_idx = #{q_idx}
+	</update>
+	
+	<delete id="qna_delete" parameterType="String">
+		delete from qna_db where q_idx=#{q_idx}	
+	</delete>
+	
+	<select id="qna_userlist" resultType="qvo" parameterType="Map">
+		select * from qna_db order by q_idx desc limit #{offset}, #{limit}
+		where u_idx=#{u_idx}
+	</select>
+	
+	<select id="qna_usercount" resultType="int" parameterType="String">
+		select count(*) from qna_db where u_idx=#{u_idx}
+	</select>
+	
+</mapper>

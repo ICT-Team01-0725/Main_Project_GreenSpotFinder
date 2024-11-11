@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC 
+ "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fna">
+	
+	<select id="fna_list" resultType="fvo" parameterType="Map">
+		select * from fna_db order by f_idx desc limit #{offset}, #{limit} 
+	</select>
+	
+	<select id="fna_count" resultType="int">
+		select count(*) from fna_db
+	</select>
+	
+	<select id="fna_detail" parameterType="String" resultType="fvo">
+		select * from fna_db where f_idx = #{f_idx}
+	</select>
+	
+	<insert id="fna_insert" parameterType="fvo">
+		insert into fna_db (a_idx, f_tle, f_fcon, f_acon, f_dat)
+		values (#{a_idx}, #{f_tle}, #{f_fcon}, #{f_acon}, now())
+	</insert>
+	
+	<update id="fna_update" parameterType="fvo">
+		update fna_db set a_idx = #{a_idx}, f_tle = #{f_tle}, f_fcon = #{f_fcon}, f_acon = #{f_acon}, f_up = now()
+		where f_idx = #{f_idx}
+	</update>
+	
+	<delete id="fna_delete" parameterType="String">
+		delete from fna_db where f_idx=#{f_idx}
+	</delete>
+</mapper>

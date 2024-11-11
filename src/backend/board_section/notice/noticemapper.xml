@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="notice">
+	<select id="nt_count" resultType="int">
+		select count(*) from notice_db
+	</select>
+	
+	<select id="nt_list" parameterType="map" resultType="nvo">
+		select * from notice_db order by idxn_idx desc limit #{limit} offset #{offset}
+	</select>
+
+	<insert id="nt_insert" parameterType="nvo">
+		insert into notice_db(n_chk, n_opt, a_idx, n_tle, n_con, n_dat, n_out, n_hit, f_name)
+		value (#{n_chk}, #{n_opt}, #{a_idx}, #{n_tle}, #{n_con}, now(), #{n_out}, 0, #{f_name})
+	</insert>
+    
+    <update id="nt_hit" parameterType="String">
+    	update notice_db set n_hit = n_hit + 1 where idxn_idx = #{idxn_idx}
+    </update>
+    
+    <select id="nt_detail" parameterType="String" resultType="nvo">
+    	select * from notice_db where idxn_idx = #{idxn_idx}
+    </select>
+	
+    <update id="nt_update" parameterType="nvo">
+    	update notice_db 
+    	set n_chk = #{n_chk},
+			n_opt = #{n_opt},
+			n_tle = #{n_tle},
+			n_con = #{n_con},
+			f_name = #{f_name}
+    	<![CDATA[ 
+    		where n_idx = #{n_idx}
+    	]]>
+    </update>
+    	
+	<update id="delete" parameterType="String">
+		update notice_db set where n_idx = #{n_idx}
+	</update>
+	
+    
+</mapper>
+

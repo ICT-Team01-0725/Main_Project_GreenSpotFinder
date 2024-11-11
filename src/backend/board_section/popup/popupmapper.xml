@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC 
+ "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="popup">
+	<insert id="popinsert">
+		insert into pop_db (pop_idx, a_idx, pop_tle, pop_con, pop_pic, pop_rdat, pop_link, pop_act, pop_etc)
+		values (#{pop_idx}, #{a_idx}, #{pop_tle}, #{pop_con}, #{pop_pic}, now(), #{pop_link}, "0", #{pop_etc})
+	</insert>
+	
+	<select id="poplist" resultType="popvo">
+		select * from pop_db order by pop_idx desc
+	</select>
+	
+	<select id="popdetail" parameterType="String" resultType="popvo">
+		select * from pop_db where pop_idx=#{pop_idx}
+	</select>
+	
+	<update id="popupdate" parameterType="popvo">
+		update pop_db set pop_tle=#{pop_tle}, pop_con=#{pop_con}, pop_pic=#{pop_pic}, pop_link=#{pop_link}, pop_act=#{pop_act}, pop_etc=#{pop_etc}
+		where pop_idx=#{pop_idx}
+	</update>
+	
+	<update id="popdelete" parameterType="popvo">
+		update pop_db set pop_odat=now(), pop_act="1", a_idx=#{a_idx}
+		where pop_idx=#{pop_idx}
+	</update>
+	
+</mapper>

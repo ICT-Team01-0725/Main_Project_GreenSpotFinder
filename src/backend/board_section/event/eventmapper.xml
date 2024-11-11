@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC 
+ "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="event">
+	
+	<select id="evcount" resultType="int">
+		select count(*) from event_db
+	</select>
+	
+	<select id="evlist" parameterType="String" resultType="evvo">
+		select * from event_db order by ev_idx desc limit #{limit} offset #{offset} 
+	</select>
+	
+	<select id="evsearch" parameterType="Map" resultType="evvo">
+		select * from event_db where ev_tle like #{str} limit #{limit} offset #{offset} 
+	</select>
+	
+	<select id="evcal" parameterType="Map" resultType="evvo">
+		select * from event_db  
+	</select>
+	
+</mapper>
