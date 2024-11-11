@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC 
+ "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Comment">
+	
+	<select id="Comment_list" resultType="cvo" parameterType="Map">
+		select * from comment_db order by c_idx desc
+		where c_ref = #{c_ref} and c_bor = #{c_ref}
+	</select>
+	
+	<select id="Comment_listall" resultType="cvo" parameterType="Map">
+		select * from comment_db order by c_idx desc
+		limit #{offset}, #{limit}
+	</select>
+	
+	<select id="Comment_count" resultType="int">
+		select count(*) from comment_db
+	</select>
+	
+	<insert id="Comment_insert" parameterType="cvo">	
+		insert into comment_db (c_idx, u_idx, c_con, c_dat, c_up, c_out, c_bor, c_ref)
+		values (#{c_idx}, #{u_idx}, #{c_con}, now(), '0', '0', #{c_bor}, #{c_ref})
+	</insert>
+	
+	<update id="Comment_update" parameterType="cvo">
+		update comment_db set c_con = #{c_con}, c_up = '1'
+		where c_idx = #{c_idx}
+	</update>
+	
+	<update id="Comment_delete" parameterType="String">
+		update comment_db set c_out = '1'
+		where c_idx = #{c_idx}
+	</update>
+</mapper>
