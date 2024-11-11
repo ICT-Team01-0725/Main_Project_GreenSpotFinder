@@ -6,34 +6,31 @@ import org.springframework.stereotype.Component;
 public class Paging {
 	
 	// 현재 페이지
-	private int nowPage = 1 ;
+	private int nowPage = 1 ; //
 	
 	// 현재 블럭
-	private int nowBlock = 1 ;
+	private int nowBlock = 1 ; //
 	
 	// 한 페이지당 10줄
-	private int numPerPage = 10;
+	private int numPerPage = 10; //
 	
 	// 한 블록당 5개
-	private int pagePerBlock = 5;
+	private int pagePerBlock = 5; // 고정
 	
 	// DB의 게시물의 수	
-	private int totalRecord = 0 ;
+	private int totalRecord = 0 ; //
 	
 	// 게시물의 수를 이용해서 전체 페이지의 수
-	private int totalPage = 0 ;
+	private int totalPage = 0 ; //
 	
-	private int totalBlock = 0 ;
+	private int totalBlock = 0 ; //
 	
 	
 	// 한번에 가져올 게시물의 시작번호와 끝번호 
-	private int begin = 0 ;
-	private int end = 0 ;
+	private int beginBlock = 0 ; //
+	private int endBlock = 0 ; //
 	
-	private int beginBlock = 0 ;
-	private int endBlock = 0 ;
-	
-	private int offset = 0 ;
+	private int offset = 0 ; //
 
 	public int getNowPage() {
 		return nowPage;
@@ -91,22 +88,6 @@ public class Paging {
 		this.totalBlock = totalBlock;
 	}
 
-	public int getBegin() {
-		return begin;
-	}
-
-	public void setBegin(int begin) {
-		this.begin = begin;
-	}
-
-	public int getEnd() {
-		return end;
-	}
-
-	public void setEnd(int end) {
-		this.end = end;
-	}
-
 	public int getBeginBlock() {
 		return beginBlock;
 	}
@@ -130,7 +111,4 @@ public class Paging {
 	public void setOffset(int offset) {
 		this.offset = offset;
 	}
-	
-	
-	
 }
