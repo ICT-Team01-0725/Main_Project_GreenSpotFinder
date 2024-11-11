@@ -1,0 +1,247 @@
+.region_event {
+	margin-top: 60px;
+}
+
+/* 메뉴 */
+.region_event_menu {
+	display: flex;		
+}
+
+.region_event_menu li {
+	font-size: 16px;
+	height: 46px;
+	line-height: 46px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	box-sizing: border-box;
+}
+
+.region_event_menu li.event_held {
+	width: 150px;
+}
+
+.region_event_menu li.event_img {
+	width: 220px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.region_event_menu li.event_contents {
+	width: calc(100% - 370px);
+}
+.region_event_menu li.event_img img {
+	width: 100%;
+	max-width: 180px;
+}
+
+.region_event_menu li.event_img img {
+	width: 100%;
+	max-width: 180px;
+}
+
+
+
+/* 리스트 */
+.region_event_list {
+	display: flex;		
+}
+
+.region_event_list li {
+	border-bottom: 1px solid #ddd;
+}
+
+
+.region_event_list li.event_held {
+	width: 150px;
+	box-sizing: border-box;
+	padding: 20px 0;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.region_event_list li.event_img {
+	width: 220px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	box-sizing: border-box;
+	padding: 20px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.region_event_list li.event_img img {
+	width: 100%;
+	max-width: 180px;
+}
+
+.region_event_list li.event_contents {
+	width: calc(100% - 370px);
+	box-sizing: border-box;
+	padding: 20px;
+	text-align: left;
+}
+
+.region_event_list li.event_contents p.event_title {
+	font-size: 20px;
+	font-weight: 500;
+	color: #333;
+	margin-bottom: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.region_event_list li.event_contents p.event_subtitle {
+	font-size: 16px;
+	color: #555;
+	margin-bottom: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.region_event_list li.event_contents p.event_start_day {
+	font-size: 16px;
+	color: #555;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.region_event_list li.event_contents p.event_start_day span {
+	font-weight: 500;
+}
+
+.region_event_list li.event_contents p.event_end_day {
+	font-size: 16px;
+	color: #555;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.region_event_list li.event_contents p.event_end_day span {
+	font-weight: 500;
+}
+
+.region_event_list li.event_contents p:last-child {
+	margin-bottom: 0px;
+}
+
+
+@media screen and (max-width: 1000px) {
+	
+}
+
+
+@media screen and (max-width: 768px) {
+	
+	.region_event_menu li.event_held,
+	.region_event_list li.event_held {
+	    width: 90px;
+	}
+	
+	.region_event_list li.event_held {
+	    width: 90px;
+    	font-size: 14px;
+	}
+	
+	.region_event_menu li.event_img {
+	    width: 160px;
+	    border-left: 1px solid #ddd;
+	    border-right: 1px solid #ddd;
+	}
+	
+	.region_event_list li.event_img {
+	    width: 160px;
+	    border-left: 1px solid #ddd;
+	    border-right: 1px solid #ddd;
+	    box-sizing: border-box;
+	    padding: 16px;
+	}
+	
+	.region_event_menu li.event_contents {
+	    width: calc(100% - 250px);
+	}
+	
+	.region_event_list li.event_contents {
+	    width: calc(100% - 250px);
+	    box-sizing: border-box;
+	    padding: 16px;
+	    text-align: left;
+	}
+
+	.region_event_list li.event_contents p.event_title {
+		font-size: 18px;
+		margin-bottom: 12px;
+	}
+	
+	.region_event_list li.event_contents p.event_subtitle {
+		font-size: 14px;
+		margin-bottom: 18px;
+	}
+	
+	.region_event_list li.event_contents p.event_start_day {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	
+	.region_event_list li.event_contents p.event_start_day span {
+		font-weight: 500;
+	}
+	
+	.region_event_list li.event_contents p.event_end_day {
+		font-size: 14px;
+	}
+	
+	.region_event_list li.event_contents p.event_end_day span {
+		font-weight: 500;
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	
+	.region_event_menu li.event_held,
+	.region_event_list li.event_held {
+	    width: 70px;
+	}
+	
+	.region_event_menu li.event_img {
+	    width: 160px;
+	    border-left: 1px solid #ddd;
+	    border-right: 1px solid #ddd;
+	}
+	
+	.region_event_list li.event_img {
+	    width: 160px;
+	    border-left: 1px solid #ddd;
+	    border-right: 1px solid #ddd;
+	    box-sizing: border-box;
+	    padding: 16px;
+	}
+	
+	.region_event_menu li.event_contents {
+	    width: calc(100% - 250px);
+	}
+	
+	.region_event_list li.event_contents {
+	    width: calc(100% - 250px);
+	    box-sizing: border-box;
+	    padding: 16px;
+	    text-align: left;
+	}
+}
