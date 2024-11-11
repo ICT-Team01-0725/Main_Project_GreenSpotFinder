@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {  
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+}
+
+.content  {
+    margin-top: 20px;
+    border-top: 2px solid #000;
+    padding: 120px 0;
+}
+
+.content > ul {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    vertical-align: middle;
+}
+
+.content > ul > li {
+    margin: 0 auto;
+}
+
+.content-box { 
+    border-top: 2px solid #000000;
+    width: 600px;
+    text-align: left;
+}
+
+.content-box > ul > li {
+    border-bottom: 1px solid #dddd;
+    height: 56px;
+    line-height: 56px;
+    word-break: keep-all;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.content-box p {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content-box label {
+    color: #333333;
+    margin-right: 10px;
+}
+
+.content-box input {
+    border: 1px solid #DDDDDD;
+    width: 100%;
+    max-width: 200px;
+    height: 30px;
+}
+
+.content ul {
+    justify-content: space-between; 
+}
+
+.content > ul > li {          
+    padding: 10px 10px;
+}
+
+.button_box div {  
+    margin: 60px 0px 60px 0px;    
+    text-align: center;  
+}
+
+.button_box button.write {    
+    padding: 6px 20px 6px 20px;
+    background-color: #333333;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+    color:#ffffff;
+}
+
+.button_box button.cancle {    
+    padding: 6px 20px 6px 20px;
+    background-color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1380px) {
+    section.notice {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .content-box {
+        width: 100%;
+    }
+
+    .content > ul > li {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .content-box > ul > li {
+        height: auto;
+        line-height: normal;
+        padding: 10px 5%;
+    }
+
+    .content-box p {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    .content-box p {
+        font-size: 16px;
+    }
+    
+    .content-box label {
+        font-size: 14px;
+        margin: 0 16px 0 0; 
+    }
+
+    .button_box div {
+        margin: 30px 0px 0px 0px;
+        text-align: center;
+    }
+    
+}
+

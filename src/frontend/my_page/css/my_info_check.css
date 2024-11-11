@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section.my_info_check {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contents_box {
+    margin-bottom: 0px;
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 5px; /* 기본 간격 설정 */
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.categories ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.categories li {
+    text-align: center;
+    font-size: 14px;
+    color: #555555;
+}
+
+.my_info_content {
+    max-width: 1000px;
+    margin: 0px auto 0px;
+}
+
+.title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.info-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.info {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding-left: 5px; /* 왼쪽 패딩 추가 */
+    padding-left: 0;
+    max-width: 100%; /* 최대 너비 설정 */
+    overflow: hidden; /* 텍스트 오버플로우 숨기기 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    text-overflow: ellipsis; /* 텍스트 잘릴 경우 ... 표시 */
+    height: 46px;
+    line-height: 46px;
+    text-align: left;
+}
+
+.masked {
+    color: #bbb;
+}
+
+.my_info_btn {
+	width: 360px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my_info_btn button {
+	width: 170px;
+	height: 46px;
+	border-radius: 5px;
+	border: 0;
+	border: 2px solid #555;
+	color: #333;
+	font-size: 16px;
+	font-weight: 500;
+	background: transparent;
+	cursor: pointer;
+}
+
+.my_info_btn button.mody_btn:hover {
+	border: 2px solid #00A38B;
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+.my_info_btn button.del_btn {
+	border: 2px solid #ffaaaa;
+	color: #ff5a5a;
+}
+
+.my_info_btn button.del_btn:hover {
+	border: 2px solid red;
+    color: red;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+    section.my_info_check {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .categories ul {
+        width: 70%; /* 너비 조정 */
+    }
+
+    .info {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .my_info_content {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .info-group {
+        margin-bottom: 15px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
+
+    .categories ul {
+        justify-content: space-between;
+    }
+
+    .categories li {
+        flex: 1; 
+        margin: 0 5px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categories {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .categories ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .categories li {
+        margin: 0 2px; 
+        flex: 1; 
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
+}
