@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.join_container {
+	width: 100%;
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+.my_info_mody {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0px auto 0 auto;
+	text-align: left;
+}
+
+input {
+	border: none;
+}
+
+#box {
+	width: 1000px;
+	text-align: left;
+	margin: 0px auto;
+}
+
+#idflex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.joininput {
+	width: 1000px;
+	height: 46px;
+	text-align: left;
+	margin: 5px 0 10px 0;
+	font-size: 16px;
+	border-bottom: 1px solid #dddddd;
+}
+
+#uid {
+	width: calc(100% - 103px);
+}
+
+#id_chk {
+	width: 88px;
+	height: 46px;
+	border: 1px solid #dddddd;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+#id_chk:hover {
+	cursor: pointer;
+}
+
+#pwtest {
+	font-size: 12px;
+}
+
+#jointxt {
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+#idchkresult {
+	font-size: 14px;
+	color: #555;
+}
+
+.email {
+	width: 31%;
+	height: 46px;
+	text-align: left;
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+.email::placeholder {
+	font-size: 14px;
+}
+
+#emailselect {
+	width: 31%;
+	height: 46px;
+	text-align: left;
+	margin: 10px 0px;
+	border-radius: 5px;
+	font-size: 16px;
+	border: 1px solid #cccccc;
+}
+
+#emailselect:hover {
+	cursor: pointer;
+}
+
+.emailsec {
+	width: 100%;
+}
+
+.star {
+	color: red;
+}
+
+#pwOK {
+	font-size: 14px;
+	color: red;
+}
+
+input::placeholder {
+	color: #cccccc;
+	font-size: 16px;
+}
+
+.h3 {
+	font-weight: 700;
+	margin-top: 30px;
+	text-align: left;
+}
+
+#allchk {
+	width: 20px;
+	height: 20px;
+	margin: 18px 10px 18px 18px;
+	vertical-align: -5px;
+}
+
+.optionchk {
+	width: 16px;
+	height: 16px;
+	margin: 18px 10px 18px 18px;
+	vertical-align: -3px;
+}
+
+.option:hover {
+	cursor: pointer;
+}
+
+.option {
+	margin: 5px 0px 5px 0px;
+	width: 100%;
+	height: 56px;
+	background-color: #dddddd;
+	border-radius: 5px;
+}
+
+.optiondetail:hover {
+	cursor: pointer;
+}
+
+.optiondetail {
+	margin: 10px 0px 10px 0px;
+	width: 100%;
+	height: 48px;
+	background-color: #eeeeee;
+	border-radius: 5px;
+}
+
+.optiontxt {
+	line-height: 0;
+}
+
+footer {
+	width: 100%;
+	height: 343px;
+	border-top: 1px solid #dddddd;
+}
+
+.joinbtn {
+	border: none;
+	width: 100%;
+	height: 46px;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 15px;
+	background-color: #999999;
+	color: #ffffff;
+}
+
+.joinbtn:hover {
+	cursor: pointer;
+}
+
+#flexbox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.com {
+	font-size: 14px;
+}
+
+#gen {
+	width: 100%;
+	height: 46px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	margin: 10px 0;
+	padding: 0 10px;
+	font-size: 16px;
+}
+
+#gen:hover {
+	cursor: pointer;
+}
+
+#bir {
+	margin: 10px 0;
+}
+
+.birth {
+	width: 100%;
+	height: 46px;
+	border-bottom: 1px solid #dddddd;
+	text-align: left;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 1380px) {
+	.join_container {
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 560px) {
+	#box {
+		width: 100%;
+	}
+	
+	#email {
+		width: 42%;
+	}
+	
+	#emailback {
+		width: 42%;
+	}
+	
+	.width100 {
+		width: 100%;
+	}
+	
+	#gen {
+		width: 100%
+	}
+
+}
+
+@media screen and (max-width: 420px) {
+	.email::placeholder {
+		font-size: 12px;
+	}
+}

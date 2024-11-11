@@ -1,0 +1,959 @@
+/* 숫자에 넣은 Montserrat 새로운 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+/* common */
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.title p {
+    font-size: 24px;
+}
+
+
+.title i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.title span {
+    display: flex;
+    align-items: center;
+	cursor: pointer;
+}
+
+.title span p {
+    font-size: 18px;
+}
+
+.title span:hover p,
+.title span:hover i {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+
+/* 메뉴 */
+.bg_on {
+    position: fixed;
+    top: 72px;
+    left: 0px;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 2;
+}
+
+nav.mypage_nav {
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+nav.mypage_nav ul {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    background-color: #fff;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+}
+
+nav.mypage_nav ul li {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.home {
+    display: block;
+    background-color: #00A38B;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 22px 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    /*background-color: darkorange; */
+    color: #333;
+    padding: 0px 16px;
+    min-width: 120px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    border: 1px solid #bbb;
+    text-align: left;
+}
+
+.dropdown-content p {
+    color: #333;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content {
+    display: block;
+}
+
+.dropdown-content p:hover,
+.dropdown-content p:active {
+    background-color: #f1f1f1;
+}
+
+.dropdown-menu:hover:not(.home) {
+    color: #00A38B;
+    font-weight: 500;
+}
+
+
+/* 사용자 프로필 */
+.user_profile {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 50px 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px #ddd;
+}
+
+.user_profile_ul {
+    display: flex;
+    align-items: flex-start;
+}
+
+.user_profile_ul li.user_profile_photo {
+    width: auto;
+    padding: 0 0px 0 0px;
+    display: flex;
+    align-items: center;
+}
+
+.user_profile_ul li.user_profile_photo figure {
+    width: 184px;
+    height: 184px;
+    overflow:hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.user_profile_ul li.user_profile_photo figure img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    margin: 0 auto;
+}
+
+ul.my_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+
+ul.my_btn li {
+    width: calc(50% - 6px);
+    margin: 12px 0px 0 0px;
+}
+
+ul.my_btn button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #555;
+    cursor: pointer;
+}
+
+ul.my_btn button:hover {
+    border: 1px solid #00A38B;
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+
+.user_profile_ul li.user_profile_contents {
+    width: calc(100% - 684px);
+    padding: 0px 30px 0px 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 184px;
+}
+
+.my_profile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 0px 0px 0px 0px;
+} 
+
+.my_profile p.name {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.my_profile p.birth {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00A38B;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 12px;
+    border-bottom: 0;
+}
+
+
+.my_profile p.phone {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    font-family: "Montserrat", sans-serif;
+}
+
+.my_profile p.phone a {
+    text-decoration: none;
+    color: #555;
+}
+
+.my_profile p.email {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    font-family: "Montserrat", sans-serif;
+}
+
+.my_profile p.email a {
+    text-decoration: none;
+    color: #555;
+}
+
+.my_profile p:last-child {
+    margin-bottom: 0px;
+}
+
+.my_profile p span {
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+
+.nums {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: #00A38B;
+}
+
+li.user_profile_number {
+    width: 500px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 184px;
+    align-items: center;
+}
+
+
+.my_num {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+} 
+
+
+.my_num ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.my_num ul li {
+    width: 33.3%;
+    padding: 0 0px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+
+.my_num ul li p {
+    height: 20px;
+    text-align: center;
+}
+
+.my_num ul li span {
+    height: 80px;
+    text-align: center;
+}
+
+.my_num ul li:last-child {
+	border-right: 0px solid #ddd;
+}
+
+/* 나의 녹지 스크랩 */
+.my_greenery_scraps {
+    margin-top: 100px;
+}
+
+.my_scraps_ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.my_scraps_ul > li {
+    width: calc(33.3% - 16px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 0px 30px 30px 30px;
+    margin-top: 130px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #ddd;
+    cursor: pointer;
+}
+
+.my_scraps_ul > li:hover {
+    border: 1px solid #00A38B;
+    transition: all 0.3s;
+}
+
+.my_scraps_ul > li .scraps_img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: -80px auto 0 auto;
+    border: 2px solid #ddd;
+}
+
+.my_scraps_ul > li:nth-child(1) .scraps_img {
+    background-image: url("../images/scraps_img_01_line.png");
+    background-position: center;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.my_scraps_ul > li:nth-child(1):hover .scraps_img {
+    background-image: url("../images/scraps_img_01_color.png");
+    transition: all 0.3s;
+    border: 2px solid #00A38B;
+}
+
+.my_scraps_ul > li:nth-child(2) .scraps_img {
+    background-image: url("../images/scraps_img_02_line.png");
+    background-position: center;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.my_scraps_ul > li:nth-child(2):hover .scraps_img {
+    background-image: url("../images/scraps_img_02_color.png");
+    transition: all 0.3s;
+    border: 2px solid #00A38B;
+}
+
+.my_scraps_ul > li:nth-child(3) .scraps_img {
+    background-image: url("../images/scraps_img_03_line.png");
+    background-position: center;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.my_scraps_ul > li:nth-child(3):hover .scraps_img {
+    background-image: url("../images/scraps_img_03_color.png");
+    transition: all 0.3s;
+    border: 2px solid #00A38B;
+}
+
+
+
+.my_scraps_ul > li p {
+    font-size: 24px;
+    margin-top: 30px;
+    font-weight: 500;
+    color: #333;
+}
+
+.my_scraps_ul > li:hover p {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+.my_scraps_ul > li span {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+    color: #555;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 나의 리뷰 리스트 */
+div.my_review_list {
+    margin-top: 100px;
+}
+
+
+/* photo list css start */
+.photo_list_ul {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photo_list_ul li {
+    width: calc(25% - 24px);
+    max-width: 306px;
+    height: auto;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.box::after {
+    display: block;
+    content: "";
+    padding-bottom: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo_list_ul li div.contents {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.photo_list_ul li div.contents p.review_stars i {
+    color: #00A38B;
+}
+
+.photo_list_ul li div.contents p.place_name {
+    font-size: 16px;
+    color: #555;
+    margin-top: 16px;
+}
+
+.photo_list_ul li:hover div.contents p.place_content {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+
+.photo_list_ul li div.contents p.place_content {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+    word-break: keep-all;
+    color: #333;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.photo_list_ul li div.contents p.id {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 16px;
+}
+/* photo list css end */
+
+
+/* 게시판 리스트 내역 */
+.my_borad_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+ul.my_borad_list > li {
+    width: calc(50% - 15px);
+    background-color: #fff;
+}
+
+.my_borad_list >li ul.list {
+    border-top: 2px solid #000;
+}
+
+.my_borad_list >li ul.list li {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    height: auto;
+    padding: 30px 0;
+    cursor: pointer;
+}
+
+.my_borad_list >li ul.list li p {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.my_borad_list >li ul.list li:hover p {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+.my_borad_list >li ul.list li span {
+    font-size: 16px;
+    color: #555;
+}
+
+
+@media screen and (max-width: 1250px) {
+    /* 나의 프로필 */
+    .user_profile_ul li.user_profile_photo figure {
+        width: 164px;
+        height: 164px;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .user_profile_ul li.user_profile_contents {
+        width: calc(100% - 614px);
+        min-height: 164px;
+    }
+
+    li.user_profile_number {
+        width: 450px;
+        min-height: 164px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    /* 나의 프로필 */
+    .user_profile_ul li.user_profile_photo figure {
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .user_profile_ul li.user_profile_contents {
+        width: calc(100% - 440px);
+        min-height: 140px;
+    }
+
+    li.user_profile_number {
+        width: 400px;
+        min-height: 140px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .bg_on {
+        top: 62px;
+    }
+    
+    /* 나의 프로필 */
+    .user_profile {
+        padding: 40px 40px;
+    }
+
+    .user_profile_ul li.user_profile_photo figure {
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .user_profile_ul li.user_profile_contents {
+        width: calc(100% - 440px);
+        min-height: 140px;
+    }
+
+    .my_num ul li {
+        width: 33.3%;
+        padding: 0 0px;
+        border-right: 1px solid #ddd;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    li.user_profile_number {
+        width: 400px;
+        min-height: 140px;
+    }
+    
+
+    ul.my_btn {
+        max-width: 250px;
+    }
+
+    ul.my_btn button {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        color: #555;
+        cursor: pointer;
+    }
+
+    .my_num ul li p {
+        font-size: 14px;
+    }
+
+    /* 나의 리뷰 */
+    .photo_list_ul li {
+        width: calc(50% - 16px);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .photo_list_ul li div.contents p.place_content {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    /* 나의 프로필 */
+    .user_profile_ul {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .user_profile_ul li.user_profile_photo {
+        width: auto;
+        padding: 0 0px 0 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .user_profile_ul li.user_profile_contents {
+        width: calc(100% - 140px);
+        min-height: 140px;
+    }
+
+    li.user_profile_number {
+        width: 100%;
+        min-height: auto;
+        margin-top: 30px;
+    }
+
+    .my_num ul li {
+        width: 33.3%;
+        padding: 0 0px;
+        border-right: 1px solid #ddd;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* common */
+    .title p {
+        font-size: 20px;
+    }
+    
+    .title i {
+        font-size: 20px;
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 3px 0 0 0;
+    }
+
+    
+    /* 마이 페이지 메뉴 */
+    .home {
+        width: 50px;
+        padding: 17px 0px;
+    }
+
+    .dropdown-menu {
+        /* background-color: darkorange; */
+        color: #333;
+        padding: 0px 16px;
+        min-width: 33.3%;
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .dropdown-content p {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .dropdown-content {
+        min-width: 150px;
+    }
+
+    .dropdown-content a {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    /* 나의 프로필 */
+    .user_profile {
+        padding: 30px 30px;
+    }
+
+    /* 나의 녹지 스크랩 */
+    .my_scraps_ul {
+        flex-direction: column;
+    }
+
+    .my_scraps_ul > li {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        padding: 0px 30px 30px 30px;
+        margin-top: 130px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ddd;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* common */
+    .title p {
+        font-size: 18px;
+    }
+
+    .title span p {
+        font-size: 16px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .title span:hover p,
+    .title span:hover i {
+        color: #00A38B;
+        transition: all 0.3s;
+    }
+
+    /* 나의 프로필 */
+    .user_profile_ul li.user_profile_photo figure {
+        width: 108px;
+        height: 108px;
+    }
+
+    ul.my_btn li {
+        width: calc(50% - 6px);
+        margin: 0px 0px 0px 0px;
+    }
+
+    .user_profile_ul li.user_profile_contents {
+        width: calc(100% - 108px);
+        min-height: 108px;
+        padding: 0px 0px 0px 30px;
+    }
+
+    .my_profile p.name {
+        font-size: 24px;
+    }
+
+    .my_profile p.birth {
+        font-size: 16px;
+    }
+
+    li.user_profile_number {
+        margin-top: 20px;
+    }
+
+    .nums {
+        font-size: 40px;
+    }
+
+    /* 나의 리뷰 */
+    .photo_list_ul li div.contents p.place_content {   
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+
+    /* 게시판 리스트 */
+    .my_borad_list {
+        flex-direction: column;
+    }
+
+    ul.my_borad_list > li {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    ul.my_borad_list > li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .my_borad_list >li ul.list li a {
+        padding: 20px 0;
+    }
+
+    .my_borad_list >li ul.list li p {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    /* 마이 페이지 메뉴 */
+    .home {
+        width: 40px;
+        padding: 12px 0px;
+    }
+
+    .dropdown-menu {
+        color: #333;
+        padding: 0px 16px;
+        min-width: 33.3%;
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .dropdown-content p {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .dropdown-content {
+        min-width: 130px;
+    }
+
+    /* 나의 프로필 */
+    .user_profile {
+        padding: 20px 20px;
+        margin-top: 30px;
+    }
+
+
+    ul.my_btn button {
+        height: 32px;
+        border-radius: 16px;
+        font-size: 12px;
+    }
+
+    .user_profile_ul li.user_profile_photo figure {
+        width: 70px;
+        height: 70px;
+    }
+
+    .user_profile_ul li.user_profile_contents {
+        width: calc(100% - 70px);
+        min-height: 88px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .my_profile p.name {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .my_profile p.birth {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .my_num ul li p {
+        font-size: 12px;
+    }
+
+    .nums {
+        font-size: 36px;
+    }
+    
+
+    /* 나의 녹지 스크랩 */
+    .my_scraps_ul {
+        flex-direction: column;
+    }
+
+    .my_scraps_ul > li {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        padding: 0px 30px 30px 30px;
+        margin-top: 130px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #ddd;
+        cursor: pointer;
+    }
+
+    /* 나의 리뷰 */
+    .photo_list_ul li {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}

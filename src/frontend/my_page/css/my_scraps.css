@@ -1,0 +1,128 @@
+/* 나의 녹지 스크랩 */
+.my_greenery_scraps2 {
+    margin-bottom: 60px;
+}
+
+.my_scraps_category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.my_scraps_category > li {
+    width: calc(33.3% - 16px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px 16px 10px 16px;
+    margin-top: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.my_scraps_category > li:hover {
+    border: 1px solid #00A38B;
+    transition: all 0.3s;
+}
+
+.my_scraps_category > li.on {
+    border: 1px solid #00A38B;
+}
+
+.my_scraps_category > li .scraps_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-right: 16px;
+}
+
+.my_scraps_category > li:nth-child(1) .scraps_img {
+    background-image: url("../images/scraps_img_01_line.png");
+    background-position: center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.my_scraps_category > li:nth-child(1):hover .scraps_img {
+    background-image: url("../images/scraps_img_01_color.png");
+    transition: all 0.3s;
+    border: 2px solid #00A38B;
+}
+
+.my_scraps_category > li.on:nth-child(1) .scraps_img {
+    background-image: url("../images/scraps_img_01_color.png");
+    border: 2px solid #00A38B;
+}
+
+.my_scraps_category > li:nth-child(2) .scraps_img {
+    background-image: url("../images/scraps_img_02_line.png");
+    background-position: center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.my_scraps_category > li:nth-child(2):hover .scraps_img {
+    background-image: url("../images/scraps_img_02_color.png");
+    transition: all 0.3s;
+    border: 2px solid #00A38B;
+}
+
+.my_scraps_category > li.on:nth-child(2) .scraps_img {
+    background-image: url("../images/scraps_img_02_color.png");
+    border: 2px solid #00A38B;
+}
+
+.my_scraps_category > li:nth-child(3) .scraps_img {
+    background-image: url("../images/scraps_img_03_line.png");
+    background-position: center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.my_scraps_category > li:nth-child(3):hover .scraps_img {
+    background-image: url("../images/scraps_img_03_color.png");
+    transition: all 0.3s;
+    border: 2px solid #00A38B;
+}
+
+.my_scraps_category > li.on:nth-child(3) .scraps_img {
+    background-image: url("../images/scraps_img_03_color.png");
+    border: 2px solid #00A38B;
+}
+
+
+
+.my_scraps_category > li p {
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: 500;
+    color: #333;
+}
+
+.my_scraps_category > li:hover p {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+.my_scraps_category > li span {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+    color: #555;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
