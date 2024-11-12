@@ -1,3 +1,5 @@
+<!-- 스크랩 페이지 삭제에 따라 mypage_menu.jsp내 변경사항을 따라서 서브 페이지 변경 부탁드립니다 --> 
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
