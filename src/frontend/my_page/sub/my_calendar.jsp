@@ -23,6 +23,7 @@
         <jsp:include page="../common/sub_header.jsp"></jsp:include>
         
         <!-- 컨텐츠 영역(main) 시작 -->
+	<!-- 변경 : sub 4-1에 삽입된 FullCalendar를 기본으로 끌고 오는 구조로 진행합니다 --> 
         <main>
             <div id="sub_container">
                 <ul class="contents_box">
