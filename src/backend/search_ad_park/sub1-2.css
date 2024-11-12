@@ -195,7 +195,6 @@ ul.region_paging_ul > li {
 }
 
 ul.region_paging_ul li.region_list {
-    border: 1px solid #ddd;
 }
 
 ul.region_paging_ul li.region_map {
@@ -276,6 +275,7 @@ ul.paging_list li.content p.address {
 ul.paging_list {
     display: flex;
     padding: 30px;
+    height: 120px;
 }
 
 
@@ -328,7 +328,7 @@ li.region_map .root_daum_roughmap .wrap_map {
 
 @media screen and (max-width: 1380px) {
     #sub_container {
-        width: 90%;
+        width: 100%;
     }
 }
 
