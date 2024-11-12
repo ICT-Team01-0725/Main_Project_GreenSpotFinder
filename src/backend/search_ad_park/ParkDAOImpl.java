@@ -16,7 +16,7 @@ public class ParkDAOImpl implements ParkDAO {
 
 	    // 공원 검색 (p_ad로 검색)
 	    @Override
-	    public List<ParkVO> searchParks(String p_ad) {
+	    public List<ParkVO> searchParksByAddress(String p_ad) {
 	        return sqlSessionTemplate.selectList("park-mapper.searchParks", p_ad);
 	    }
 
