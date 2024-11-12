@@ -10,5 +10,8 @@ public interface ParkService {
     List<ParkVO> getTop4Parks();
 
     // 주소로 공원 검색하기
-    List<ParkVO> searchParks(String p_ad);
+    List<ParkVO> searchParksByAddress(String p_ad);
+    
+    // 지역별 공원 조회하기
+    List<ParkVO> getParksByRegion(String region);
 }
