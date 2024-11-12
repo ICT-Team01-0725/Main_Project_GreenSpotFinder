@@ -10,4 +10,7 @@ public interface ParkDAO {
 
     // 기본 공원 리스트 조회
     List<ParkVO> getTop4Parks();
+    
+    // 지역별 공원 목록 조회
+    List<ParkVO> getParksByRegion(String region);
 }
