@@ -10,7 +10,7 @@
         <li class="dropdown">
             <div class="dropdown-menu">히스토리</div>
             <div class="dropdown-content">
-                <p onclick="my_calendar()">캘린더</p>            <!-- 개별 캘린더 X / sub 4-1의 캘린더 페이지로 단순 이동 --> 
+                <p onclick="my_calendar()">캘린더</p>            <!-- 개별 캘린더 X / sub 4-1의 캘린더 페이지로 단순 이동 or FullCalendar 삽입 --> 
                 <p onclick="my_scraps()">스크랩</p>              <!-- 현재 스크랩 불가 상태 / '공지사항' 으로 변경 / sub 5-1 공지사항 이동 -->
                 <p onclick="my_review()">내가 쓴 리뷰</p>         <!-- 기존에 유지하기로 한 개인별 리뷰 페이지로 이동 --> 
             </div>
