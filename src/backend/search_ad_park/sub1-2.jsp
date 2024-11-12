@@ -61,36 +61,28 @@
 						<div class="m_menu_slide">
 							<div class="swiper">
 								<div class="swiper-wrapper sub_menu2">
-									<div class="swiper-slide cur_submenu"
-										onclick="location.href='/content/greetings'">
+									<div class="swiper-slide cur_submenu" onclick="location.href='/park/findPark?region=서울'">
 										<span>서울</span>
 									</div>
-									<div class="swiper-slide "
-										onclick="location.href='/content/mission'">
+									<div class="swiper-slide" onclick="location.href='/park/findPark?region=경기'">
 										<span>경기</span>
 									</div>
-									<div class="swiper-slide "
-										onclick="location.href='/content/faculty_introduction'">
+									<div class="swiper-slide" onclick="location.href='/park/findPark?region=인천'">
 										<span>인천</span>
 									</div>
-									<div class="swiper-slide "
-										onclick="location.href='/content/faculty_recruitment'">
+									<div class="swiper-slide" onclick="location.href='/park/findPark?region=강원'">
 										<span>강원</span>
 									</div>
-									<div class="swiper-slide "
-										onclick="location.href='/content/mou_school'">
+									<div class="swiper-slide" onclick="location.href='/park/findPark?region=충청'">
 										<span>충청</span>
 									</div>
-									<div class="swiper-slide "
-										onclick="location.href='/content/contact'">
+									<div class="swiper-slide" onclick="location.href='/park/findPark?region=경상'">
 										<span>경상</span>
 									</div>
-									<div class="swiper-slide "
-										onclick="location.href='/content/contact'">
+									<div class="swiper-slide" onclick="location.href='/park/findPark?region=전라'">
 										<span>전라</span>
 									</div>
-									<div class="swiper-slide "
-										onclick="location.href='/content/contact'">
+									<div class="swiper-slide" onclick="location.href='/park/findPark?region=제주'">
 										<span>제주</span>
 									</div>
 								</div>
@@ -103,46 +95,62 @@
 									<div class="material-icons">arrow_forward</div>
 								</div>
 							</div>
-						</div> <!-- 첫 화면에 가나다순 공원 4개 출력 -->
-						<ul class="region_paging_ul total_search_mg">
-							<li class="region_list">
-								<ul class="paging_list_ul">
-									<c:if test="${not empty parkList}">
-										<c:forEach items="${parkList}" var="park">
-											<li>
-												<ul class="paging_list">
-													<li class="category"><span>지역</span></li>
-													<li class="content">
-														<h4>${park.p_na}</h4> <!-- 공원명 -->
-														<p class="text">${park.p_ce_na}</p> <!-- 공원 구분 -->
-														<p class="address">${park.p_ad}</p> <!-- 공원 주소 -->
-													</li>
-												</ul>
-											</li>
-										</c:forEach>
-									</c:if>
+						</div>
+						
+						
+                               <ul class="region_paging_ul total_search_mg">
+                            <li class="region_list">
+                                <ul class="paging_list_ul">
+									<!-- 첫 화면에 공원 리스트 출력 -->
+									<c:choose>
+                                        <c:when test="${isFirstVisit}">
+                                            <h3>가장 인기 있는 공원 4곳</h3>
+                                            <c:forEach var="park" items="${parkList}">
+                                                <li>
+                                                    <ul class="paging_list">
+                                                        <li class="category"><span>지역</span></li>
+                                                        <li class="content">
+                                                            <h4>${park.p_na}</h4>
+                                                            <p class="text">${park.p_ce_na}</p>
+                                                            <p class="address">${park.p_ad}</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </c:forEach>
+                                        </c:when>
 
-									<!-- 검색된 결과가 없을 경우 -->
-									<c:if test="${empty parkList}">
-										<p style="margin-top: 30px;">검색된 공원이 없습니다.</p>
-									</c:if>
+                                        <c:when test="${not empty parkList}">
+                                            <c:forEach var="park" items="${parkList}">
+                                                <li>
+                                                    <ul class="paging_list">
+                                                        <li class="category"><span>지역</span></li>
+                                                        <li class="content">
+                                                            <h4>${park.p_na}</h4>
+                                                            <p class="text">${park.p_ce_na}</p>
+                                                            <p class="address">${park.p_ad}</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </c:forEach>
+                                        </c:when>
 
+                                        <c:otherwise>
+                                            <p style="margin-top: 30px;">검색 결과가 없습니다.</p>
+                                        </c:otherwise>
+                                    </c:choose>
 								</ul>
-								<div>
-									<ul class="paging_num_ul">
-										<li class="material-icons prev">
-											keyboard_double_arrow_left</li>
-										<li class="material-icons prev">chevron_left</li>
-										<li class="active">1</li>
-										<li>2</li>
-										<li>3</li>
-										<li>4</li>
-										<li>5</li>
-										<li class="material-icons next">chevron_right</li>
-										<li class="material-icons next">
-											keyboard_double_arrow_right</li>
-									</ul>
-								</div>
+								<!-- 페이지 네비게이션 추가 -->
+								<ul class="paging_num_ul">
+									<li class="material-icons prev">keyboard_double_arrow_left</li>
+									<li class="material-icons prev">chevron_left</li>
+									<li class="active">1</li>
+									<li>2</li>
+									<li>3</li>
+									<li>4</li>
+									<li>5</li>
+									<li class="material-icons next">chevron_right</li>
+									<li class="material-icons next">keyboard_double_arrow_right</li>
+								</ul>
 							</li>
 
 							<!-- 지도 표시 섹션 -->
@@ -164,8 +172,7 @@
 			var mapContainer = document.getElementById('map');
 			var mapOption = {
 				center : new kakao.maps.LatLng(33.450701, 126.570667), // 기본 중심 좌표
-				level : 3
-			// 기본 확대 수준
+				level : 3 // 기본 확대 수준
 			};
 			var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
 
