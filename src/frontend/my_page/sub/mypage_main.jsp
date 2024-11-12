@@ -36,11 +36,11 @@
                         <jsp:include page="../common/mypage_profile.jsp"></jsp:include>
                         
                         
-
-                        <!-- 나의 녹지 스크랩 -->
+			<!-- 마이페이지 내의 형식을 유지하기 위해, 스크랩이란 표현을 제외하고, 일반 사용자 페이지의 서브페이지로 이동하는 방향으로 수정합니다 --> 
+                        <!-- 나의 녹지 스크랩 -->				<!-- 변경 : 녹지 정보 바로가기 --> 
                         <div class="my_greenery_scraps">
                             <div class="title">
-                                <p>나의 녹지 스크랩</p>
+                                <p>나의 녹지 스크랩</p>			<!-- 변경 : 녹지 정보 바로가기 -->
 
                                 <span onclick="my_scraps()">
                                     <p>더보기</p> <i class="material-icons">chevron_right</i>
@@ -48,7 +48,7 @@
                             </div>
                             <ul class="my_scraps_ul">
                                 <li onclick="my_scraps()">
-                                    <div class="scraps_img"></div>
+                                    <div class="scraps_img"></div>	<!-- 변경 : 각각의 지역별 찾기 서브 페이지로 이동 / sub 1-2, sub 2-2. sub 3-2로 이동 --> 
                                     <p>공원</p>
                                     <span>도심 공원에서 만나는  자연과 지속가능성</span>
                                 </li>
@@ -64,6 +64,8 @@
                                 </li>
                             </ul>
                         </div>
+
+		<!-- 여기부터는 콘텐츠 영역 유지 --> 
 
                         <!-- 나의 리뷰 -->
                         <div class="my_review_list">
