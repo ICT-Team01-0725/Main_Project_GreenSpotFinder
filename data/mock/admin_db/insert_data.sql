@@ -1,0 +1,10 @@
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (1, 'braunadam', 'X!4yA2yBJi', 'Matthew Herrera', '010-2798-8768', 'sancheztanya@example.com', 1, 0);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (2, 'faithharris', '*188Hmxm!s', 'Caroline Ray', '010-8062-4821', 'ewillis@example.org', 1, 1);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (3, 'cynthia32', 'e^ikt7HuKu', 'Dawn Ramirez', '010-1512-7108', 'robinsonjason@example.org', 0, 0);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (4, 'jsanchez', 'Vb*#%bQg!6', 'Derek Collins', '010-8487-9921', 'joseph68@example.org', 0, 1);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (5, 'iblair', '*rPvG6OlI!', 'Joseph Guzman', '010-5207-8775', 'browntonya@example.com', 0, 1);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (6, 'scottjamie', '&K15DSddA9', 'Tyrone Washington', '010-8541-9105', 'robertsonandrew@example.com', 1, 1);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (7, 'teresapace', 'td!N@4KgHF', 'Megan Singh', '010-6722-8768', 'brockbrenda@example.org', 1, 1);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (8, 'troymiller', 'zxcsoVLg%9', 'Derrick Brandt', '010-7403-6883', 'anthony77@example.com', 0, 1);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (9, 'arielhardy', '%3aYA2Ar@5', 'Gary Mathews', '010-9317-1051', 'langstephanie@example.org', 1, 0);
+INSERT INTO admin_tbl (a_id, a_pw, a_na, a_pho, a_em, a_stat, a_log) VALUES (10, 'sheila10', '^Jm0B1bf4*', 'Alfred Glenn', '010-4811-1452', 'braunyvonne@example.net', 0, 0);

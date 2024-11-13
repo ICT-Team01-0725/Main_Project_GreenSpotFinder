@@ -1,0 +1,1 @@
+# qna_tbl_mock.py

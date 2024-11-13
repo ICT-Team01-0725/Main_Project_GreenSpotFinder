@@ -1,0 +1,1 @@
+# inquiry_tbl_mock.py
