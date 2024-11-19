@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="finalroad-mapper">
+
+	<!-- 나무 종류에 맞는 도로 리스트 조회 (페이징 처리) -->
+	<select id="selectRoadsByTreeType" resultType="com.ict.edu.finalroadvo.FinalRoadVO">
+		SELECT r_idx, r_na, r_ty, r_ce_ad, r_sto, r_rsec, r_s_lat, r_s_lon
+		FROM road_db.road_tbl
+		WHERE r_ty LIKE CONCAT('%', #{type}, '%')
+		ORDER BY r_ce_ad ASC
+		LIMIT #{offset}, #{pageSize}
+	</select>
+
+	<!-- 나무 종류에 해당하는 총 도로 수 조회 -->
+	<select id="selectTotalRoadsByTreeType" resultType="int">
+		SELECT COUNT(*)
+		FROM road_db.road_tbl
+		WHERE r_ty LIKE CONCAT('%', #{type}, '%')
+	</select>
+
+</mapper>

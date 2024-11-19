@@ -1,0 +1,403 @@
+
+/* sub1-3 시작 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body{
+font-family: "Noto Sans KR", serif;
+}
+
+.contents1 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 130px;
+}
+
+.sub1-3 > .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.category_icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+.category_icon img {
+	width: 100%;
+}
+
+
+.map0 #map {
+    width: 100%;
+    height: 500px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.categories ul {
+    display: flex;
+    margin-bottom: 30px;
+    list-style: none;
+    width: 700px;
+}
+
+.categories li {
+    text-align: center;
+    font-size: 14px;
+    color: #555555;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.categories li:hover span.category {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+.category {
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 2px;
+}
+
+
+/* 지역별_스크롤  */
+ul.region_scroll_ul {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+ul.region_scroll_ul > li {
+    width: 100%;
+    max-width: 1320px;
+    height: auto;
+}
+
+ul.region_scroll_ul li.region_list {
+    overflow-y: scroll;
+    overflow-y: hidden;
+    margin-top: 30px;
+}
+
+ul.region_scroll_ul li.region_map {
+    height: 418px;
+    background-color: #555555;
+}
+
+.scroll_list {
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px #DDDDDD;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+ul.scroll_list li.content {
+    padding: 0px 16px;
+    word-break: keep-all;
+}
+
+ul.scroll_list li.content h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    height: 26px;
+    align-content: center;
+}
+
+ul.scroll_list li.content p.text {
+    font-size: 16px;
+    color: #555;
+    margin: 12px 0 16px 0;
+    line-height: 26px;
+}
+
+ul.scroll_list li.content p.address {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.scroll_list .category span {
+    display: inline-block;
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 13px;
+    background-color: #00A38B;
+    text-align: center;
+    color: #fff;
+}
+
+.scroll_list_ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul.scroll_list li.content {
+    text-align: left;
+}
+
+.scroll_list_ul > li:nth-child(1),
+.scroll_list_ul > li:nth-child(2) {
+    border-top: 2px solid black;
+}
+
+.scroll_list_ul > li {
+    cursor: pointer;
+    width: calc(50% - 15px);
+}
+
+.scroll_list_ul > li:hover {
+    background-color: #f8f8f8;
+    transition: all 0.3s;
+}
+.scroll_list_ul li:hover ul.scroll_list li.content h4 {
+    color: #00A38B;
+    transition: all 0.3s;
+}
+
+ul.scroll_list {
+    display: flex;
+    padding: 30px;
+}
+
+li.region_map #map {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+li.region_map button {
+	
+}
+
+li.region_map #map .wrap_map {
+    height: calc(100% - 31.33px) !important;
+}
+
+.text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 1380px) {
+	#sub_container {
+	    width: 90%;
+	}
+	
+	ul.scroll_list li.content {
+	    text-align: left;
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+    li.region_map #map {
+        width: 100% !important;
+        height: 320px !important;
+    }
+    
+    ul.scroll_list li.content p.text {
+        line-height: 22px;
+        font-size: 14px;
+    }
+
+    ul.scroll_list li.content h4 {
+        font-size: 16px;
+    }
+
+    ul.scroll_list li.content p.address {
+        font-size: 14px;
+        color: #333;
+        line-height: 22px;
+    }
+    /* 지역별_scroll */
+    ul.region_scroll_ul {
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        align-items: flex-start; 
+    }
+
+    ul.region_scroll_ul > li {
+        width: 100%;
+
+    }
+
+    ul.region_scroll_ul li.region_map {
+        height: auto;
+        margin-bottom: 30px;
+    }
+    /* 지역별_scroll */
+}
+
+@media screen and (max-width: 768px) {
+
+    .categories ul {
+        width: 100%;
+    }
+
+    .scroll_list .category span {
+        display: inline-block;
+        width: 60px;
+        height: 18px;
+        line-height: 18px;
+        border-radius: 9px;
+        background-color: #00A38B;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    ul.scroll_list li.content h4 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        height: 18px;
+        align-content: center;
+    }
+    li.region_map #map {
+        height: 300px !important;
+    }
+
+.scroll_list_ul > li:nth-child(2) {
+    border-top: 0px solid black;
+}
+    .scroll_list_ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .scroll_list_ul > li {
+        width: 100%;
+    }
+
+    .page {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .page-link {
+        display: inline-block;
+        margin: 0 1px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        border: 1px solid #ddd;
+        cursor: pointer;
+
+
+}
+@media screen and (max-width: 600px) {
+	.category_icon {
+	    width: 36px;
+	    height: 36px;
+	    margin: 0px auto 10px auto;
+	}
+		
+	
+	.categories ul {
+	    display: flex;
+	    margin-bottom: 30px;
+	    list-style: none;
+	    width: 100%;
+	}
+	
+	.categories li {
+	    text-align: center;
+	    font-size: 14px;
+	    color: #555555;
+	    width: 20%;
+	    box-sizing: border-box;
+	    padding: 0 0px;
+	    cursor: pointer;
+	}
+	
+	.category {
+		display: inline-block;
+		font-size: 14px;
+		margin-top: 2px;
+    	font-weight: 500;
+	}
+}
+
+@media screen and (max-width: 480px) {
+    /* 지역별_scroll */
+    ul.scroll_list {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul.scroll_list li.content {
+        padding: 0px;
+        word-break: keep-all;
+    }
+
+    .scroll_list .category span {
+        width: 60px;
+        height: 18px;
+        line-height: 18px;
+        border-radius: 9px;
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    ul.scroll_list li.content p.text {
+        font-size: 14px;
+        margin: 12px 0;
+        line-height: 20px;
+    }
+
+    ul.scroll_list li.content p.address {
+        font-size: 14px;
+    }
+
+    .page {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .page-link {
+        display: inline-block;
+        margin: 0 1px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+    
+}
+/* sub1-3 끝 */

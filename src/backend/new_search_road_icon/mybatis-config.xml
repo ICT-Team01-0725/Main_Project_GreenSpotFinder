@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- MyBatis가 해당 값의 타입을 명시적으로 알지 못하면 null 취급하게 된다. -->
+	<!-- 매번 쿼리를 실행할 때마다 데이터베이스에 요청이 가고, 결과를 새로 받아옵니다. -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+		<setting name="cacheEnabled" value="false" />
+	</settings>
+	
+	  <!-- Type Alias 설정 -->
+ <typeAliases>
+    <!-- 공원 VO 클래스의 별칭 -->
+    <typeAlias type="com.ict.edu.finalroadvo.FinalRoadVO" alias="finalroadvo" />
+</typeAliases>
+
+    <!-- 매퍼 파일 설정 -->
+    <mappers>
+        <!-- 공원 관련 매퍼 파일 -->
+        <mapper resource="mappers/finalroad_mapper.xml" />
+    </mappers>
+</configuration>

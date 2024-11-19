@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="parkpark-mapper">
+
+
+	<!-- 공원 구분에 맞는 공원 리스트 조회 (페이징 처리) -->
+	<select id="selectParksByCategory"
+		resultType="com.ict.edu.parkparkvo.ParkParkVO">
+		SELECT p_idx, p_na, p_ty, p_ad, p_lat, p_lon
+		FROM park_db.park_tbl
+		WHERE p_ty = #{category}
+		AND p_ad IS NOT NULL
+		AND p_ad != 'NaN'
+		ORDER BY p_ad ASC
+		LIMIT #{offset}, #{pageSize}
+		
+	</select>
+
+	<!-- 카테고리에 해당하는 총 공원 수 조회 -->
+	<select id="selectTotalParksByCategory" resultType="int">
+		SELECT COUNT(*)
+		FROM park_db.park_tbl
+		WHERE p_ty = #{category}
+	</select>
+
+
+</mapper>
