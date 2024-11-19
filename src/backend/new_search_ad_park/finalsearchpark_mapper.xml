@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="finalsearchpark-mapper">
+
+
+   <!-- 주소로 공원 검색 -->
+    <select id="searchParkByAddress" resultType="com.ict.edu.finalsearchparkvo.FinalSearchParkVO">
+        SELECT CASE WHEN p_na NOT LIKE ‘%공원%’ THEN CONCAT(p_na, ‘공원’)
+ 		ELSE p_na END AS p_na FROM park_db.park_tbl
+    </select>
+
+    <!-- 지역별 공원 검색 -->
+    <select id="searchParkByRegion" resultType="com.ict.edu.finalsearchparkvo.FinalSearchParkVO">
+        SELECT CASE WHEN p_na NOT LIKE ‘%공원%’ THEN CONCAT(p_na, ‘공원’)
+  		ELSE p_na END AS p_na FROM park_db.park_tbl
+    </select>
+
+</mapper>
+
+
+</mapper>

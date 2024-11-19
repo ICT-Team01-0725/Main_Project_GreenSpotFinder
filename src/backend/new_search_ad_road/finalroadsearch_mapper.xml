@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="finalroadsearch-mapper">
+
+
+  <!-- 가로수길 주소로 검색 -->
+    <select id="searchRoadByAddress" 
+            resultType="com.ict.edu.finalroadsearchvo.FinalRoadSearchVO" parameterType="String">
+        SELECT * FROM road_db.road_tbl
+        WHERE r_ce_ad LIKE CONCAT('%', #{address}, '%')
+        LIMIT 4
+    </select>
+
+    <!-- 지역별 가로수길 검색 -->
+    <select id="searchRoadByRegion" 
+            resultType="com.ict.edu.finalroadsearchvo.FinalRoadSearchVO" parameterType="String">
+        SELECT * FROM road_db.road_tbl
+        WHERE r_ce_ad LIKE CONCAT('%', #{region}, '%')
+        LIMIT 4
+    </select>
+
+
+</mapper>

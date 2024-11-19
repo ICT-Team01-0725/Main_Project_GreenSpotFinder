@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="searchtreead-mapper">
+
+	<!-- 주소로 보호수 검색 (t_rad, t_ad) -->
+	<select id="searchTreesByAddress"
+		resultType="com.ict.edu.searchtreeadvo.SearchTreeAdVO" parameterType="String">
+		   SELECT * FROM tree_db.tree_area_tbl WHERE 
+		   t_ad LIKE CONCAT('%', #{address}, '%') 
+		   OR 
+		   t_rad LIKE CONCAT('%', #{address}, '%')
+		   LIMIT 4
+		<!-- SELECT COALESCE(t_ad, t_rad) AS selected_value
+		FROM tree_db.tree_area_tbl -->
+	</select>
+
+	<!-- 첫 화면에 4개의 보호수 가져오기 -->
+	<select id="getTop4Trees"
+		resultType="com.ict.edu.searchtreeadvo.SearchTreeAdVO">
+		SELECT * FROM tree_db.tree_area_tbl
+		ORDER BY t_ad ASC
+		LIMIT 4
+	</select>
+
+	<!-- 모든 보호수 가져오기 -->
+	<select id="getAllTrees"
+		resultType="com.ict.edu.searchtreeadvo.SearchTreeAdVO">
+		SELECT * FROM tree_db.tree_area_tbl
+		LIMIT 4
+	</select>
+
+	<!-- 지역별 보호수 목록 조회 -->
+	<select id="searchTreesByRegion" resultType="searchtreeadvo">
+		
+		SELECT * FROM tree_db.tree_area_tbl WHERE 	
+		t_ad LIKE CONCAT('%', #{region}, '%') 
+  		OR 
+  		t_rad LIKE CONCAT('%', #{region}, '%')
+  		LIMIT 4
+		<!-- SELECT COALESCE(t_ad, t_rad) AS selected_value
+		FROM tree_db.tree_area_tbl -->
+		
+	</select>
+
+</mapper>
