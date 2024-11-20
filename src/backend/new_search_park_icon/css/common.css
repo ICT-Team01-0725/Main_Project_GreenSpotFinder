@@ -11,8 +11,6 @@
     padding-top: 153px
 }
 
-
-
 h2.great_title {
     font-size: 40px;
     font-weight: 700;
@@ -84,6 +82,8 @@ p.subheading_title_my {
     line-height: 40px;
     margin-left: 10px;
     box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
 }
 
 /* 기존 디자인 삭제 */
@@ -121,7 +121,6 @@ p.subheading_title_my {
 	height: 100%;
 	top: 0;
 	left: 0;
-	text-decoration: none;
 }
 
 .paging_num_ul li.prev,
@@ -141,12 +140,8 @@ p.subheading_title_my {
     text-align: center;
     border: 1px solid #111;
 }
-/* 페이징 버튼 숨기기 */
-.paging_num_ul li.hide {
-    display: none;  /* 버튼 숨기기 */
-    border: none;   /* border도 없애기 */
-}
 /* paging_number */
+
 @media screen and (max-width: 768px) {
 	/* 태블릿 폰트 */
     .contents_box {
