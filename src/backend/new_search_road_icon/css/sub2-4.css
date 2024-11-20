@@ -203,7 +203,15 @@ li.region_map #map .wrap_map {
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 }
+.paging_num_ul li.hide {
+    display: none;  /* 버튼 숨기기 */
+    border: none;   /* border도 없애기 */
+}
 
+/* 페이지네이션 버튼에서 밑줄 없애기 */
+.paging_num_ul a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
 @media screen and (max-width: 1380px) {
 	#sub_container {
 	    width: 90%;
