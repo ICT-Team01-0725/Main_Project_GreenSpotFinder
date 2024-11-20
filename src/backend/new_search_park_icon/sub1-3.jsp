@@ -126,9 +126,9 @@
 
 					<!-- < 버튼 (첫 페이지일 때 숨김) -->
 					<li
-						class="material-icons prev <c:if test="${currentPage == 1}">hide</c:if>">
-						<c:if test="${currentPage > 1}">
-							<a href="/parks?category=${category}&page=${currentPage - 1}">chevron_left</a>
+						class="material-icons prev <c:if test="${!prevGroup}">hide</c:if>">
+						<c:if test="${prevGroup}">
+							<a href="/parks?category=${category}&page=${prevGroupStart}">chevron_left</a>
 						</c:if>
 					</li>
 
