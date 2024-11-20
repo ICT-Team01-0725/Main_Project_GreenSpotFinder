@@ -1,4 +1,4 @@
-package com.ict.edu.parkparkcontroller;
+package com.ict.project.parkpark.controller;
 
 import java.util.List;
 
@@ -10,14 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.google.gson.Gson;
-import com.ict.edu.parkparkservice.ParkParkService;
-import com.ict.edu.parkparkvo.ParkParkVO;
+import com.ict.project.parkpark.vo.ParkParkVO;
 
 @Controller
 public class ParkParkController {
 
     @Autowired
-    private ParkParkService parkParkService;
+    private com.ict.project.parkpark.service.ParkParkService parkParkService;
 
     // 카테고리별 공원 목록 조회
     @GetMapping("/parks")
@@ -51,6 +50,9 @@ public class ParkParkController {
         // 첫 페이지 그룹(1~5, 6~10 등)
         int firstGroupStart = 1;
         int lastGroupStart = (totalPages / pageGroupSize) * pageGroupSize + 1;
+        
+        // 이전 그룹의 첫 번째 페이지
+        int prevGroupStart = Math.max(pageGroupStart - pageGroupSize, 1);
 
         // 모델에 데이터 추가
         request.setAttribute("parks", parks);
@@ -63,11 +65,12 @@ public class ParkParkController {
         request.setAttribute("nextGroup", nextGroup);
         request.setAttribute("firstGroupStart", firstGroupStart);
         request.setAttribute("lastGroupStart", lastGroupStart);
+        request.setAttribute("prevGroupStart", prevGroupStart);
         
         // parks 데이터를 JSON으로 변환하여 JSP로 전달
         String parksJson = new Gson().toJson(parks); // Gson을 이용한 JSON 변환
         request.setAttribute("parksJson", parksJson);
         
-        return "sub1-3"; // JSP로 이동
+        return "sub/sub1-3"; // JSP로 이동
     }
 }
