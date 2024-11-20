@@ -204,6 +204,12 @@ li.region_map #map .wrap_map {
 	-webkit-box-orient: vertical;
 }
 
+
+.paging_num_ul li.hide {
+    display: none;  /* 버튼 숨기기 */
+    border: none;   /* border도 없애기 */
+}
+
 @media screen and (max-width: 1380px) {
 	#sub_container {
 	    width: 90%;
