@@ -105,6 +105,7 @@
 			</section>
 		</li>
 	</ul>
+  <c:if test="${category != null }">
 		<div>
 				<ul class="paging_num_ul">
 					<li class="material-icons prev <c:if test="${pageGroupStart == 1}">hide</c:if>">
@@ -141,7 +142,7 @@
 				</ul>
 			</div>
 			
-			
+	</c:if>		
 			
 	<script>
 		// 카카오맵 API로 지도 표시하기
