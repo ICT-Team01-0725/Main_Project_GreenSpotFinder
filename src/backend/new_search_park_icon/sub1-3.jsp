@@ -110,7 +110,7 @@
 				</li>
 			</ul>
 				
-			
+			  <c:if test="${category != null }">
 			<div>
 				<ul class="paging_num_ul">
 					<!-- << 버튼 (첫 페이지일 때 숨김) -->
@@ -157,7 +157,7 @@
 					</li>
 				</ul>
 			</div>
-			
+			</c:if>
 		</div>
 
 		<script>
