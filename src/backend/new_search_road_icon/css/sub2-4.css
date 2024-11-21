@@ -76,7 +76,10 @@ font-family: "Noto Sans KR", serif;
 	font-size: 16px;
 	margin-top: 2px;
 }
-
+.category a{
+	text-decoration: none;
+	color: #555555;
+}
 
 /* 지역별_스크롤  */
 ul.region_scroll_ul {
