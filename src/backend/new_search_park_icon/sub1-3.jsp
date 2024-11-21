@@ -10,34 +10,29 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
 <!-- CSS 파일 링크 -->
+<link rel="stylesheet" href="/resources/css/menu.css" />
 <link rel="stylesheet" href="resources/css/common.css" />
 <link rel="stylesheet" href="resources/css/sub1-3.css" />
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <!-- fontawesome -->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 <!-- Material icon -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
+<!-- fill icon 사용 시 불러오는 라이브러리 -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<!-- Outlined icon 사용 시 불러오는 라이브러리 -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 <!-- Kakao Map API SDK -->
 <script
 	src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=ab07141ee929664c409a80cf396d1118&libraries=services"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- parkpark.js -->
-<script src="resources/js/parkpark.js"></script>
-
-
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
+
+<!-- sub_header 불러오기 -->
+        <jsp:include page="../common/sub_header.jsp"></jsp:include>
+
 
 <body>
 	<div class="sub1-3">
@@ -114,6 +109,8 @@
 					</section>
 				</li>
 			</ul>
+				
+			
 			<div>
 				<ul class="paging_num_ul">
 					<!-- << 버튼 (첫 페이지일 때 숨김) -->
@@ -160,6 +157,7 @@
 					</li>
 				</ul>
 			</div>
+			
 		</div>
 
 		<script>
@@ -231,9 +229,8 @@
 			map.setBounds(bounds);
 		</script>
 
-		<footer>
-			<h1>common-footer</h1>
-		</footer>
+		<!-- footer 불러오기 -->
+        	<jsp:include page="../common/sub_footer.jsp"></jsp:include>
 	</div>
 </body>
 </html>
