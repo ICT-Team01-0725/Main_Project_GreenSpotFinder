@@ -189,7 +189,7 @@
 					}
 				},
 				error : function(){
-					alert("이런 젠장"),
+					alert("에러가 발생하였습니다: id검색"),
 					console.log(idchkok)
 					}
 			});
